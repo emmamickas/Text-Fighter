@@ -4,7 +4,7 @@ import com.hotmail.kalebmarc.textfighter.main.Casino;
 import com.hotmail.kalebmarc.textfighter.main.Ui;
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Stats;
-
+// Abstract game class. All casino games will extend the basic casino game class
 public abstract class BasicCasinoGame {
     protected final GameType gameType;
     private final String header;

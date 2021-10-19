@@ -6,6 +6,7 @@ import com.hotmail.kalebmarc.textfighter.casino.LotteryGame;
 import com.hotmail.kalebmarc.textfighter.casino.SlotsGame;
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 
+//Casino class contains all games that extend the basic casino game.
 public class Casino {
     public static final DiceGame DICE = new DiceGame();
     public static final SlotsGame SLOTS = new SlotsGame();

@@ -4,6 +4,11 @@ import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Stats;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
 
+/* Player may visit the Bank to:
+* Deposit coins to keep them safe in case of a death
+* Withdraw coins from bank account to purchase items
+* Open a loan/ pay off a loan in order to purchase items in the case they don't have accessible coins.
+* */
 public class Bank {
 
     private static double interest;
@@ -95,6 +100,7 @@ public class Bank {
         return balance;
     }
 
+    // If user is withdrawing from the bank, a negative number will be added to the balance.
     public static void set(int amount, boolean add) {
         if (!add) {
             balance = amount;
@@ -108,28 +114,36 @@ public class Bank {
         interest = price;
     }
 
+
+    // User is withdrawing from their bank account. Their bank will deduct the amount and coins will be added to
+    //the player for use in the game.
     private static void withdraw(int amount) {
-        //Calculation
+
         Coins.set(amount, true);
         set(-amount, true);
 
-        //Result
+        //Clears the window and displays the amount.
         Ui.cls();
         Ui.println("Amount withdrawn: " + amount);
         Ui.println("Current Balance: " + get());
+
+        //Waiting for user to press enter to continue
         Ui.pause();
     }
 
+    //A player can deposit coins into the bank, so they will be used later if a player dies.
+    // Player will need to pay a fee in order to deposit coins in the bank account.
     private static void deposit(int amount, double interest) {
 
-        //Get interest
+        //
         interest = interest * amount;
         if (amount < 10) interest = 1;
 
-        //Take coins from player
+        //Deduct coins from player
         Coins.set(-amount, true);
 
-        //Take away interest amount
+        //Deduct the interest fee from deposited amount
+
         amount -= Math.round(interest);
         Stats.totalCoinsSpent += Math.round(interest);
         Stats.coinsSpentOnBankInterest += Math.round(interest);
@@ -137,7 +151,7 @@ public class Bank {
         //Add remaining coins to bank account
         set(amount, true);
 
-        //Display
+        //Clear screen and display updated banking information
         Ui.cls();
         Ui.println("Amount Deposited: " + amount + " coins");
         Ui.println("Interest Paid: " + Math.round(interest) + " coins");

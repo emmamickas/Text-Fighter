@@ -11,6 +11,11 @@ import com.hotmail.kalebmarc.textfighter.player.Xp;
 
 import java.util.ArrayList;
 
+/*
+* Shop class is how players use coins to further their game.
+* Players can purchase health, weapons, ammo, armour and xp with their coins.
+* */
+
 class Shop {
     private Shop() {
     }

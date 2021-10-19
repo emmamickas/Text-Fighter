@@ -5,7 +5,9 @@ import com.hotmail.kalebmarc.textfighter.main.Ui;
 import com.hotmail.kalebmarc.textfighter.main.Weapon;
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Potion;
-
+/*
+Chest class is where the users items are displayed.
+ */
 public class Chest {
     private Chest() {
     }

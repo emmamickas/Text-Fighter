@@ -5,7 +5,10 @@ import com.hotmail.kalebmarc.textfighter.main.Handle;
 import com.hotmail.kalebmarc.textfighter.main.Ui;
 
 import javax.swing.*;
-
+/*
+XP class determines a players level given the experience (xp) that they have gained throughout the game.
+XP determines which items are available to the player in the shops.
+ */
 public class Xp {
 
 	//Variables

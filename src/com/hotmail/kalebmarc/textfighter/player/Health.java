@@ -8,6 +8,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import javax.swing.*;
 
+/*
+Health determines the players' livelihood. When a player loses all their health a player will die.
+Players can lose health by fighting enemies
+A player can eat food, purchase first aid, purchase potions or purchase a health upgrade to gain health.
+ */
 public class Health {
 
     public static int timesDied;
@@ -50,7 +55,10 @@ public class Health {
             health = outOf;
         }
     }
-
+    /*
+    Taking damages during a fight will result in losing health.
+    If health <= 0 then a player dies.
+     */
     private static void lose(int h) {
         health -= h;
         if (health <= 0) {
@@ -69,7 +77,7 @@ public class Health {
     }
 
     public static void takeDamage(int damage) {
-
+        // godMode is not implemented.
         if (Settings.getGodMode()) {
             damage = 0;
         }

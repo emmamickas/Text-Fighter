@@ -131,7 +131,9 @@ public class Armour {
     public boolean isEquipped() {
         return this.equipped;
     }
-
+    /*
+    The armour the player is currently using is the armour the player is equipped with.
+     */
     public void equip() {
         if (!(this.owns)) {
             Ui.msg("You do not own this.");
@@ -143,7 +145,10 @@ public class Armour {
         this.equipped = true;
         Ui.msg("You have equipped " + this.toString());
     }
-
+    /*
+    When player purchases armour, player will be equipped (using currently) with this new armour,
+    Player won't be notified in the UI.
+     */
     public void equipSilent() {
         if (!(this.owns)) {
             return;

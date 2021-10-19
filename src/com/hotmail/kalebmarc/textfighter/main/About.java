@@ -2,6 +2,7 @@ package com.hotmail.kalebmarc.textfighter.main;
 
 import javax.swing.*;
 
+// About class is used to display information about the current version of the game.
 class About {
     private static boolean viewed = false;
 

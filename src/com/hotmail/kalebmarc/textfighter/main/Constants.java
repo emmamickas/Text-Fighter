@@ -1,5 +1,6 @@
 package com.hotmail.kalebmarc.textfighter.main;
 
+// Constants for the current user interface elements
 public class Constants {
 
   public static final String WELCOME_HEADER   = "WELCOME TO TEXT FIGHTER";

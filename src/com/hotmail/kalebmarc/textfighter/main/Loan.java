@@ -2,7 +2,10 @@ package com.hotmail.kalebmarc.textfighter.main;
 
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
-
+/*
+Loan class is used as a tool for players to save coins. If a player saves coins then they can retrieve coins after death.
+Players must pay an interest rate if they have a loan. A player can only have one loan at a time.
+ */
 public class Loan {
 
     private static final double INTEREST_RATE = 0.15;

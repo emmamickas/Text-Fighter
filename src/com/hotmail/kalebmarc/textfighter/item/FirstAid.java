@@ -6,6 +6,10 @@ import com.hotmail.kalebmarc.textfighter.player.Health;
 import com.hotmail.kalebmarc.textfighter.player.Stats;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
 
+/*
+FirstAid is used to increase a players' health. A FirstAid kit can increase health by 20 points.
+FirstAid can be purchased at a shop.
+ */
 public class FirstAid {
     public static int used = 0;
     public static int price;

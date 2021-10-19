@@ -159,7 +159,10 @@ public class Enemy {
 
         encounterNew();
     }
-
+    /*If enemy uses first aid kit.
+    Return true if enemy uses kit
+    Return false if enemy doesn't have any first aid kits.
+     */
     public boolean useFirstAidKit(){
         if (this.firstAidKit <= 0) {
             return false;

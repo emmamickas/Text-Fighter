@@ -15,6 +15,7 @@ import java.util.*;
 
 /**
  * Created by Brendon Butler on 7/27/2016.
+ * Saves currently game to local repository.
  */
 public class Saves {
 

@@ -2,14 +2,22 @@ package com.hotmail.kalebmarc.textfighter.player;
 
 import com.hotmail.kalebmarc.textfighter.main.Handle;
 import com.hotmail.kalebmarc.textfighter.main.Ui;
-
+/*
+Potions are used to increase health. Two potions are available
+Survival potion increases health by 25%
+Recovery potion increases health by 75%
+ */
 public class Potion {
     public static int spUsed = 0;
+    /* Difficulty set to Easy: spLevel = 2 spPrice = 10
+       Difficulty set to Hard: spLevel = 2 spPrice = 25*/
     public static int spLevel;
     public static int spPrice;
     //TODO will eventually add potions to heal status ailments
     //TODO possibly add potion that gives player a temporary strength boost (Does more damage)
     public static int rpUsed = 0;
+    /* Difficulty set to Easy: rpLevel = 2 rpPrice = 20
+       Difficulty set to Hard: rpLevel = 2 rpPrice = 35*/
     public static int rpLevel;
     public static int rpPrice;
     private static int survivalPotion; //potion that heals 25% of health
@@ -79,6 +87,8 @@ public class Potion {
         } else {
 
             set(kind, -1, true);
+
+            //Increasing players health if a potion has been used.
             int heal = (int) Math.round(healBy(kind));
             Health.gain(heal);
             used(kind);
@@ -95,7 +105,7 @@ public class Potion {
         }
 
     }
-
+    // Calculating health increase, determined by which potion was purchased.
     public static double healBy(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -107,6 +117,8 @@ public class Potion {
         }
     }
 
+
+    // Updating stats for the amount of potions that have been used.
     public static void used(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -136,6 +148,7 @@ public class Potion {
         }
     }
 
+    // Level for potions are calculated according to which difficulty a player is using.
     public static int getLevel(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -147,6 +160,7 @@ public class Potion {
         }
     }
 
+    // Price of potions are calculated according to which difficulty a player is using.
     public static int getPrice(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":

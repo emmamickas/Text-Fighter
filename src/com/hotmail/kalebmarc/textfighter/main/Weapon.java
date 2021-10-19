@@ -229,7 +229,7 @@ public class Weapon implements Comparable<Weapon> {
             }
         }
 
-        //Display stuff
+        //Display stats from the current attack
         com.hotmail.kalebmarc.textfighter.player.Stats.totalDamageDealt += damageDealt;
         com.hotmail.kalebmarc.textfighter.player.Xp.setBattleXp(damageDealt, true);
         if(!Enemy.get().takeDamage(damageDealt)) { // !dead
