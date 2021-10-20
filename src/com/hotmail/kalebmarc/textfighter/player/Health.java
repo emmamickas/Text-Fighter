@@ -24,40 +24,71 @@ public class Health {
     private Health() {
     }
 
+    /**
+     * Gets ratio of health over maximum health
+     * @return string
+     */
     public static String getStr() {
         return health + "/" + outOf;
     }
 
+    /**
+     * Gets players health
+     * @return int amount of health player has remaining.
+     */
     public static int get() {
         return health;
     }
 
+    /**
+     * Gets maximum amount of health
+     * @return int maximum health
+     */
     public static int getOutOf() {
         return outOf;
     }
 
+    /**
+     * Sets health amount
+     * @param h amount of health player has.
+     */
     public static void set(int h) {
         health = h;
     }
 
+    /**
+     * Set players health and maximum health
+     * @param h players health
+     * @param hOutOf maximum health
+     */
     public static void set(int h, int hOutOf) {
         health = h;
         outOf = hOutOf;
     }
 
+    /**
+     * Set upgrade health price
+     * @param price price to upgrade health
+     */
     public static void setUpgradePrice(int price) {
         UPGRADE_PRICE = price;
     }
 
+    /**
+     * Setting health gained when using first aid, eating, drinking potion.
+     * @param h amount of health gained.
+     */
     public static void gain(int h) {
         health += h;
         if (health > outOf) {
             health = outOf;
         }
     }
-    /*
-    Taking damages during a fight will result in losing health.
-    If health <= 0 then a player dies.
+
+    /**
+     *  Taking damages during a fight will result in losing health.
+     *  If health <= 0 then a player dies.
+     * @param h amount of health deducted from player
      */
     private static void lose(int h) {
         health -= h;
@@ -66,6 +97,10 @@ public class Health {
         }
     }
 
+    /**
+     * When player dies a random amount of coins is lost.
+     * Display player has died. Update player death stats.
+     */
     public static void die() {
         float randomCoinLoss = ThreadLocalRandom.current().nextInt(25, 51); //random between 25% and 50%
         int coinsLost = Math.round(Coins.get() * (randomCoinLoss / 100));
@@ -76,6 +111,11 @@ public class Health {
         timesDied++;
     }
 
+    /**
+     * Reducing health if enemy has hurt player.
+     * Displaying how much health is lost.
+     * @param damage amount of damage dealt from enemy.
+     */
     public static void takeDamage(int damage) {
         // godMode is not implemented.
         if (Settings.getGodMode()) {
@@ -98,6 +138,11 @@ public class Health {
 
     }
 
+    /**
+     * When upgrading health, XP level must be >= health level to purchase upgrade.
+     * 10 is max health
+     * @return
+     */
     private static int getLevel() {
 
         //TODO Possibly find a better way to calculate and execute this whole 'upgrade health' section later
@@ -130,6 +175,9 @@ public class Health {
         }
     }
 
+    /**
+     * Health upgrade menu
+     */
     public static void upgrade() {
         while (true) {
 

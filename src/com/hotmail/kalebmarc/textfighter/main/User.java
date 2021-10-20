@@ -9,6 +9,10 @@ public class User {
     //field to indicate if player is the program default player (-1) or a user selected player
     private static int playerDefault = -1;
 
+    /**
+     * Getting players name.
+     * @return string players name.
+     */
     public static String name() {
         return playerName;
     }
@@ -17,11 +21,18 @@ public class User {
         return playerDefault;
     }
 
+    /**
+     * Set players name.
+     * @param name Users input for their name
+     */
     public static void setName(String name) {
         playerName = name;
         playerDefault = 1;
     }
 
+    /**
+     * Prompt user to enter players name.
+     */
     public static void promptNameSelection() {
 
         Ui.cls();

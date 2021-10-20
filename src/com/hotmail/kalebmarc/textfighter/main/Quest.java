@@ -41,6 +41,11 @@ public class Quest {
         QuestList.add(this);
     }
 
+    /**
+     *
+     * @param npcName
+     * @return
+     */
     public static boolean checkQuestsForNPC(String npcName) {
         boolean check = false;
         int i = 0;
@@ -58,6 +63,10 @@ public class Quest {
         return check;
     }
 
+    /**
+     *
+     * @return int level required to go on a specific quest.
+     */
     public int getMinLevelReq() {
         return minLevelReq;
     }

@@ -10,12 +10,22 @@ public class Coins {
     private Coins() {
     }
 
-    //Return the current amount of coins
+
+    /**
+     * Gets the players current amount of coins
+     * @return int players coins
+     */
     public static int get() {
         return coins;
     }
 
-    // Adding coins to a player and updating player stats.
+
+    /**
+     * Setting the amount of coins a player has, updating player stats.
+     * @param amount amount of coins player will have
+     * @param add true if player is withdrawing coins, taking coins from enemy, purchasing items.
+     *            false when a player uses cheat to increase coin amount.
+     */
     public static void set(int amount, boolean add) {
         if (!add) {
             coins = amount;

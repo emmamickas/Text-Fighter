@@ -91,14 +91,25 @@ public class Weapon implements Comparable<Weapon> {
         }
     }
 
+    /**
+     * Get current weapon.
+     * @return current weapon
+     */
     public static Weapon get() {
         return current;
     }
 
+    /**
+     *Method is  not used.
+     */
     static int getIndex(Weapon i) {
         return arrayWeapon.indexOf(i);
     }
 
+    /**
+     * Set current weapon
+     * @param x weapon chosen by player.
+     */
     public static void set(Weapon x) {
         current = x;
     }
@@ -107,6 +118,9 @@ public class Weapon implements Comparable<Weapon> {
         current = arrayWeapon.get(i);
     }
 
+    /**
+     * Display weapons to choose from.
+     */
     public static void choose() {
         while (true) {
             Ui.cls();
@@ -159,25 +173,45 @@ public class Weapon implements Comparable<Weapon> {
         }
     }
 
+    /**
+     * Display player has run out of ammo.
+     */
     private static void noAmmo() {
         Ui.popup("You've run out of ammo!", "Warning", JOptionPane.WARNING_MESSAGE);
         Weapon.current = Weapon.starting;
     }
 
+    /**
+     * Display how much ammo current weapon has.
+     */
     public static void displayAmmo() {
         if (!(Weapon.get().melee)) {
             Ui.println("     Ammo: " + Weapon.get().getAmmo());
         }
     }
 
+    /**
+     * Gets the weapons name
+     * @return string weapons name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Checks if player owns a certain weapon
+     * @return true if the player owns the weapon.
+     * false if the player doesn't own the weapon.
+     */
     public boolean owns() {
         return owns;
     }
 
+    /**
+     * Sets ammo amount when purchasing ammo.
+     * @param amount amount of ammo purchased. negative number is ammo was used.
+     * @param add true if ammo is purchased. False if ammo was accumulated from cheat.
+     */
     public void setAmmo(int amount, boolean add) {
         if (this.melee) return;
         if (add) {
@@ -187,14 +221,27 @@ public class Weapon implements Comparable<Weapon> {
         }
     }
 
+    /**
+     * Gets the ammo amount.
+     * @return int amount of ammo player has.
+     */
     public int getAmmo() {
         return this.ammo;
     }
 
+    /**
+     * Gets the damage dealt to an enemy after a fight
+     * @return int how much damage was dealt to enemy.
+     */
     public int getDamageDealt() {
         return this.damageDealt;
     }
 
+    /**
+     * Calculates how much damage was dealt according to which kind of fight took place.
+     * Melee is a random number generated between minimum and maximum damage allotted.
+     * Gun attack is determined by ammo used and if there was a critical hit.
+     */
     public void dealDam() {
 
         if (this.melee) {
@@ -250,6 +297,9 @@ public class Weapon implements Comparable<Weapon> {
         damageDealt = 0;
     }
 
+    /**
+     * Displays critical hit has happened.
+     */
     private void criticalHit() {
 
         if (wasCriticalHit()) {
@@ -267,10 +317,18 @@ public class Weapon implements Comparable<Weapon> {
         }
     }
 
+    /**
+     * Determines if a critical hit has taken place.
+     *
+     * @return true if there was a critical hit
+     */
     private boolean wasCriticalHit() {
         return Random.RInt((int) (100 / this.critChanceMultiplier)) == 1;
     }
 
+    /**
+     * Displays information about weapons in the Help section.
+     */
     public void viewAbout() {
 
         final int BORDER_LENGTH = 39;
@@ -294,6 +352,10 @@ public class Weapon implements Comparable<Weapon> {
         //End of weapon Info
     }
 
+    /**
+     * Gets the damage information
+     * @return string that displays minimum and maximum damage.
+     */
     private String getDamage() {
         if (this.melee) {
             return (this.damageMin + " - " + this.damageMax);
@@ -306,10 +368,17 @@ public class Weapon implements Comparable<Weapon> {
         }
     }
 
+    /**
+     * Checks if an item is available at the shop.
+     * @return true if a player has a high enough level and enough coins to purchase weapon.
+     */
     public boolean isBuyable() {
         return this.buyable;
     }
 
+    /**
+     * Purchase weapon if player doesn't already own it, has high enough level and has enough coins,
+     */
     public void buy() {
         if (!isBuyable()) {
             Ui.msg("Sorry, this item is no longer in stock.");
@@ -343,6 +412,9 @@ public class Weapon implements Comparable<Weapon> {
 
     }
 
+    /**
+     * Purchases ammo is player is at high enough level and has enough coins.
+     */
     public void buyAmmo() {
 
         Ui.cls();

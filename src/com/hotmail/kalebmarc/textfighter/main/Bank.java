@@ -96,11 +96,21 @@ public class Bank {
         }
     }
 
+    /**
+     * Retrieves current coin balance
+     * @return int The total number of coins
+     */
     public static int get() {
         return balance;
     }
 
-    // If user is withdrawing from the bank, a negative number will be added to the balance.
+    /**
+     * Updates players balance of coins
+     *
+     * @param amount the current player balance.
+     * @param add add will be false when user saves game to local repository,
+     *            add will be true when player is adding coins to bank
+     */
     public static void set(int amount, boolean add) {
         if (!add) {
             balance = amount;
@@ -110,13 +120,23 @@ public class Bank {
         }
     }
 
+    /**
+     * Sets interest during initial game setup.
+     *
+     * @param price the current interest rate
+     */
     public static void setInterest(double price) {
         interest = price;
     }
 
 
-    // User is withdrawing from their bank account. Their bank will deduct the amount and coins will be added to
-    //the player for use in the game.
+
+    /**
+     *  User is withdrawing from their bank account.
+     *  Their bank will deduct the amount and coins will be added to the player for use in the game.
+     *
+     * @param amount total number of coins player is withdrawing from bank account.
+     */
     private static void withdraw(int amount) {
 
         Coins.set(amount, true);
@@ -131,8 +151,14 @@ public class Bank {
         Ui.pause();
     }
 
-    //A player can deposit coins into the bank, so they will be used later if a player dies.
-    // Player will need to pay a fee in order to deposit coins in the bank account.
+
+    /**
+     *  A player can deposit coins into the bank, so they will be used later if a player dies.
+     *  Player will need to pay a fee in order to deposit coins in the bank account.
+     *
+     * @param amount total number of coins player is depositing into bank account
+     * @param interest current interest rate
+     */
     private static void deposit(int amount, double interest) {
 
         //

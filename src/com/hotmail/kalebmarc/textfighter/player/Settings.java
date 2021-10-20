@@ -14,6 +14,9 @@ public class Settings {
     private Settings() {
     }
 
+    /**
+     * Settings menu.
+     */
     public static void menu() {
         while (true) {
 
@@ -53,11 +56,20 @@ public class Settings {
         }
     }
 
+    /**
+     * Setting difficulty a player will play the game at.
+     * @param dif hard or easy
+     * @param firstInit true if difficulty hasn't been changed.
+     * @param switchDif false, switching difficulties.
+     */
     public static void setDif(String dif, boolean firstInit, boolean switchDif) {
         difficulty = dif;
         setConstants(dif, firstInit, switchDif);
     }
 
+    /**
+     * Switching difficulties from Hard to Easy or Easy to Hard.
+     */
     private static void switchDif() {
         /*
          * Make sure difficulty isn't locked
@@ -74,6 +86,9 @@ public class Settings {
         }
     }
 
+    /**
+     * Locking difficulties so player must continue on the difficulty they chose.
+     */
     private static void lockDif() {
         /*
 		 * Make sure difficulty isn't already locked
@@ -100,6 +115,9 @@ public class Settings {
         }
     }
 
+    /**
+     * Lock cheats so player cannot use any.
+     */
     private static void lockCheats() {
         /*
 		 * Make sure cheats aren't already locked
@@ -134,10 +152,20 @@ public class Settings {
         }
     }
 
+    /**
+     * Gets the difficulty the player is currently playing on.
+     * @return string difficulty the player is using,
+     */
     public static String getDif() {
         return difficulty;
     }
 
+    /**
+     * Set constants according to which level of difficulty a player has chosen.
+     * @param dif hard or easy.
+     * @param firstInit true if player initialized game with current difficulty.
+     * @param changeDif false if a player has initialized the game with current difficulty.
+     */
     private static void setConstants(String dif, boolean firstInit, boolean changeDif) {
         if (dif.equals("Easy")) {//Sets variables for EASY mode
 
@@ -241,6 +269,9 @@ public class Settings {
         if (firstInit) newGameSetup();
     }
 
+    /**
+     * Initializing the players game setup.
+     */
     private static void newGameSetup() {
 
         Coins.set(50, false);

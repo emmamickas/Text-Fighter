@@ -28,10 +28,17 @@ class Version {
     private Version() {
     }
 
+    /**
+     * Get version of game
+     * @return string current version of game.
+     */
     public static String get() {
         return VERSION;
     }
 
+    /**
+     * Method is not used.
+     */
     public static String getStage() {
         return STAGE;
     }

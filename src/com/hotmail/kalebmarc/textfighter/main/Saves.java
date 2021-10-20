@@ -27,6 +27,9 @@ public class Saves {
 	private static String path;
 	private static Yaml yaml;
 
+	/**
+	 * Saves all attributes to local repository.
+	 */
 	public static void save() {
 
 		path = Saves.class.getProtectionDomain().getCodeSource().getLocation().getPath() + ".TFsave";
@@ -179,6 +182,10 @@ public class Saves {
 		}
 	}
 
+	/**
+	 * Loads all attributes from local repository.
+	 * @return true if all attributes were set.
+	 */
 	public static boolean load() {
 		setup();
 
@@ -376,6 +383,10 @@ public class Saves {
 		return true;
 	}
 
+	/**
+	 * Converting a saved file
+	 * @return true if successful.
+	 */
 	public static boolean convert() {
 		Ui.cls();
 		Ui.println("------------------------------------");
@@ -516,6 +527,9 @@ public class Saves {
 		return true;
 	}
 
+	/**
+	 *Method is not used.
+	 */
 	public static boolean contains(String key) {
 		return data.containsKey(key);
 	}
@@ -524,6 +538,11 @@ public class Saves {
 		return data != null;
 	}
 
+	/**
+	 * Used when loading saved game,
+	 * @param key Current setting that is being read from saved file
+	 * @return true if setting was set to true. False if setting was set to false.
+	 */
 	public static boolean getBoolean(String key) {
 		Object tempObject = get(key);
 
@@ -542,16 +561,26 @@ public class Saves {
 		return false;
 	}
 
+	/**
+	 *Method is not used
+	 */
 	public static boolean hasValue(String key) {
 		Object tempObject = data.get(key);
 
 		return (tempObject != null);
 	}
 
+	/**
+	 *
+	 * @return true if it is empty.
+	 */
 	public static boolean isEmpty() {
 		return data.isEmpty() || data == null;
 	}
 
+	/**
+	 *Method is not used.
+	 */
 	public static byte getByte(String key) {
 		Object tempObject = get(key);
 
@@ -564,7 +593,9 @@ public class Saves {
 			return Byte.parseByte(tempObject.toString());
 		return -1;
 	}
-
+	/**
+	 *Method is not used.
+	 */
 	public static char getChar(String key) {
 		Object tempObject = get(key);
 
@@ -576,7 +607,9 @@ public class Saves {
 			return tempObject.toString().charAt(0);
 		return '\u0000';
 	}
-
+	/**
+	 *Method is not used.
+	 */
 	public static double getDouble(String key) {
 		Object tempObject = get(key);
 
@@ -590,6 +623,11 @@ public class Saves {
 		return -1;
 	}
 
+	/**
+	 * Used when loading an integer from a saved file.
+	 * @param key current attribute being loaded from file
+	 * @return Integer that was saved for that specific setting.
+	 */
 	public static int getInteger(String key) {
 		Object tempObject = get(key);
 
@@ -610,7 +648,9 @@ public class Saves {
 			return (List) tempObject;
 		return null;
 	}
-
+	/**
+	 *Method is not used.
+	 */
 	public static long getLong(String key) {
 		Object tempObject = get(key);
 
@@ -623,7 +663,9 @@ public class Saves {
 			return Long.parseLong(tempObject.toString());
 		return -1;
 	}
-
+	/**
+	 *Method is not used.
+	 */
 	public static Map<?, ?> getMap(String key) {
 		Object tempObject = get(key);
 
@@ -631,7 +673,9 @@ public class Saves {
 			return (Map) tempObject;
 		return null;
 	}
-
+	/**
+	 *Method is not used.
+	 */
 	public static Map<String, Object> getValues() {
 		if (!isEmpty())
 			return data;
@@ -659,13 +703,17 @@ public class Saves {
 		}
 		return null;
 	}
-
+	/**
+	 *Method is not used.
+	 */
 	public static Set<String> getKeys() {
 		if (!isEmpty())
 			return data.keySet();
 		return new HashSet<>();
 	}
-
+	/**
+	 *Method is not used.
+	 */
 	public static short getShort(String key) {
 		Object tempObject = get(key);
 
@@ -687,6 +735,11 @@ public class Saves {
 		return null;
 	}
 
+	/**
+	 * Reads next file
+	 * @param file file being read.
+	 * @return next file
+	 */
 	public static FileReader read(File file) {
 		try {
 			if (!file.exists())

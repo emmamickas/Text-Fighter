@@ -33,6 +33,9 @@ public class Stats {
     private Stats() {
     }
 
+    /**
+     * Display Player Stat menu
+     */
     public static void view() {
 
         updateKillDeathRatio();

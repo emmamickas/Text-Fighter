@@ -3,6 +3,9 @@ package com.hotmail.kalebmarc.textfighter.main;
 import com.hotmail.kalebmarc.textfighter.item.Armour;
 import com.hotmail.kalebmarc.textfighter.player.Achievements;
 
+/**
+ * Displays information on the attributes of this game according to the users' selection.
+ */
 class Help {
     private Help() {
     }

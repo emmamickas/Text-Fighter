@@ -68,18 +68,32 @@ public class Enemy {
         }
     }
 
+    /**
+     * Sets which enemy the player is going to interact with
+     * @param i index at which the enemy is.
+     */
     public static void set(int i) {
         current = arrayEnemy.get(i);
     }
 
+    /**
+     * Gets the current enemy.
+     * @return Current enemy player is going to interact with.
+     */
     public static Enemy get() {
         return current;
     }
 
+    /**
+     * getIndex is an unused method.
+     */
     public static int getIndex(Enemy i) {
         return arrayEnemy.indexOf(i);
     }
 
+    /**
+     * Finds a suitable enemy for a player according to the players experience e.g. players current level
+     */
     public static void findEnemy() {
         int playerLevel = Xp.getLevel();
         ArrayList<Enemy> suitableEnemies = new ArrayList<>();
@@ -92,6 +106,9 @@ public class Enemy {
         current = suitableEnemies.get(Random.RInt(0, suitableEnemies.size() -1));
     }
 
+    /**
+     * If a player is encountering an enemy they haven't met yet, they will get an introduction of enemy.
+     */
     public static void encounterNew() {
 
         findEnemy();
@@ -111,6 +128,13 @@ public class Enemy {
         }
     }
 
+    /**
+     *
+     * @param damage negative number is enemy uses a first aid kit, enemies health increases
+     * @param damage pseudo random positive number determined by which weapon was used.
+     * @return returns true if enemy dies.
+     *         returns false is enemy lives.
+     */
     public boolean takeDamage(int damage) {
         this.health -= damage;
         if (this.health <= 0) {
@@ -120,11 +144,17 @@ public class Enemy {
         return false;
     }
 
+    /**
+     * Pseudo random positive number that is the amount of damage inflicted on player during a fight.
+     */
     void dealDamage() {
         int damage = Random.RInt(this.damageMin, this.damageMax);
         Health.takeDamage(damage);
     }
 
+    /**
+     * If enemy dies player gets a reward, players xp increases and player stats are updated.
+     */
     private void die() {
 
         //Get rewards & store in temp vars
@@ -159,9 +189,12 @@ public class Enemy {
 
         encounterNew();
     }
-    /*If enemy uses first aid kit.
-    Return true if enemy uses kit
-    Return false if enemy doesn't have any first aid kits.
+
+
+    /**
+     * If enemy uses first aid kit.
+     * @return Return true if enemy uses kit
+     * Return false if enemy doesn't have any first aid kits to use.
      */
     public boolean useFirstAidKit(){
         if (this.firstAidKit <= 0) {
@@ -174,45 +207,83 @@ public class Enemy {
         }
     }
 
+    /**
+     * First aid kit Getter
+     * @return number of first aid kits enemy has.
+     */
     public int getFirstAidKit(){
         return this.firstAidKit;
     }
 
+    /**
+     * First aid kit Setter
+     * @param amount sets the number of first aid kits enemy has.
+     */
     public void setFirstAidKit(int amount){
         this.firstAidKit = amount;
     }
 
+    /**
+     *Method is not used.
+     */
     public void setDamage(int min, int max) {
         this.damageMin = min;
         this.damageMax = max;
     }
 
+    /**
+     *Method is not used.
+     */
     public void setCoinDrop(int min, int max) {
         this.coinDropMin = min;
         this.coinDropMax = max;
     }
 
+    /**
+     * Used to set health when user uses cheat code or when user wishes to save to local repository.
+     * @param current enemies current health
+     * @param max enemies maximum health
+     */
     public void setHealth(int current, int max) {
         this.health = current;
         this.healthMax = max;
     }
 
+    /**
+     * Gets enemies current health.
+     * @return int enemies current health
+     */
     public int getHealth() {
         return health;
     }
 
+    /**
+     * Returns the max amount of health this enemy can have.
+     * @return int enemies max health
+     */
     public int getHealthMax() {
         return healthMax;
     }
 
+    /**
+     * Shows the current enemies health ratio.
+     * @return string, displays ratio of current health/maximum health
+     */
     public String getHeathStr() {
         return (health + "/" + healthMax);
     }
 
+    /**
+     * Gets the current enemies name.
+     * @return string enemies name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Displays information about Enemy in the Help section.
+     */
     public void viewAbout() {
         final int BORDER_LENGTH = 39;
 

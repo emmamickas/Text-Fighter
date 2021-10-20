@@ -56,6 +56,9 @@ public class Achievements {
 
     }
 
+    /**
+     * Displays the players achievements.
+     */
     public static void view() {
 
         //Displays which achievements the user has gotten
@@ -165,6 +168,9 @@ public class Achievements {
         Ui.pause();
     }
 
+    /**
+     * Checks to see which achievements the user has unlocked at current point in the game.
+     */
     public static void check() {
 
         //Tests achievements if not already unlocked
@@ -209,6 +215,10 @@ public class Achievements {
         Xp.set(100, true);
     }
 
+
+    /**
+     * If user has won a jackpot at the casino Unnatural Luck is unlocked.
+     */
     private static void checkUnnaturalLuck() {
         if(Casino.LOTTERY.getJackpotWon()){
             unnaturalLuck = true;
@@ -216,6 +226,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If user has over $1500 Money Maker is unlocked.
+     */
     private static void checkMoneyMaker() {
         if (Coins.get() >= 1500) {
             moneyMaker = true;
@@ -223,6 +236,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If user has killed over 100 enemies Enemy Slayer is unlocked.
+     */
     private static void checkEnemySlayer() {
         if (Stats.totalKills >= 100) {
             enemySlayer = true;
@@ -230,6 +246,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If user has killed their first enemy, First Kill unlocked.
+     */
     private static void checkFirstKill() {
         if (Stats.totalKills >= 1) {
             firstKill = true;
@@ -244,6 +263,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If these achievements have been unlocked, Text Fighter Master is unlocked.
+     */
     private static void checkTextFighterMaster() {
         if (
                 moneyMaker &&
@@ -283,6 +305,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If more than 5 Power has been used, YAY Power is unlocked.
+     */
     private static void checkYAYPOWER() {
         if (com.hotmail.kalebmarc.textfighter.item.Power.used >= 5) {
             YAYPOWER = true;
@@ -290,6 +315,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If User has viewed Achievements information, Aww you care about Me is unlocked.
+     */
     private static void checkAwwYouCareAboutMe() {
         if (viewedAbout) {
             awwYouCareAboutMe = true;
@@ -297,6 +325,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If player has dealt >= 1000 damage, Slayer unlocked.
+     */
     private static void checkSlayer() {
         if (Stats.totalDamageDealt >= 1000) {
             slayer = true;
@@ -304,6 +335,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If player has died > 0 times, Nobody's Perfect unlocked.
+     */
     private static void checkNobodysPerfect() {
         if (Health.timesDied > 0) {
             nobodysPerfect = true;
@@ -311,6 +345,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If player has won more than 1000 coins, Making Money unlocked.
+     */
     private static void checkMakingMoney() {
         if (Casino.totalCoinsWon >= 1000) {
             makingMoney = true;
@@ -318,6 +355,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If player has played more than 75 games at the casino, Gambling Addiction unlocked.
+     */
     private static void checkGamblingAddiction() {
         if (Casino.gamesPlayed >= 75) {
             gamblingAddiction = true;
@@ -325,62 +365,81 @@ public class Achievements {
         }
     }
 
+    /**
+     * If player makes it to level 2, Level 2 Fighter unlocked.
+     */
     private static void checkLevel2Fighter() {
         if (Xp.getLevel() == 2) {
             level2Fighter = true;
             get("Level 2 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 3, Level 3 Fighter unlocked.
+     */
     private static void checkLevel3Fighter() {
         if (Xp.getLevel() == 3) {
             level3Fighter = true;
             get("Level 3 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 4, Level 4 Fighter unlocked.
+     */
     private static void checkLevel4Fighter() {
         if (Xp.getLevel() == 4) {
             level4Fighter = true;
             get("Level 4 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 5, Level 5 Fighter unlocked.
+     */
     private static void checkLevel5Fighter() {
         if (Xp.getLevel() == 5) {
             level5Fighter = true;
             get("Level 5 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 6, Level 6 Fighter unlocked.
+     */
     private static void checkLevel6Fighter() {
         if (Xp.getLevel() == 6) {
             level6Fighter = true;
             get("Level 6 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 7, Level 7 Fighter unlocked.
+     */
     private static void checkLevel7Fighter() {
         if (Xp.getLevel() == 7) {
             level7Fighter = true;
             get("Level 7 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 8, Level 8 Fighter unlocked.
+     */
     private static void checkLevel8Fighter() {
         if (Xp.getLevel() == 8) {
             level8Fighter = true;
             get("Level 8 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 9, Level 9 Fighter unlocked.
+     */
     private static void checkLevel9Fighter() {
         if (Xp.getLevel() == 9) {
             level9Fighter = true;
             get("Level 9 Fighter!");
         }
     }
-
+    /**
+     * If player makes it to level 10, Level 10 Fighter unlocked.
+     */
     private static void checkLevel10Fighter() {
         if (Xp.getLevel() == 10) {
             level10Fighter = true;
@@ -388,6 +447,9 @@ public class Achievements {
         }
     }
 
+    /**
+     * If player keeps the cheats locked, Honest Player unlocked.
+     */
     private static void checkHonestPlayer() {
         if (Cheats.locked()) {
             honestPlayer = true;

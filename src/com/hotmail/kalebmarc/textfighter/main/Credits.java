@@ -1,5 +1,5 @@
 package com.hotmail.kalebmarc.textfighter.main;
-
+//Homage to the creators of Text-Fighter
 class Credits {
 
     public static void view() {

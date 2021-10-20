@@ -10,6 +10,11 @@ public class Ui {
     private Ui() {
     }
 
+    /**
+     * When saving, converting strings that are supposed to be doubles, to a double
+     * @param string Object that parses to a double
+     * @return true if successful
+     */
     public static boolean isDecimalNumber(String string) {
         if (string == null) {
             return false;
@@ -46,6 +51,11 @@ public class Ui {
         return (numOfDot == 1);
     }
 
+    /**
+     * When saving, converting strings that are supposed to be integers, to an integer.
+     * @param string Object that parses to a integer.
+     * @return true if successful
+     */
     public static boolean isNumber(String string) {
         if (string == null) return false;
 

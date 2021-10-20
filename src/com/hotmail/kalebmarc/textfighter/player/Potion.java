@@ -26,6 +26,11 @@ public class Potion {
     private Potion() {
     }
 
+    /**
+     * Get potion type
+     * @param kind type of potion
+     * @return int ty of potion
+     */
     public static int get(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -37,6 +42,12 @@ public class Potion {
         }
     }
 
+    /**
+     * Setting potion types
+     * @param kind recovery or survival
+     * @param amount player starts with 2 of each type.
+     * @param add true if player purchases more, false for all other instances.
+     */
     public static void set(String kind, int amount, boolean add) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -60,6 +71,11 @@ public class Potion {
         }
     }
 
+    /**
+     * If Player chooses to use a potion, Potion.use(s) checks to see if player has any potions available,
+     * if player is at full health potion cannot be used, or if potion can be used.
+     * @param k
+     */
     public static void use(String k) {
         String kind = k.trim().substring(0, 1).toUpperCase()
                 + k.substring(1).toLowerCase();
@@ -105,7 +121,12 @@ public class Potion {
         }
 
     }
-    // Calculating health increase, determined by which potion was purchased.
+
+    /**
+     * Calculates health increase
+     * @param kind type of potion used
+     * @return amount of health that is added to player.
+     */
     public static double healBy(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -118,7 +139,12 @@ public class Potion {
     }
 
 
-    // Updating stats for the amount of potions that have been used.
+
+
+    /**
+     * Updating stats for the amount of potions that have been used.
+     * @param kind Type of potion that was used.
+     */
     public static void used(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -128,6 +154,11 @@ public class Potion {
         }
     }
 
+    /**
+     * Purchasing potions. Potion.buy(k) ensures player is at a high enough level to purchase potions
+     * and if player has enough coins ot purchase potion.
+     * @param kind Type of potion player wishes to purchase.
+     */
     public static void buy(String kind) {
 
         int level = getLevel(kind);
@@ -148,7 +179,13 @@ public class Potion {
         }
     }
 
-    // Level for potions are calculated according to which difficulty a player is using.
+
+
+    /**
+     * Level for potions are calculated according to which game difficulty a players settings are set to.
+     * @param kind type of potion
+     * @return level needed to use potions.
+     */
     public static int getLevel(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -160,7 +197,12 @@ public class Potion {
         }
     }
 
-    // Price of potions are calculated according to which difficulty a player is using.
+
+    /**
+     * Price of potions are calculated according to which game difficulty a players settings are set to
+     * @param kind type of potion
+     * @return Price of that potion
+     */
     public static int getPrice(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":

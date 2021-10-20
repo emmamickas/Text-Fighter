@@ -76,25 +76,52 @@ public class Food {
         }
     }
 
+    /**
+     *
+     * @return name of food in players chest.
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     *
+     * @return int the number of effect level points gained from food.
+     */
     public int getEffectLevel() {
         return effectLevel;
     }
 
+    /**
+     *
+     * @return status effects include: health, strength, stamina, accuracy and luck.
+     */
     public StatusEffect.type getStatusEffect() {
         return statusEffect;
     }
 
+    /**
+     *
+     * @return int quantity of food player has in their chest.
+     */
     public int getQuantity() {
         return quantity;
     }
 
+    /**
+     * Set quantity of food using a cheat.
+     *
+     * @param quantity = 5000 with cheat code "givemeitall"
+     * @param quantity = 100 with cheat code "nomorepain"
+     *@param quantity = 10 with cheat code "thirstforfood"
+     */
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    /**
+     * Display player has eaten and what effects that has on player.
+     */
     public void eat() {
         Ui.cls();
 
@@ -120,6 +147,9 @@ public class Food {
 
     }
 
+    /**
+     * Displays Food information in the "Help" section.
+     */
     public void viewAbout() {
 
         final int BORDER_LENGTH = 39;
@@ -142,10 +172,19 @@ public class Food {
         this.setViewed(true);
     }
 
+    /**
+     * Unused method
+     * @return boolean
+     */
     public boolean viewedAbout() {
         return this.viewedAbout;
     }
 
+    /**
+     *
+     * @param v if viewAbout() is used in the Help section, viewedAbout is set to true.
+     *          if viewAbout() hasn't been seen in the Help section, viewAbout remains false.
+     */
     public void setViewed(boolean v) {
         this.viewedAbout = v;
     }

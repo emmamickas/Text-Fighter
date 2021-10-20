@@ -20,6 +20,9 @@ class Shop {
     private Shop() {
     }
 
+    /**
+     * Display shop menu
+     */
     public static void menu() {
         while (true) {
             Ui.cls();
@@ -62,6 +65,9 @@ class Shop {
         }
     }
 
+    /**
+     * Display health shop menu
+     */
     private static void health() {
 
         while (true) {
@@ -124,6 +130,9 @@ class Shop {
         }
     }
 
+    /**
+     * Display weapons shop menu
+     */
     private static void weapons() {
         while (true) {
             Ui.cls();
@@ -186,6 +195,9 @@ class Shop {
         }
     }
 
+    /**
+     * Display XP shop menu
+     */
     private static void xp() {
 
         //Makes sure player has enough money
@@ -247,6 +259,9 @@ class Shop {
         }
     }
 
+    /**
+     * Display ammo shop menu
+     */
     private static void buyAmmo() {
 
 
@@ -292,6 +307,10 @@ class Shop {
             }
         }
     }
+
+    /**
+     * Display property shop menu
+     */
     private static void property(){
         while (true){
 
@@ -310,6 +329,10 @@ class Shop {
             return;
         }
     }
+
+    /**
+     * Display armour shop menu
+     */
     private static void armour() {
         while (true) {
             Ui.cls();

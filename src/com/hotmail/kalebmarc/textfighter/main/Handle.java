@@ -6,6 +6,10 @@ public class Handle {
     private Handle() {
     }
 
+    /**
+     * Displays error message.
+     * @param e error that has occurred.
+     */
     public static void error(String e) {
         System.err.println(e);
         Ui.popup(e, "An error has occurred", JOptionPane.WARNING_MESSAGE);

@@ -2,8 +2,9 @@ package com.hotmail.kalebmarc.textfighter.main;
 
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
-/*
-Loan class is used as a tool for players to save coins. If a player saves coins then they can retrieve coins after death.
+/**
+Loan class is used as a tool for players to save coins.
+If a player saves coins then they can retrieve coins after death.
 Players must pay an interest rate if they have a loan. A player can only have one loan at a time.
  */
 public class Loan {
@@ -42,6 +43,9 @@ public class Loan {
         }
     }
 
+    /**
+     * Create a loan for the user if requested. A user can only have one loan.
+     */
     private static void createLoan() {
 
         if (hasLoan()) {
@@ -74,6 +78,9 @@ public class Loan {
         Ui.pause();
     }
 
+    /**
+     * Pay off loan in full or a portion of the loan. Player cannot deposit coins until loan is paid.
+     */
     private static void payLoan() {
         if (getGrossDue() == 0) {
             Ui.println("You must enter at least 1 coin.");
@@ -112,30 +119,59 @@ public class Loan {
         Ui.pause();
     }
 
+    /**
+     * Max Loan is the players level * 100
+     * @return int max loan amount is determined by the players current level
+     */
     private static int getMaxLoan() {
         return Xp.getLevel() * 100;
     }
 
+    /**
+     * Get the players current loan.
+     * @return int Players current loan amount
+     */
     public static int getCurrentLoan() {
         return currentLoan;
     }
 
+    /**
+     * Set the players current loan amount
+     * @param loan int loan amount
+     */
     public static void setCurrentLoan(int loan) {
         currentLoan = loan;
     }
 
+    /**
+     * Checks to see if the Player has a loan.
+     * @return true if player currently has a loan. Player cannot have > 1 loans
+     * @return false if player doesn't have outstanding loan amount.
+     */
     public static boolean hasLoan() {
         return getCurrentLoan() > 0;
     }
 
+    /**
+     * Getting total loan amount, loan + interest
+     * @return int total amount owed to the bank.
+     */
     public static int getGrossDue() {
         return (int) (netDue + (netDue * INTEREST_RATE));
     }
 
+    /**
+     * Getting net amount owed to the bank. (Loan amount)
+     * @return int loaned amount
+     */
     public static int getNetDue() {
         return netDue;
     }
 
+    /**
+     * Setting loan amount
+     * @param due loan amount
+     */
     public static void setNetDue(int due) {
         netDue = due;
     }
