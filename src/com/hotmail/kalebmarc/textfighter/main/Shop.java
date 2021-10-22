@@ -169,7 +169,7 @@ class Shop {
 
                 int menuItem = Ui.getValidInt();
 
-                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program.. Use variables!
+                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program. Use variables!
 
                     //choices other than options in the array go here:
                     if (menuItem == (j + 1))
@@ -179,7 +179,7 @@ class Shop {
                     if (menuItem == (j + 3) || menuItem > j)
                         return;
 
-                    //reverts back to Weapon indexing
+                    //reverts to Weapon indexing
                     menuItem--;
                     menuItem = menuItem + offset[menuItem];
 
@@ -289,7 +289,7 @@ class Shop {
 
                 int menuItem = Ui.getValidInt();
 
-                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program.. Use variables!
+                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program. Use variables!
                     validWeapons.get(menuItem - 1).buyAmmo();
                     NPC.gratitude("Weapon", "purchase");
                     break;
@@ -369,7 +369,7 @@ class Shop {
                     if (menuItem == j + 1 || menuItem > j)
                         return;
 
-                    //reverts back to armour indexing
+                    //reverts to armour indexing
                     menuItem--;
                     menuItem = menuItem + armourShopOffset[menuItem];
 

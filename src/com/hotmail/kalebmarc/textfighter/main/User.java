@@ -22,6 +22,7 @@ public class User {
     }
 
     /**
+     * Method is never used
      * Set players name.
      * @param name Users input for their name
      */

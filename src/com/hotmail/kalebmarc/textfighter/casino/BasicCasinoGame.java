@@ -86,7 +86,7 @@ public abstract class BasicCasinoGame {
      * @return int The option the user has to pick in order to exit to the casino menu
      */
     protected abstract int getExitEntry();
-
+    // Method is never used.
     public String getDescription() {
         return description;
     }
@@ -94,7 +94,7 @@ public abstract class BasicCasinoGame {
     public String getHeader() {
         return header;
     }
-
+    // Method is never used.
     public String getOptions() {
         return options;
     }

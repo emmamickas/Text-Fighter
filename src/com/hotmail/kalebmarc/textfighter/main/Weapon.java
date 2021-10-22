@@ -177,7 +177,7 @@ public class Weapon implements Comparable<Weapon> {
                     if (menuItem == (j + 1) || menuItem > j)
                         return;
 
-                    //reverts back to Weapon indexing
+                    //reverts to Weapon indexing
                     menuItem--;
                     menuItem = menuItem + offset[menuItem];
 

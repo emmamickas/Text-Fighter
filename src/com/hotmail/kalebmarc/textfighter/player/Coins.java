@@ -4,6 +4,7 @@ package com.hotmail.kalebmarc.textfighter.player;
 public class Coins {
 
     private static int coins;
+    //Field has no usage
     private static int bank;
 
 

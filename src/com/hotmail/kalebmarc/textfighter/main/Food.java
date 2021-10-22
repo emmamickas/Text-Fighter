@@ -45,13 +45,13 @@ public class Food {
 
                 int menuItem = Ui.getValidInt();
 
-                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program.. Use variables!
+                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program. Use variables!
 
                     //choices other than options in the array go here:
                     if (menuItem == (j + 1) || menuItem > j)
                         return;
 
-                    //reverts back to Weapon indexing
+                    //reverts to Weapon indexing
                     menuItem--;
                     menuItem = menuItem + offset[menuItem];
 

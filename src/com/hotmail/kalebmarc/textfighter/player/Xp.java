@@ -112,7 +112,7 @@ public class Xp {
 	/**
 	 * Setter for current, outOf, level.
 	 * @param current amount of xp player has accumulated
-	 * @param outOf total xp needed to to level up
+	 * @param outOf total xp needed to level up
 	 * @param lvl players current level
 	 */
 	public static void setAll(int current, int outOf, int lvl){

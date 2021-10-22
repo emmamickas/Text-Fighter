@@ -227,7 +227,7 @@ public class Achievements {
     }
 
     /**
-     * If user has over $1500 Money Maker is unlocked.
+     * If user has over $1500 Moneymaker is unlocked.
      */
     private static void checkMoneyMaker() {
         if (Coins.get() >= 1500) {

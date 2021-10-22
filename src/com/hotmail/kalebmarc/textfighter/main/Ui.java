@@ -53,7 +53,7 @@ public class Ui {
 
     /**
      * When saving, converting strings that are supposed to be integers, to an integer.
-     * @param string Object that parses to a integer.
+     * @param string Object that parses to an integer.
      * @return true if successful
      */
     public static boolean isNumber(String string) {
@@ -84,7 +84,7 @@ public class Ui {
      * ways to output information. For example, switching to a GUI application, instead of changing
      * every System.out.println() in the program, you can change just the methods in this class.
      *
-     * Also to control whether popup should actually be a popup or not, based on user preference
+     * Also, to control whether popup should actually be a popup or not, based on user preference
      */
     public static void print(String input) {
         System.out.print(input);
@@ -93,27 +93,29 @@ public class Ui {
     public static void println(String input) {
         print(input + "\n");
     }
-
+    // Method is never used.
     public static void print(int input) {
         print(input + "");
     }
-
+    // Method is never used.
     public static void println(int input) {
         print(input + "\n");
     }
 
+    //Method is never used.
     public static void print(boolean input) {
         print(input + "");
     }
-
+    // Method is never used.
     public static void println(boolean input) {
         print(input + "\n");
     }
 
+   // Method is never used.
     public static void print(double input) {
         print(input + "");
     }
-
+    // Method is never used.
     public static void println(double input) {
         print(input + "\n");
     }

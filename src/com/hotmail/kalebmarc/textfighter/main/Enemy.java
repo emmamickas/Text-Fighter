@@ -63,7 +63,7 @@ public class Enemy {
             arrayEnemy.add(this);
             Achievements.setUpEnemyAch(name, this);
         }
-        if (firstInit) {//Only call if its the first time initializing the enemy. (Not if changing difficulties)
+        if (firstInit) {//Only call if it's the first time initializing the enemy. (Not if changing difficulties)
             this.health = healthMax;
         }
     }
@@ -153,7 +153,7 @@ public class Enemy {
     }
 
     /**
-     * If enemy dies player gets a reward, players xp increases and player stats are updated.
+     * If enemy dies' player gets a reward, players xp increases and player stats are updated.
      */
     private void die() {
 
@@ -266,7 +266,7 @@ public class Enemy {
     }
 
     /**
-     * Shows the current enemies health ratio.
+     * Shows the current enemies' health ratio.
      * @return string, displays ratio of current health/maximum health
      */
     public String getHeathStr() {

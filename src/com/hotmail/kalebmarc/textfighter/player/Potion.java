@@ -104,7 +104,7 @@ public class Potion {
 
             set(kind, -1, true);
 
-            //Increasing players health if a potion has been used.
+            //Increasing players' health if a potion has been used.
             int heal = (int) Math.round(healBy(kind));
             Health.gain(heal);
             used(kind);

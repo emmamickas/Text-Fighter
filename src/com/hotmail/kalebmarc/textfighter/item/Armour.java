@@ -41,7 +41,7 @@ public class Armour {
         return null;
     }
     /**
-     * Getter for all of players armour
+     * Getter for all the players armour
      * @return List of armour
      */
     public static ArrayList<Armour> getArmours() {
@@ -87,9 +87,9 @@ public class Armour {
 
                 int menuItem = Ui.getValidInt();
 
-                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program.. Use variables!
+                try { //This is probably pretty bad practice. Using exceptions as a functional part of the program. Use variables!
 
-                    //reverts back to Weapon indexing
+                    //reverts Weapon indexing
                     menuItem--;
                     menuItem = menuItem + offset[menuItem];
 
@@ -112,6 +112,7 @@ public class Armour {
         return this.name;
     }
     /**
+     * Method is never used.
      * Setter for armours name
      * @param name
      */
@@ -127,6 +128,7 @@ public class Armour {
         return this.price;
     }
     /**
+     * Method is never used.
      * Setter for armours price
      * @param price price of armour
      */
@@ -141,7 +143,9 @@ public class Armour {
         return this.damResist;
     }
     /**
+     *  Method is never used.
      * Setter for damage resistance for an armour
+     *
      */
     public void setDamResist(int damResist) {
         this.damResist = damResist;
@@ -154,6 +158,7 @@ public class Armour {
         return this.level;
     }
     /**
+     *  Method is never used.
      * Setter for level armour can be unlocked
      * @param level
      */

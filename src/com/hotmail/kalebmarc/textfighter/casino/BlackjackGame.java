@@ -105,7 +105,7 @@ public class BlackjackGame extends BasicCasinoGame {
             Ui.println("Value: " + highestPossibleValue(drawnCards));
             Ui.println();
 
-            // Check for too much points
+            // Check for too many points
             if (highestPossibleValue(drawnCards) > 21) {
                 Ui.println("Unfortunately you got more than 21 points, resulting in a total of 0 points!");
                 Ui.pause();
@@ -177,7 +177,7 @@ public class BlackjackGame extends BasicCasinoGame {
             Ui.println("Casino's value: " + highestPossibleValue(drawnCards));
             Ui.println();
 
-            // Check for too much points
+            // Check for too many points
             if (highestPossibleValue(drawnCards) > 21) {
                 Ui.println("The casino drew more than a total of 21, resulting in its loss!");
                 Ui.pause();
