@@ -36,7 +36,22 @@ public class Weapon implements Comparable<Weapon> {
     private int ammoUsed;
     private int ammoPrice;//Per 1
     private int ammoIncludedWithPurchase;
-
+   /**
+    * Weapon constructor for gun weapons
+    * @param name
+    * @param ammoUsed
+    * @param ammoIncludedWithPurchase
+    * @param buyable
+    * @param price
+    * @param ammoPrice
+    * @param level
+    * @param chanceOfMissing
+    * @param critChanceMultiplier
+    * @param critDamMultiplierMin
+    * @param critDamMultiplierMax
+    * @param firstInit
+    * @param changeDif
+    */
     public Weapon(String name, int ammoUsed, int ammoIncludedWithPurchase, boolean buyable, int price, //For guns
                   int ammoPrice, int level, double chanceOfMissing, double critChanceMultiplier, int critDamMultiplierMin, int critDamMultiplierMax, boolean firstInit, boolean changeDif) {
 
@@ -65,7 +80,18 @@ public class Weapon implements Comparable<Weapon> {
         Collections.sort(arrayWeapon);
 
     }
-
+/**
+ * Weapon constructor for melee weapons
+ * @param name
+ * @param startingWeapon
+ * @param buyable
+ * @param price
+ * @param level
+ * @param damageMin
+ * @param damageMax
+ * @param firstInit
+ * @param changeDif
+ */
     public Weapon(String name, boolean startingWeapon, boolean buyable, int price, int level,//For Melee
                   int damageMin, int damageMax, boolean firstInit, boolean changeDif) {
         this.name = name;

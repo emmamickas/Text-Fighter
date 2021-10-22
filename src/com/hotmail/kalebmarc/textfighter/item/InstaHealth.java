@@ -5,7 +5,10 @@ import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Health;
 import com.hotmail.kalebmarc.textfighter.player.Stats;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
-
+/**
+ * InstaHealth class allows player to fully heal themselves
+ *
+ */
 public class InstaHealth {
     public static int used = 0;
     public static int price;
@@ -14,11 +17,19 @@ public class InstaHealth {
 
     private InstaHealth() {
     }
-
+    /**
+     * Getter for InstaHealth
+     * @return number of InstaHealth available
+     */
     public static int get() {
         return instaHealth;
     }
-
+    /**
+     * Setter for InstaHealth
+     * @param amount number of InstaHealth
+     * @param add true if amount is added to the total of InstaHealth available
+     * 		      false if amount is the total of InstaHealth
+     */		      
     public static void set(int amount, boolean add) {
         if (!add) {
             instaHealth = amount;
@@ -27,7 +38,11 @@ public class InstaHealth {
             if (instaHealth < 0) instaHealth = 0;
         }
     }
-
+    /**
+     * Use InstaHealth
+     * Increases Health to 100
+     * Decreases number of InstaHealth available.
+     */
     public static void use() {
 
         Ui.cls();
@@ -68,6 +83,9 @@ public class InstaHealth {
         }
     }
 
+    /**
+     * Purchase InstaHealth if user is at high enough level and has enough coins
+     */
     public static void buy() {
         if (Xp.getLevel() < level) {
             Ui.println("You have to be at least level " + level + " to buy this!");

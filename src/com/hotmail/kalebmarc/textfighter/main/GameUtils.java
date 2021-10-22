@@ -2,15 +2,23 @@ package com.hotmail.kalebmarc.textfighter.main;
 
 import java.util.List;
 
+/*
+* This is a Utility Class for modifying String
+*/
 public class GameUtils {
 
-  /*
-  * This is a Utility Class for modifying String
-  */
+  /**
+   * Prints to console
+   * @param input string to be printed
+   */
   public static void print(String input) {
     System.out.print(input);
   }
 
+  /**
+   * Prints to console, includes to move to the next time
+   * @param input string to be printed
+   */
   public static void println(String input) {
     print(input + "\n");
   }
@@ -43,13 +51,29 @@ public class GameUtils {
     println(center(Constants.DASH_DIVIDER));
   }
 
+  /**
+   * Aligns text to the center
+   * @param s string to be modified
+   * @return modified string that is aligned to the center
+   */
   public static String center(String s) {
     return center(s, 45, ' ');
   }
+  /**
+   * Aligns text to the left.
+   * @param s string to be modified
+   * @return modified string that is aligned to the left
+   */
   public static String leftAlign(String s) {
     return leftAlign(s, 45, ' ');
   }
-
+  /**
+   * Aligns text to the center
+   * @param input string to be modified 
+   * @param size width of "text box"
+   * @param pad padding around text
+   * @return string that is aligned to the center.
+   */
   public static String center(String input, int size, char pad) {
     if (input == null || size <= input.length())
       return input;
@@ -65,7 +89,13 @@ public class GameUtils {
     output.append("|");
     return output.toString();
   }
-
+ /**
+  * Aligns text to the left
+  * @param input string to be modified 
+  * @param size width of "text box"
+  * @param pad padding around text
+  * @return string that is aligned to the left.
+  */
   public static String leftAlign(String input, int size, char pad) {
     if (input == null || size <= input.length())
       return input;

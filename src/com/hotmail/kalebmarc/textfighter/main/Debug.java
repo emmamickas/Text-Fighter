@@ -6,7 +6,10 @@ import com.hotmail.kalebmarc.textfighter.item.Power;
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Settings;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
-
+/**
+ * Debug class is used for Developers to debug program
+ *
+ */
 class Debug {
 
     private static boolean enabled = false;
@@ -14,15 +17,24 @@ class Debug {
     Debug() {
     }
 
+    /**
+     *If current version is a developer version, if so, enable debug menu
+     */
     public static void enable() {
         Ui.println("Enabling debug menu..");
         enabled = true;
     }
-
+    /**
+     * Getter for enable variable
+     * @return enabled.
+     */
     public static boolean enabled() {
         return enabled;
     }
 
+    /**
+     * Displays debug menu
+     */
     public static void menu() {
 
         //Validate

@@ -1,5 +1,7 @@
 package com.hotmail.kalebmarc.textfighter.main;
-
+/**
+ * Status Effect is not utilized
+ */
 public class StatusEffect {
     //Will be used for Stats
     //https://github.com/hhaslam11/Text-Fighter/issues/16

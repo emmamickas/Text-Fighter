@@ -1,5 +1,8 @@
 package com.hotmail.kalebmarc.textfighter.main;
-
+/**
+ * Entry point to program.
+ *
+ */
 class Start {
 
     public static void main(String[] args) {

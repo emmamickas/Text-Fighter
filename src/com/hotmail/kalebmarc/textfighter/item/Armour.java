@@ -7,7 +7,10 @@ import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
 
 import java.util.ArrayList;
-
+/**
+ * Armour class is a defense mechanism for player
+ *Armour can be purchased. Better armour is available when player levels up
+ */
 public class Armour {
 
     private static ArrayList<Armour> armours = new ArrayList<>(3);
@@ -25,7 +28,11 @@ public class Armour {
         this.level = level;
         armours.add(this);
     }
-
+    /**
+     * Helper function for get()
+     * Player choosing armour to use
+     * @return chosen armour
+     */
     public static Armour getEquipped() {
         for (Armour i : armours) {
             if (i.isEquipped()) return i;
@@ -33,19 +40,30 @@ public class Armour {
         Handle.error("Error - No armour equipped");
         return null;
     }
-
+    /**
+     * Getter for all of players armour
+     * @return List of armour
+     */
     public static ArrayList<Armour> getArmours() {
         return armours;
     }
-
+    /**
+     * Getter for armour player chooses
+     * @return index of armour in List armours
+     */
     public static int get() {
         return armours.indexOf(getEquipped());
     }
-
+    /**
+     * Sets which armour player is equipped with
+     * @param i index at chosen armour
+     */
     public static void set(int i) {
         armours.get(i).equipped = true;
     }
-
+    /**
+     * UI for player to choose armour to be equipped with
+     */
     public static void choose() {
         while (true) {
             Ui.cls();
@@ -86,48 +104,80 @@ public class Armour {
             }
         }
     }
-
+    /**
+     * Getter for armours name
+     * @return armours name
+     */
     public String getName() {
         return this.name;
     }
-
+    /**
+     * Setter for armours name
+     * @param name
+     */
     public void setName(String name) {
         if (name.equals("")) return;
         this.name = name;
     }
-
+    /**
+     * Getter for armours price
+     * @return price of armour
+     */
     public int getPrice() {
         return this.price;
     }
-
+    /**
+     * Setter for armours price
+     * @param price price of armour
+     */
     public void setPrice(int price) {
         this.price = price;
     }
-
+    /**
+     * Getter for damage resistance for an armour
+     * @return armours damage resistance
+     */
     public int getDamResist() {
         return this.damResist;
     }
-
+    /**
+     * Setter for damage resistance for an armour
+     */
     public void setDamResist(int damResist) {
         this.damResist = damResist;
     }
-
+    /**
+     * Getter for level armour can be unlocked
+     * @return level armour can be unlocked
+     */
     public int getLevel() {
         return this.level;
     }
-
+    /**
+     * Setter for level armour can be unlocked
+     * @param level
+     */
     public void setLevel(int level) {
         this.level = level;
     }
-
+    /**
+     * Checks to see if player owns armour
+     * @return true if player owns the armour
+     */
     public boolean isOwns() {
         return this.owns;
     }
-
+    /**
+     * Setter for owns 
+     * @param owns true if player buys armour
+     */
     public void setOwns(boolean owns) {
         this.owns = owns;
     }
-
+    /**
+     * Checks which armour player is using
+     * @return true if player is currently using armour
+     */
     public boolean isEquipped() {
         return this.equipped;
     }
@@ -157,7 +207,9 @@ public class Armour {
         getEquipped().unequip();
         this.equipped = true;
     }
-
+    /**
+     * Used when player has switched to a new armour
+     */
     public void unequip() {
         this.equipped = false;
     }
@@ -166,7 +218,11 @@ public class Armour {
         if (this.getName().equals("None")) return "No armour";
         return this.getName() + " armour";
     }
-
+    /**
+     * Menu to purchase armour
+     * @return true if player purchases armour
+     * 		   false if player isn't able to purchase armour
+     */
     public boolean buy() {
         if (Xp.getLevel() < this.getLevel()) {
             Ui.println("You have to be at least level " + this.getLevel() + " to buy this!");
@@ -189,7 +245,9 @@ public class Armour {
             return false;
         }
     }
-
+    /**
+     * Armour information in the Help Section.
+     */
     public void viewAbout() {
 
         final int BORDER_LENGTH = 39;

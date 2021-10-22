@@ -18,11 +18,19 @@ public class FirstAid {
 
     private FirstAid() {
     }
-
+    /**
+     * Getter for first aid kits
+     * @return number of first aid kits available
+     */
     public static int get() {
         return firstAid;
     }
-
+    /**
+     * Setter for first aid kits
+     * @param amount number of first aid kits
+     * @param add true if amount is added to total number of first aid kits
+     * 			  false if amount is the total number of first aid kits.
+     */		  
     public static void set(int amount, boolean add) {
         if (!add) {
             firstAid = amount;
@@ -31,7 +39,11 @@ public class FirstAid {
             if (firstAid < 0) firstAid = 0;
         }
     }
-
+    /**
+     * Uses first aid kit on player or enemy
+     * Increases health by 20 points
+     * Decreases number of first aid kits available
+     */
     public static void use() {
 
         Ui.cls();
@@ -73,7 +85,9 @@ public class FirstAid {
         }
 
     }
-
+    /**
+     * Purchase first aid kit if player is at high enough level and has enough coins
+     */
     public static void buy() {
         if (Xp.getLevel() < level) {
             Ui.println("You have to be at least level " + level + " to buy this!");

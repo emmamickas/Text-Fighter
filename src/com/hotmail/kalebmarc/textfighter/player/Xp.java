@@ -21,6 +21,10 @@ public class Xp {
     private Xp() {
     }
 
+    /**
+     * Every 500 xp, player moves to the next level.
+     * 100 coins are rewarded.
+     */
     private static void levelUp() {
         if (level == 9) {
             Ui.popup("You've reached level 10!\nYou have been rewarded 250 coins!", "Level Up!", JOptionPane.INFORMATION_MESSAGE);
@@ -44,6 +48,12 @@ public class Xp {
 		Achievements.check();
 	}
 
+    /**
+     * Setter for xp
+     * @param amount amount to xp points
+     * @param add if true amount is added to total xp, 
+     *            if false amount is the total xp.
+     */
 	public static void set(int amount, boolean add) {
 
         if((level == 100) || Cheats.enabled()){
@@ -62,11 +72,21 @@ public class Xp {
 		}
 
 	}
-	
+	/**
+	 * battleXP is the xp accumulated from fighting enemies.
+	 * Getter for battleXp
+	 * @return int total battleXP
+	 */
 	public static int getBattleXp() {
 		return battleXp;
 	}
 	
+	/**
+	 * Setter for battleXP.
+	 * @param amount xp gained
+	 * @param add if true amount is added to total battleXp, 
+     *            if false amount is the total battleXp.
+	 */
 	public static void setBattleXp(int amount, boolean add) {
 		if(add) {
 			battleXp += amount;
@@ -75,31 +95,57 @@ public class Xp {
 		}
 	}
 
+	/**
+	 * Setter for the level user is on
+	 * @param lvl level user is on.
+	 */
 	public static void setLevel(int lvl){
         level = lvl;
 	}
-
+/**
+ * Setter for how many points needed to move to the next level
+ * @param outOf total points needed to level up.
+ */
 	public static void setOutOf(int outOf){
 		xpNeeded = outOf;
 	}
+	/**
+	 * Setter for current, outOf, level.
+	 * @param current amount of xp player has accumulated
+	 * @param outOf total xp needed to to level up
+	 * @param lvl players current level
+	 */
 	public static void setAll(int current, int outOf, int lvl){
         xp = current;
         xpNeeded = outOf;
         level = lvl;
     }
-
+    /**
+     * Getter for xp
+     * @return players xp points
+     */
     public static int get(){
         return xp;
     }
-
+    
+    /**
+     * Getter for user xp needed to level up
+     * @return xo points needed to level up
+     */
     public static int getOutOf(){
         return xpNeeded;
     }
-
+    /**
+     * Getter for players current level
+     * @return players current level
+     */
     public static int getLevel(){
         return level;
     }
-
+    /**
+     * Creates a ratio of player xp.
+     * @return XP/xpNeeded
+     */
     public static String getFull(){
         return xp + "/" + xpNeeded + " xp";
     }

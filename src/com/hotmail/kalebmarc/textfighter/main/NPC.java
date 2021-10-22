@@ -1,7 +1,10 @@
 package com.hotmail.kalebmarc.textfighter.main;
 
 //import Quest;
-
+/**
+ * NPC is not utilized in the game
+ *
+ */
 public class NPC {
 
     private static final String NAME_HEALTH = "Corinna";

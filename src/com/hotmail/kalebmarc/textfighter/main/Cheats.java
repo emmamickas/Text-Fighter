@@ -6,14 +6,20 @@ import com.hotmail.kalebmarc.textfighter.item.Power;
 import com.hotmail.kalebmarc.textfighter.player.*;
 
 import java.util.Scanner;
-
+/**
+ * Cheats class allows player to improve certain attributes by entering codes.
+ *
+ */
 public class Cheats {
 
     //Variables
     private static Scanner cheat = new Scanner(System.in);
     private static boolean enabled = false;
     private static boolean locked = false;
-
+    
+    /**
+     * Enables cheats if cheats are not locked.
+     */
     public static void cheatGateway() {
 
         //Makes sure cheats aren't locked
@@ -32,6 +38,9 @@ public class Cheats {
         if (enabled()) Cheats.cheatSelect();
     }
 
+    /**
+     * Enable cheat if user enters corresponding text.
+     */
     private static void cheatSelect() {
         Ui.println("*");
 
@@ -111,18 +120,32 @@ public class Cheats {
         }
     }
 
+    /**
+     * Getter for the enable variable
+     * @return enable variable.
+     */
     public static boolean enabled() {
         return enabled;
     }
 
+    /**
+     * Getter for the locked variable
+     * @return locked variable
+     */
     public static boolean locked() {
         return locked;
     }
 
+    /**
+     * Sets enable to true.
+     */
     public static void enable() {
         enabled = true;
     }
 
+    /**
+     * Sets locked to true.
+     */
     public static void lock() {
         locked = true;
     }

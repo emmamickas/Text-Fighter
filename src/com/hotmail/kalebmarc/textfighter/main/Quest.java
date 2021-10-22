@@ -4,7 +4,10 @@ import com.hotmail.kalebmarc.textfighter.item.Armour;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
 
 import java.util.ArrayList;
-
+/**
+ * Quest isn't utilized in the game
+ *
+ */
 public class Quest {
 
     private static final ArrayList<Quest> QuestList = new ArrayList<>();

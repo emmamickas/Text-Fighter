@@ -5,7 +5,10 @@ import com.hotmail.kalebmarc.textfighter.main.Ui;
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Stats;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
-
+/**
+ * 
+ *  Power Class allows the player to kill an enemy instantly.
+ */
 public class Power {
 
     public static int used = 0;
@@ -13,10 +16,19 @@ public class Power {
     public static int level;
     private static int powers;
 
+    /**
+     * Getter for powers
+     * @return number of powers available
+     */
     public static int get() {
         return powers;
     }
-
+    /**
+     * Setter for powers
+     * @param amount number of powers
+     * @param add true if amount is added to the total of powers available
+     * 		      false if amount is the total of powers
+     */	
     public static void set(int amount, boolean add) {
         if (!add) {
             powers = amount;
@@ -26,6 +38,11 @@ public class Power {
         }
     }
 
+    /**
+     * Use Power 
+     * Kill enemy instantly
+     * Decrease players number of powers available.
+     */
     public static void use() {
 
         Ui.cls();
@@ -52,6 +69,9 @@ public class Power {
         }
     }
 
+    /**
+     * Purcahse power if player is at high enough level and has enough coins
+     */
     public static void buy() {
         if (Xp.getLevel() < level) {
             Ui.println("You have to be at least level " + level + " to buy this!");

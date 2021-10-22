@@ -1,5 +1,8 @@
 package com.hotmail.kalebmarc.textfighter.main;
-
+/**
+ * Property isn't utilized in the game
+ *
+ */
 public class Property {
 
     private String name;
