@@ -479,7 +479,7 @@ public class Achievements {
     }
 
     private static void checkCheaterCheater() {
-        if (!Cheats.locked()) {
+        if (Stats.timesCheated > 0) {
             cheaterCheater = true;
             get("Cheater! Cheater!");
         }
