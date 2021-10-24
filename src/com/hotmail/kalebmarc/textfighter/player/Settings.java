@@ -152,8 +152,25 @@ public class Settings {
             Game.giantAnt = new Enemy("Giant Ant", 30, 5, 10, 5, 10, 10, 1, 100, firstInit, changeDif);
             Game.evilUnicorn = new Enemy("Evil Unicorn", 35, 30, 40, 5, 15, 20, 1, 100, firstInit, changeDif);
             Game.ogre = new Enemy("Ogre", 90, 20, 50, 10, 30, 50, 1, 100, firstInit, changeDif);
+            Game.rogue = new Enemy("Rogue", 40,20,30,1,25,15,1,100,firstInit, changeDif);
+            Game.imp = new Enemy("Imp",15,10,15,5,15,10,1,100,firstInit,changeDif);
+            Game.witch = new Enemy("Witch", );
+            Game.dragon
+            Game.skeleton
+            Game.turtle
+            Game.mummy
+            Game.minotaur
+            Game.python
+            Game.yeti
+            Game.bigFoot
+            Game.werewolf
 
-            /*Weapons
+
+
+
+
+
+                    /*Weapons
             * Gun:   (name, ammoUsed, ammoIncludedWithPurchase, buyable, price, ammoPrice, level, chanceOfMissing, critChanceMultiplier,
             *        critDamMultiplierMin, critDamMultiplierMax firstInit, changeDif)
             * Melee: (name, startingWeapon, buyable, price, level, damageMin, damageMax, firstInit, changeDif)

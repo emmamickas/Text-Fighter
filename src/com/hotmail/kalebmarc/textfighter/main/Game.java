@@ -32,6 +32,18 @@ public class Game {
 	public static Enemy giantAnt;
 	public static Enemy evilUnicorn;
 	public static Enemy ogre;
+	public static Enemy rogue;
+	public static Enemy imp;
+	public static Enemy witch;
+	public static Enemy dragon;
+	public static Enemy skeleton;
+	public static Enemy turtle;
+	public static Enemy mummy;
+	public static Enemy minotaur;
+	public static Enemy python;
+	public static Enemy yeti;
+	public static Enemy bigFoot;
+	public static Enemy werewolf;
 
 	//Weapons
 	public static Weapon fists;
