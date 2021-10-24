@@ -13,7 +13,7 @@ public class Achievements {
     public static final ArrayList<Boolean> arrayKilled = new ArrayList<>();
     private static final ArrayList<Enemy> arrayEnemy = new ArrayList<>();
     /* Achievements
-     * 22 Total
+     * 27 Total
      *
      * Booleans to check if the
      * achievement has been unlocked
@@ -40,6 +40,13 @@ public class Achievements {
     public static boolean level9Fighter = false;
     public static boolean level10Fighter = false;
     public static boolean honestPlayer = false;
+    public static boolean poorMan = false;
+    public static boolean heatingUp = false;
+    public static boolean hesOnFire = false;
+    public static boolean fromDowntown = false;
+    public static boolean machineGunKelly = false;
+    public static boolean closeShave = false;
+    public static boolean cheaterCheater = false;
     //Variables for testing the achievements
     //Time for an upgrade
     public static boolean boughtItem = false;
@@ -61,8 +68,8 @@ public class Achievements {
         //Displays which achievements the user has gotten
         Ui.cls();
 
-        boolean[] ach = new boolean[22];
-        String[] strAch = new String[22];
+        boolean[] ach = new boolean[28];
+        String[] strAch = new String[28];
         ach[0] = moneyMaker;
         strAch[0] = "Money Maker";
 
@@ -129,6 +136,27 @@ public class Achievements {
         ach[21] = unnaturalLuck;
         strAch[21] = "Unnatural Luck";
 
+        ach[22] = poorMan;
+        strAch[22] = "Poor Man";
+
+        ach[23] = heatingUp;
+        strAch[23] = "Heating up!";
+
+        ach[24] = hesOnFire;
+        strAch[24] = "HE'S ON FIRE!";
+
+        ach[25] = fromDowntown;
+        strAch[25] = "From downtown!";
+
+        ach[26] = machineGunKelly;
+        strAch[26] = "Machine Gun Kelly";
+
+        ach[26] = closeShave;
+        strAch[26] = "Close Shave!";
+
+        ach[27] = cheaterCheater;
+        strAch[27] = "Cheater! Cheater!";
+
         Ui.println("---------------------------------------");
         Ui.println("Achievements");
         Ui.println();
@@ -192,6 +220,13 @@ public class Achievements {
             if (!level9Fighter) checkLevel9Fighter();
             if (!level10Fighter) checkLevel10Fighter();
             if (!honestPlayer) checkHonestPlayer();
+            if (!poorMan) checkPoorMan();
+            if (!heatingUp) checkHeatingUp();
+            if (!hesOnFire) checkHesOnFire();
+            if (!fromDowntown) checkFromDowntown();
+            if (!machineGunKelly) checkMachineGunKelly();
+            if (!closeShave) checkCloseShave();
+            if (!cheaterCheater) checkCheaterCheater();
             //Enemy achs get checked from textfighter.Enemy class
         }
     }
@@ -265,7 +300,13 @@ public class Achievements {
                         level8Fighter &&
                         level9Fighter &&
                         level10Fighter &&
-                        honestPlayer
+                        honestPlayer &&
+                        poorMan &&
+                        heatingUp &&
+                        hesOnFire &&
+                        fromDowntown &&
+                        closeShave &&
+                        cheaterCheater
                 ) {
 
             //Check Enemy Achs
@@ -392,6 +433,55 @@ public class Achievements {
         if (Cheats.locked()) {
             honestPlayer = true;
             get("Honest Player");
+        }
+    }
+
+    private static void checkPoorMan() {
+        if (Coins.get() == 0) {
+            poorMan = true;
+            get("Poor Man");
+        }
+    }
+
+    private static void checkHeatingUp() {
+        if (Stats.kills >= 3) {
+            heatingUp = true;
+            get("Heating Up!");
+        }
+    }
+
+    private static void checkHesOnFire() {
+        if (Stats.kills >= 5) {
+            hesOnFire = true;
+            get("HE'S ON FIRE!");
+        }
+    }
+
+    private static void checkFromDowntown() {
+        if (Stats.bulletsThatHit >= 1) {
+            fromDowntown = true;
+            get("From downtown!");
+        }
+    }
+
+    private static void checkMachineGunKelly() {
+        if (Stats.bulletsFired >= 100) {
+            machineGunKelly = true;
+            get("Machine Gun Kelly");
+        }
+    }
+
+    private static void checkCloseShave() {
+        if (Enemy.get().getHealth() <= 0 && Health.get() <= 5) {
+            closeShave = true;
+            get("Close Shave!");
+        }
+    }
+
+    private static void checkCheaterCheater() {
+        if (!Cheats.locked()) {
+            cheaterCheater = true;
+            get("Cheater! Cheater!");
         }
     }
 }

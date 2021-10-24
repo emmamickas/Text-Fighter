@@ -15,7 +15,7 @@ public class TestAchievements {
 
     @Test
     public void poorManTest() {
-        // Test if Poor Man achievement activates when player stats are correct
+        // Testing Poor Man: run out of coins.
         Coins.set(0, true);
         assertEquals(0, Coins.get());
 
@@ -57,7 +57,7 @@ public class TestAchievements {
 
     @Test
     public void fromDowntownTest() {
-        // Test From downtown!: hit with one bullet
+        // Test From downtown!: hit with one bullet.
         Stats.bulletsThatHit = 1;
         assertEquals(1, Stats.bulletsThatHit);
 
@@ -71,7 +71,7 @@ public class TestAchievements {
 
     @Test
     public void machineGunKellyTest() {
-        // Test Machine Gun Kelly: 100 bullets hit
+        // Test Machine Gun Kelly: 100 bullets hit.
         Stats.bulletsThatHit = 100;
         assertEquals(100, Stats.bulletsThatHit);
 
@@ -85,7 +85,7 @@ public class TestAchievements {
 
     @Test
     public void closeShaveTest() {
-        // Test Close Shave!: enemy dies while fighter has 5 or less health
+        // Test Close Shave!: enemy dies while fighter has 5 or less health.
         Enemy testEnemy = new Enemy("Dark Elf", 45, 10, 15, 10, 15, 15, 1, 100, true, false);
         testEnemy.setHealth(0, 45);
         Health.set(5);
@@ -102,6 +102,7 @@ public class TestAchievements {
 
     @Test
     public void cheaterCheaterTest() {
+        // Test Cheater! Cheater!: cheats enabled.
         Cheats.enable();
         assertTrue(!Cheats.locked());
 
