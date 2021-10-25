@@ -194,3 +194,57 @@
   * [Class Diagrams](https://github.com/emmamickas/Text-Fighter/tree/AddingPotions/Class%20Diagram) of modified classes.
   * [Dependencies](https://github.com/emmamickas/Text-Fighter/tree/AddingPotions/Dependency%20Matrix) of modified or dependent classes.
 
+# Changes in the AddTimeFeatures branch
+
+## This branch addresses the following issue:
+### Time, ([issue #72](https://github.com/hhaslam11/Text-Fighter/issues/72) in the source hhaslam11/Text-Fighter repository, [issue #5](https://github.com/emmamickas/Text-Fighter/issues/5) in the forked emmamickas/Text-Fighter repository)
+
+## Desired modifications:
+### Add a game clock that would keep track of time, days, months, and years. The game time would be faster than real world time by a certain amount.
+
+## Modified files:
+ * [Game](https://github.com/emmamickas/Text-Fighter/blob/AddTimeFeatures/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
+
+## Added Files:
+ * [GameClock](https://github.com/emmamickas/Text-Fighter/blob/AddTimeFeatures/src/time/GameClock.java)
+
+
+## Testing:
+###  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
+ * [TestGameClock](https://github.com/emmamickas/Text-Fighter/blob/AddTimeFeatures/src/tests/TestGameClock.java)
+
+
+# Changes in the TrackGamePlayTime branch
+
+## This branch addresses the following issue:
+### Time, ([issue #128](https://github.com/hhaslam11/Text-Fighter/issues/128) in the source hhaslam11/Text-Fighter repository, [issue #10](https://github.com/emmamickas/Text-Fighter/issues/10) in the forked emmamickas/Text-Fighter repository)
+
+## Desired modifications:
+### Add a feature that will keep track of the total time played and the current session game play.
+
+## Modified files:
+ * [Game](https://github.com/emmamickas/Text-Fighter/blob/AddTimeFeatures/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
+ * [Saves](https://github.com/emmamickas/Text-Fighter/blob/TrackGamePlayTime/src/com/hotmail/kalebmarc/textfighter/main/Saves.java)
+
+## Added Files:
+ * [TestTimeTrack](https://github.com/emmamickas/Text-Fighter/blob/TrackGamePlayTime/src/tests/TestTimeTrack.java)
+
+## Testing:
+###  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
+ * [TestGameClock](https://github.com/emmamickas/Text-Fighter/blob/AddTimeFeatures/src/tests/TestGameClock.java)
+
+
+# Changes in the UpdateReadme branch
+
+## This branch addresses the following issue:
+### Time, ([issue #74](https://github.com/hhaslam11/Text-Fighter/issues/74) in the source hhaslam11/Text-Fighter repository, [issue #6](https://github.com/emmamickas/Text-Fighter/issues/6) in the forked emmamickas/Text-Fighter repository)
+
+## Desired modifications:
+### Update the README.md file since because it hasn't been updated for a while.
+
+## Modified files:
+ * [README](https://github.com/hhaslam11/Text-Fighter/blob/master/README.md)
+   - Updated running instructions for IntelliJ and Gradle.
+   - Added a clip that shows game play. 
+   - Updated contributors.
+
