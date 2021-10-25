@@ -18,4 +18,6 @@
  ### Please view the following to find additional documentation of the changes and the code involved in the changes.
   * [Dependency Analysis](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/Dependency%20Analysis) of modified files.
   * [Program Comprehension](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/Program%20Comprehension) of project.
+  * [Class Diagrams](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/Class%20Diagram) of project.
+   
   
