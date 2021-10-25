@@ -248,3 +248,69 @@
    - Added a clip that shows game play. 
    - Updated contributors.
 
+
+# Modifications in the Achievements fork
+
+## Changes in the Achievements branch
+
+### This branch addresses the following issue:
+
+#### Add More Achievements, ([issue #94](https://github.com/hhaslam11/Text-Fighter/issues/94) in the source hhaslam11/Text-Fighter repository, [issue #11](https://github.com/emmamickas/Text-Fighter/issues/11) in the forked emmamickas/Text-Fighter repository)
+
+### Desired Modifications:
+#### There are currently 21 achievements in the game. They are also not very creative (i.e. level up, kill a specific monster, etc.). 
+#### The changes to this issue is that a handful of more creative and desireable achievements were added. Some are easy to achieve, some are not.
+
+### Modified Files:
+#### The following packages were modified in the change:
+* [Main Package](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/main)
+* [Player Package](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/player)
+
+### Testing:
+#### The following tests were performed during TDD:
+* [TestAchievements.java](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/player/TestAchievements.java)
+
+
+# Modifications in the MoreEnemies fork
+
+
+## Changes in the MoreEnemies branch
+
+### This branch addresses the following issue:
+#### Add way more enemies and monsters into the game, ([issue #19](https://github.com/hhaslam11/Text-Fighter/issues/19) in the source hhaslam11/Text-Fighter repository, [issue #13](https://github.com/emmamickas/Text-Fighter/issues/13) in the forked emmamickas/Text-Fighter repository)
+
+### Desired Modifications:
+#### In the current game, there are 10 enemies and monsters for the fighter to kill. The monsters typically come from a fantasy world. In the changes, the number of monsters have now more than doubled up to a total of 23 enemies and monsters spanning all genres of monsters (Greek mythology, Anglo Saxon legends, and good old folk stories).
+
+### Modified Files:
+#### The following packages were modified in the change
+* [Game.java](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
+* [Settings.java](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/player/Settings.java)
+* [Help.java](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/main/Help.java)
+
+### Testing:
+#### Testing for this issue was fairly straightforward. There wasn't much required for testing before the enemies were created, but regression testing and playtesting after implementation were both important to confirm accuracy and truancy.
+
+
+# Modifications in the TipsHints fork
+
+
+## Changes in the TipsHints branch:
+
+### This branch addresses the following issue:
+#### Add tips and hints that would pop up at certain times during play. ([issue #65](https://github.com/hhaslam11/Text-Fighter/issues/65) in the source hhaslam11/Text-Fighter repository, [issue #12](https://github.com/emmamickas/Text-Fighter/issues/12) in the forked emmamickas/Text-Fighter repository)
+
+### Desired Modifications:
+#### In the current implementation, there are no tips or hints to help the fighter navigate their journey through the game. In the updated version (**under construction), the fighter will receive a helpful hint after every other enemy or monster they kill. This could be something as simple as "Some monsters may be too powerful to kill at low levels. Come back and fight them after you've gained some experience and gear."
+
+### Modified Files:
+* [Enemy](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/main/Enemy)
+
+### Testing:
+#### The following tests were performed during TDD: **under construction
+* TestTipsHints.java](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/player/TestTipsHints.java)
+
+### This issue is not quite completed, but the bones are there to flesh out. The idea is that when an enemy dies, the player's Stats.kill % 2 == 0. This makes it true on even number kills. When true, the function tipsHints() is called where a string array containing all of the tips lives. A random number is chosen and the message in that index is displayed on the screen.
+
+
+
