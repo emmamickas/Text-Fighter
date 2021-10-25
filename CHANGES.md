@@ -119,57 +119,57 @@
   * [Dependencies](https://github.com/emmamickas/Text-Fighter/tree/CheatsIndexOutOfBoundsFix/Dependency%20References) of modified or dependent classes.
   * [Sequence Diagrams](https://github.com/emmamickas/Text-Fighter/tree/CheatsIndexOutOfBoundsFix/Sequence%20Diagrams) of modified or dependent methods.
 
-# Changes in the InlineDocumentation Branch
+## Changes in the InlineDocumentation Branch
 
-## This branch addresses the following issue:
-### Add better in-line documentation, ([issue #32](https://github.com/hhaslam11/Text-Fighter/issues/32) in the source hhaslam11/Text-Fighter repository, [issue #2](https://github.com/emmamickas/Text-Fighter/issues/2) in the forked emmamickas/Text-Fighter repository)
+#### This branch addresses the following issue:
+#### Add better in-line documentation, ([issue #32](https://github.com/hhaslam11/Text-Fighter/issues/32) in the source hhaslam11/Text-Fighter repository, [issue #2](https://github.com/emmamickas/Text-Fighter/issues/2) in the forked emmamickas/Text-Fighter repository)
 
-## Desired modifications:
-### In the current implementation, there is no documentation throughout the project. 
-### In the updated implementation, classes and methods will be documented.
+### Desired modifications:
+#### In the current implementation, there is no documentation throughout the project. 
+#### In the updated implementation, classes and methods will be documented.
 
-## Modified files:
-### The following packages were modified in the change:
+### Modified files:
+#### The following packages were modified in the change:
  * [Casino Package](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/casino)
  * [Item Package](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/item)
  * [Main Package](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/main)
  * [Player Package](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/player)
  
- ## Additional resources:
- ### Please view the following to find additional documentation of the changes and the code involved in the changes.
+ ### Additional resources:
+ #### Please view the following to find additional documentation of the changes and the code involved in the changes.
   * [Dependency Analysis](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/Dependency%20Analysis) of modified files.
   * [Program Comprehension](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/Program%20Comprehension) of project.
   * [Class Diagrams](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/Class%20Diagram) of project.
 
-# Changes in the HealthHelpSection
+## Changes in the HealthHelpSection
 
-## This branch addresses the following issue:
-### Add more health info in Help section, ([issue #37](https://github.com/hhaslam11/Text-Fighter/issues/37) in the source hhaslam11/Text-Fighter repository, [issue #3](https://github.com/emmamickas/Text-Fighter/issues/3) in the forked emmamickas/Text-Fighter repository)
+### This branch addresses the following issue:
+#### Add more health info in Help section, ([issue #37](https://github.com/hhaslam11/Text-Fighter/issues/37) in the source hhaslam11/Text-Fighter repository, [issue #3](https://github.com/emmamickas/Text-Fighter/issues/3) in the forked emmamickas/Text-Fighter repository)
 
-## Desired modifications:
-### In the current implementation, the Health section of the Help Menus doesn't go into detail of the features available that affect player and enemies health.
-### In the updated implementation, the Health section describes all aspect of the game pertaining to player and enemy health.
+### Desired modifications:
+#### In the current implementation, the Health section of the Help Menus doesn't go into detail of the features available that affect player and enemies health.
+#### In the updated implementation, the Health section describes all aspect of the game pertaining to player and enemy health.
 
-## Modified files:
-### The following files were modified in the change:
+### Modified files:
+#### The following files were modified in the change:
  * [Help.java](https://github.com/emmamickas/Text-Fighter/blob/HelpSectionUpdate/src/com/hotmail/kalebmarc/textfighter/main/Help.java)
 
  
- ## Additional resources:
- ### Please view the following to find additional documentation of the changes and the code involved in the changes.
+ ### Additional resources:
+ #### Please view the following to find additional documentation of the changes and the code involved in the changes.
   * [Class Diagrams](https://github.com/emmamickas/Text-Fighter/tree/HealthHelpSection/Class%20Diagrams) of modified classes.
   * [Dependency Reference](https://github.com/emmamickas/Text-Fighter/tree/HealthHelpSection/Dependency%20Reference) of Health class.
 
-# Changes in the AddingPotions branch
+## Changes in the AddingPotions branch
 
-## This branch addresses the following issue:
-### Potion Brewing and more options, ([issue #87](https://github.com/hhaslam11/Text-Fighter/issues/87) in the source hhaslam11/Text-Fighter repository, [issue #8](https://github.com/emmamickas/Text-Fighter/issues/8) in the forked emmamickas/Text-Fighter repository)
+### This branch addresses the following issue:
+#### Potion Brewing and more options, ([issue #87](https://github.com/hhaslam11/Text-Fighter/issues/87) in the source hhaslam11/Text-Fighter repository, [issue #8](https://github.com/emmamickas/Text-Fighter/issues/8) in the forked emmamickas/Text-Fighter repository)
 
-## Desired modifications:
-### In the current implementation, there are only two potion types and the player can only purchase potions. In the updated version there are now three types of potions and players can brew potions.
+### Desired modifications:
+#### In the current implementation, there are only two potion types and the player can only purchase potions. In the updated version there are now three types of potions and players can brew potions.
 
-## Modified files:
-### The following files were modified in the change:
+### Modified files:
+#### The following files were modified in the change:
  * [Chest.java](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/item/Chest.java)
  * [Food.java](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/main/Food.java)
  * [Game.java](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
@@ -180,17 +180,17 @@
  * [Settings.java](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/player/Settings.java)
  * [Stats.java](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/player/Stats.java)
 
-## Testing:
-###  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
+### Testing:
+####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
  * [Potion](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
  * [Settings](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/player/SettingsTest.java)
  * [Enemy](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java)
  * [Food](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/src/com/hotmail/kalebmarc/textfighter/main/FoodTest.java)
 
- #### See [here](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/TESTING.md) for more information on testing.
+ ##### See [here](https://github.com/emmamickas/Text-Fighter/blob/AddingPotions/TESTING.md) for more information on testing.
  
- ## Additional resources:
- ### Please view the following to find additional documentation of the changes and the code involved in the changes.
+ ### Additional resources:
+ #### Please view the following to find additional documentation of the changes and the code involved in the changes.
   * [Class Diagrams](https://github.com/emmamickas/Text-Fighter/tree/AddingPotions/Class%20Diagram) of modified classes.
   * [Dependencies](https://github.com/emmamickas/Text-Fighter/tree/AddingPotions/Dependency%20Matrix) of modified or dependent classes.
 
