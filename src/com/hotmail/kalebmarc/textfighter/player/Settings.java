@@ -152,18 +152,18 @@ public class Settings {
             Game.giantAnt = new Enemy("Giant Ant", 30, 5, 10, 5, 10, 10, 1, 100, firstInit, changeDif);
             Game.evilUnicorn = new Enemy("Evil Unicorn", 35, 30, 40, 5, 15, 20, 1, 100, firstInit, changeDif);
             Game.ogre = new Enemy("Ogre", 90, 20, 50, 10, 30, 50, 1, 100, firstInit, changeDif);
-            Game.rogue = new Enemy("Rogue", 40,20,30,1,25,15,1,100,firstInit, changeDif);
-            Game.imp = new Enemy("Imp",15,10,15,5,15,10,1,100,firstInit,changeDif);
-            Game.witch = new Enemy("Witch", );
-            Game.dragon
-            Game.skeleton
-            Game.turtle
-            Game.mummy
-            Game.minotaur
-            Game.python
-            Game.yeti
-            Game.bigFoot
-            Game.werewolf
+            Game.rogue = new Enemy("Rogue", 40,20,30,1,25,15,1,100, firstInit, changeDif);
+            Game.imp = new Enemy("Imp",15,10,15,5,15,10,1,100, firstInit, changeDif);
+            Game.witch = new Enemy("Witch", 30,15,25,10,20,15,1,100, firstInit, changeDif);
+            Game.dragon = new Enemy("Dragon",120,100,125,40,55,70,1,100, firstInit, changeDif);
+            Game.skeleton = new Enemy("Skeleton",25,5,10,5,10,15,1,100, firstInit, changeDif);
+            Game.turtle = new Enemy("Turtle",15,0,10,1,5,10,1,100, firstInit, changeDif);
+            Game.mummy = new Enemy("Mummy", 75,15,25,10,20,15,1,100, firstInit, changeDif);
+            Game.minotaur = new Enemy("Minotaur", 85, 30,50,1,40,35,1,100, firstInit, changeDif);
+            Game.python = new Enemy("Python",20,15,25,25,35,20,1,100, firstInit, changeDif);
+            Game.yeti = new Enemy("Yeti",80,20,40,15,30,20,1,100, firstInit, changeDif);
+            Game.bigFoot = new Enemy("Big Foot",80,20,40,15,30,20,1,100, firstInit, changeDif);
+            Game.werewolf = new Enemy("Werewolf", 65,20,30,15,35,20,1,100, firstInit, changeDif);
 
 
 
@@ -218,6 +218,18 @@ public class Settings {
             Game.giantAnt = new Enemy("Giant Ant", 30, 5, 10, 5, 10, 10, 1, 100, firstInit, changeDif);
             Game.evilUnicorn = new Enemy("Evil Unicorn", 35, 20, 40, 5, 15, 20, 1, 100, firstInit, changeDif);
             Game.ogre = new Enemy("Ogre", 100, 20, 50, 10, 30, 50, 1, 100, firstInit, changeDif);
+            Game.rogue = new Enemy("Rogue", 50,25,35,5,35,15,1,100, firstInit, changeDif);
+            Game.imp = new Enemy("Imp",20,15,20,10,20,15,1,100, firstInit, changeDif);
+            Game.witch = new Enemy("Witch", 35,15,30,15,25,15,1,100, firstInit, changeDif);
+            Game.dragon = new Enemy("Dragon",140,110,135,40,65,80,1,100, firstInit, changeDif);
+            Game.skeleton = new Enemy("Skeleton",25,5,10,10,15,15,1,100, firstInit, changeDif);
+            Game.turtle = new Enemy("Turtle",15,5,15,1,5,20,1,100, firstInit, changeDif);
+            Game.mummy = new Enemy("Mummy", 85,25,30,15,25,15,1,100, firstInit, changeDif);
+            Game.minotaur = new Enemy("Minotaur", 95, 30,50,1,50,35,1,100, firstInit, changeDif);
+            Game.python = new Enemy("Python",30,25,30,25,45,20,1,100, firstInit, changeDif);
+            Game.yeti = new Enemy("Yeti",95,20,40,15,30,20,1,100, firstInit, changeDif);
+            Game.bigFoot = new Enemy("Big Foot",80,20,40,20,35,20,1,100, firstInit, changeDif);
+            Game.werewolf = new Enemy("Werewolf", 70,20,35,20,40,20,1,100, firstInit, changeDif);
 
             /*Weapons
             * Gun:   (name, ammoUsed, ammoIncludedWithPurchase, buyable, price, ammoPrice, level, chanceOfMissing, critChanceMultiplier,
