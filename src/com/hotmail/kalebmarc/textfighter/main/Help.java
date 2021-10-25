@@ -266,6 +266,12 @@ class Help {
         Ui.println("   Level 10 Fighter       | Reach level 10");
         Ui.println("   Honest Player          | Lock cheats off");
         Ui.println("   Learning               | Look at every single help page in one session");
+        Ui.println("   Heating Up!            | Earn a three monster kill streak");
+        Ui.println("   HE'S ON FIRE!          | Earn a five monster kill streak");
+        Ui.println("   From Downtown!         | Hit an enemy with a ranged weapon");
+        Ui.println("   Machine Gun Kelly      | Hit 100 times with a ranged weapon");
+        Ui.println("   Close Shave!           | Kill an enemy with 5 or less player health");
+        Ui.println("   Cheater! Cheater!      | Use a cheat code");
         Ui.println("-------------------------------------------------------------------------");
         Ui.pause();
     }
