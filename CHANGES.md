@@ -17,6 +17,6 @@
 
 ### Testing:
 #### The following tests were performed during TDD:
-* [Player Package](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/player/TestAchievements.java)
+* [TestAchievements.java](https://github.com/emmamickas/Text-Fighter/tree/InlineDocumentationUpdate/src/com/hotmail/kalebmarc/textfighter/player/TestAchievements.java)
 
 
