@@ -4,6 +4,7 @@ import com.hotmail.kalebmarc.textfighter.player.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Enemy {
 
@@ -157,6 +158,12 @@ public class Enemy {
         //Get Achievement
         Achievements.getEnemyAch(Enemy.get());
 
+        // Location for calling tips/hints
+        // Send tip/hint every other monster kill
+        if(Stats.kills % 2 == 0) {
+            tipsHints();
+        }
+
         encounterNew();
     }
 
@@ -229,5 +236,13 @@ public class Enemy {
         Ui.pause();
         Ui.cls();
         //End of weapon Info
+    }
+
+    public String tipsHints() {
+        // Implementation of tips string array
+        String[] myTestStrings = new String[] { "One Tip", "Two Tips", "Three Tips" }; // Test string array
+
+        int i = Random.RInt(myTestStrings.length);
+        return (myTestStrings[i]);
     }
 }
