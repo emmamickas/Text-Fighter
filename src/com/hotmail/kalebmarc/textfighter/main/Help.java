@@ -48,7 +48,7 @@ class Help {
                     info_cheats();
                     break;
                 case 8:
-                    info_achs();
+                    info_achievements();
                     break;
                 case 9:
                     return;
@@ -251,7 +251,7 @@ class Help {
         Ui.pause();
     }
 
-    private static void info_achs() {
+    private static void info_achievements() {
         Ui.cls();
         Ui.println("-------------------------------------------------------------------------");
         Ui.println("                         ACHIEVEMENTS                       ");
