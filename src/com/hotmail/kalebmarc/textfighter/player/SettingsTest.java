@@ -28,13 +28,13 @@ public class SettingsTest {
 
 	@Test
 	public void testDifficulty() {
-		Settings.setDif("Easy", true, true);
+		Settings.setDifficulty("Easy", true, true);
 		
-		assertEquals("Easy", Settings.getDif());
+		assertEquals("Easy", Settings.getDifficulty());
 		
-		Settings.setDif("Hard", false, false);
+		Settings.setDifficulty("Hard", false, false);
 		
-		assertEquals("Hard", Settings.getDif());
+		assertEquals("Hard", Settings.getDifficulty());
 	}
 
 }

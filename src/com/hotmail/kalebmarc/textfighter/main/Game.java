@@ -9,7 +9,7 @@ import java.util.Scanner;
 import static com.hotmail.kalebmarc.textfighter.player.Health.getAsString;
 import static com.hotmail.kalebmarc.textfighter.player.Health.upgrade;
 import static com.hotmail.kalebmarc.textfighter.player.Settings.menu;
-import static com.hotmail.kalebmarc.textfighter.player.Settings.setDif;
+import static com.hotmail.kalebmarc.textfighter.player.Settings.setDifficulty;
 import static java.util.Arrays.asList;
 
 public class Game {
@@ -92,7 +92,7 @@ public class Game {
 				if(difficultyLevel.equals("Exit")) {
 					return;
 				} else {
-					setDif(difficultyLevel, true, false);
+					setDifficulty(difficultyLevel, true, false);
 					Health.set(100, 100);
 					//docschorsch swapped order of promptNameSelection() and encounterNew()
 					User.promptNameSelection();

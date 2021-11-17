@@ -81,8 +81,8 @@ public class Saves {
 		set("User.Potions.Recovery", Potion.get("recovery"));
 
 		//Settings
-		set("Settings.Difficulty.Level", Settings.getDif());
-		set("Settings.Difficulty.Locked", Settings.difLocked);
+		set("Settings.Difficulty.Level", Settings.getDifficulty());
+		set("Settings.Difficulty.Locked", Settings.difficultyLocked);
 		set("Settings.Cheats.Enabled", Cheats.enabled());
 		set("Settings.Cheats.Locked", Cheats.locked());
 		set("Settings.GUI.Enabled", Ui.guiEnabled);
@@ -237,8 +237,8 @@ public class Saves {
 		Potion.set("recovery", getInteger("User.Potions.Recovery"), false);
 
 		//Settings
-		Settings.setDif(getString("Settings.Difficulty.Level"), false, false);
-		Settings.difLocked = getBoolean("Settings.Difficulty.Locked");
+		Settings.setDifficulty(getString("Settings.Difficulty.Level"), false, false);
+		Settings.difficultyLocked = getBoolean("Settings.Difficulty.Locked");
 		if(getBoolean("Settings.Cheats.Enabled")) Cheats.enable();
 		if(getBoolean("Settings.Cheats.Locked")) Cheats.lock();
 		Ui.guiEnabled = getBoolean("Settings.GUI.Enabled");
@@ -446,10 +446,10 @@ public class Saves {
 
 
 			//Settings
-			Settings.setDif(input.nextLine(), false, false);
+			Settings.setDifficulty(input.nextLine(), false, false);
 			if (readBoolean()) Cheats.enable();
 			if (readBoolean()) Cheats.lock();
-			Settings.difLocked = readBoolean();
+			Settings.difficultyLocked = readBoolean();
 			Ui.guiEnabled = readBoolean();
 
 			//Combat
