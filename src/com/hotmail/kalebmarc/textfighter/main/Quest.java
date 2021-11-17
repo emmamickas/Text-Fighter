@@ -21,12 +21,12 @@ public class Quest {
     private int healthRewardMin;
     private int healthRewardMax;
     //Requirements
-    private int minLevelReq;
+    private int minLevelRequired;
     private boolean completed;
     private boolean available;
 
     public Quest(String host, int coinMin, int coinMax, int xpMin, int xpMax,
-                 int healthMin, int healthMax, int minLevel, boolean complete, boolean avail) {
+                 int healthMin, int healthMax, int minLevelRequired, boolean complete, boolean avail) {
 
         this.host = host;
         this.coinRewardMin = coinMin;
@@ -35,7 +35,7 @@ public class Quest {
         this.xpRewardMax = xpMax;
         this.healthRewardMin = healthMin;
         this.healthRewardMax = healthMax;
-        this.minLevelReq = minLevel;
+        this.minLevelRequired = minLevelRequired;
         this.completed = complete;
         this.available = avail;
         QuestList.add(this);
@@ -46,7 +46,7 @@ public class Quest {
         int i = 0;
         do {
             if (QuestList.get(i).host.equalsIgnoreCase(npcName)) {
-                if (QuestList.get(i).getMinLevelReq() <= Xp.getLevel()) {
+                if (QuestList.get(i).getMinLevelRequired() <= Xp.getLevel()) {
                     if (QuestList.get(i).getAvailable())
                         check = !QuestList.get(i).getComplete();
                 }
@@ -58,8 +58,8 @@ public class Quest {
         return check;
     }
 
-    public int getMinLevelReq() {
-        return minLevelReq;
+    public int getMinLevelRequired() {
+        return minLevelRequired;
     }
 
     public boolean getComplete() {

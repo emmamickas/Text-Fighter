@@ -32,9 +32,9 @@ public class QuestTest {
 		
 		Quest testQuest2 = new Quest("Test host 2", 2, 8, 10, 20, 5, 25, 0, false, false);
 		
-		assertEquals(1, testQuest1.getMinLevelReq());
+		assertEquals(1, testQuest1.getMinLevelRequired());
 
-		assertEquals(0, testQuest2.getMinLevelReq());
+		assertEquals(0, testQuest2.getMinLevelRequired());
 	}
 
 }
