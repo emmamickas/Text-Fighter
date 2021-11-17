@@ -180,27 +180,31 @@ public class ArmourTest {
 		// Check all objects are the same in each list access method
 		assertEquals("None", Armour.getArmours().get(0).getName());
 		assertEquals(0, Armour.getArmours().get(0).getPrice());
-		assertEquals(0, Armour.getArmours().get(0).getDamResist());
+		assertEquals(0, Armour.getArmours().get(0).getDamageResist());
 		assertEquals(1, Armour.getArmours().get(0).getLevel());
 
 		assertEquals( "Basic", Armour.getArmours().get(1).getName());
 		assertEquals(400, Armour.getArmours().get(1).getPrice());
-		assertEquals(15, Armour.getArmours().get(1).getDamResist());
+		assertEquals(15, Armour.getArmours().get(1).getDamageResist());
 		assertEquals(5, Armour.getArmours().get(1).getLevel());
 
 		assertEquals("Advanced", Armour.getArmours().get(2).getName());
 		assertEquals(750, Armour.getArmours().get(2).getPrice());
-		assertEquals(30, Armour.getArmours().get(2).getDamResist());
+		assertEquals(30, Armour.getArmours().get(2).getDamageResist());
 		assertEquals(7, Armour.getArmours().get(2).getLevel());
 	}
 
 	@Test
 	public void testDamageResist() {
 		
-		assertEquals(0, Armour.getArmours().get(0).getDamResist());
+		assertEquals(0, Armour.getArmours().get(0).getDamageResist());
 		
-		assertEquals(15, Armour.getArmours().get(1).getDamResist());
+		assertEquals(15, Armour.getArmours().get(1).getDamageResist());
 
-		assertEquals(30, Armour.getArmours().get(2).getDamResist());
+		assertEquals(30, Armour.getArmours().get(2).getDamageResist());
+
+		Armour.getArmours().get(2).setDamageResist( 35);
+
+		assertEquals(35, Armour.getArmours().get(2).getDamageResist());
 	}
 }

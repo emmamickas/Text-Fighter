@@ -13,15 +13,15 @@ public class Armour {
     private static ArrayList<Armour> armours = new ArrayList<>(3);
     private String name;
     private int price;
-    private int damResist;//x%
+    private int damageResist;//x%
     private int level;
     private boolean owns;
     private boolean equipped;
 
-    public Armour(String name, int price, int damResist, int level) {
+    public Armour(String name, int price, int damageResist, int level) {
         this.name = name;
         this.price = price;
-        this.damResist = damResist;
+        this.damageResist = damageResist;
         this.level = level;
         armours.add(this);
     }
@@ -104,12 +104,12 @@ public class Armour {
         this.price = price;
     }
 
-    public int getDamResist() {
-        return this.damResist;
+    public int getDamageResist() {
+        return this.damageResist;
     }
 
-    public void setDamResist(int damResist) {
-        this.damResist = damResist;
+    public void setDamageResist(int damageResist) {
+        this.damageResist = damageResist;
     }
 
     public int getLevel() {
@@ -197,7 +197,7 @@ public class Armour {
             Ui.print(" ");//Set correct spacing to get name in middle of box
         Ui.println(this.toString());
         Ui.println("Price: " + this.price + " coins");
-        Ui.println("Damage Resistance(%): " + this.damResist + "%");
+        Ui.println("Damage Resistance(%): " + this.damageResist + "%");
         Ui.println("Level needed: " + this.level);
         for (int i = 0; i < BORDER_LENGTH; i++) Ui.print("-");//Make line
         Ui.pause();

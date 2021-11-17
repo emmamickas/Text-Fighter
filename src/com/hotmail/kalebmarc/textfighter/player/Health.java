@@ -74,7 +74,7 @@ public class Health {
             damage = 0;
         }
 
-        double resist = Armour.getEquipped().getDamResist() / 100.0;
+        double resist = Armour.getEquipped().getDamageResist() / 100.0;
         damage = (int) (damage - (damage * resist));
 
         Ui.cls();
