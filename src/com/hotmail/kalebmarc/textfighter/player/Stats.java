@@ -93,18 +93,18 @@ public class Stats {
     }
 
     private static void updateKillDeathRatio() {
-        int i, gcm = 1, first = totalKills, second = Health.timesDied;
+        int i, greatestCommonMultiple = 1, first = totalKills, second = Health.timesDied;
 
         i = (first >= second) ? first : second;
 
         while (i != 0) {
             if (first % i == 0 && second % i == 0) {
-                gcm = i;
+                greatestCommonMultiple = i;
                 break;
             }
             i--;
         }
 
-        killDeathRatio = first / gcm + ":" + second / gcm;
+        killDeathRatio = first / greatestCommonMultiple + ":" + second / greatestCommonMultiple;
     }
 }
