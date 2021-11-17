@@ -35,17 +35,17 @@ public class PropertyTest {
 		
 		testProperty2.setDesc("A different description of a property!");
 		
-		assertEquals("New description of a property!", testProperty1.getDesc());
+		assertEquals("New description of a property!", testProperty1.getDescription());
 		
-		assertEquals("A different description of a property!", testProperty2.getDesc());
+		assertEquals("A different description of a property!", testProperty2.getDescription());
 		
 		testProperty1.setDesc("Yet another description of a property!");
 		
 		testProperty2.setDesc("One more description of a property!");
 		
-		assertEquals("Yet another description of a property!", testProperty1.getDesc());
+		assertEquals("Yet another description of a property!", testProperty1.getDescription());
 		
-		assertEquals("One more description of a property!", testProperty2.getDesc());
+		assertEquals("One more description of a property!", testProperty2.getDescription());
 	}
 
 	@Test
@@ -53,21 +53,21 @@ public class PropertyTest {
 		Property testProperty1 = new Property();
 		Property testProperty2 = new Property();
 		
-		testProperty1.setPricePerSqFt(10);
+		testProperty1.setPricePerSquareFoot(10);
 		
-		testProperty2.setPricePerSqFt(20);
+		testProperty2.setPricePerSquareFoot(20);
 		
-		assertEquals(10, testProperty1.getPricePerSqFt());
+		assertEquals(10, testProperty1.getPricePerSquareFoot());
 		
-		assertEquals(20, testProperty2.getPricePerSqFt());
+		assertEquals(20, testProperty2.getPricePerSquareFoot());
 		
-		testProperty1.setPricePerSqFt(15);
+		testProperty1.setPricePerSquareFoot(15);
 		
-		testProperty2.setPricePerSqFt(25);
+		testProperty2.setPricePerSquareFoot(25);
 		
-		assertEquals(15, testProperty1.getPricePerSqFt());
+		assertEquals(15, testProperty1.getPricePerSquareFoot());
 		
-		assertEquals(25, testProperty2.getPricePerSqFt());
+		assertEquals(25, testProperty2.getPricePerSquareFoot());
 	}
 
 	@Test
@@ -75,21 +75,21 @@ public class PropertyTest {
 		Property testProperty1 = new Property();
 		Property testProperty2 = new Property();
 		
-		testProperty1.setSqFtOwned(50);
+		testProperty1.setSquareFeetOwned(50);
 		
-		testProperty2.setSqFtOwned(2000);
+		testProperty2.setSquareFeetOwned(2000);
 		
-		assertEquals(50, testProperty1.getSqFtOwned());
+		assertEquals(50, testProperty1.getSquareFeetOwned());
 		
-		assertEquals(100, testProperty2.getSqFtOwned());
+		assertEquals(100, testProperty2.getSquareFeetOwned());
 		
-		testProperty1.setSqFtOwned(75);
+		testProperty1.setSquareFeetOwned(75);
 		
-		testProperty2.setSqFtOwned(80);
+		testProperty2.setSquareFeetOwned(80);
 		
-		assertEquals(75, testProperty1.getSqFtOwned());
+		assertEquals(75, testProperty1.getSquareFeetOwned());
 		
-		assertEquals(80, testProperty2.getSqFtOwned());
+		assertEquals(80, testProperty2.getSquareFeetOwned());
 	}
 
 }

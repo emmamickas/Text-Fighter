@@ -3,13 +3,13 @@ package com.hotmail.kalebmarc.textfighter.main;
 public class Property {
 
     private String name;
-    private String desc;
+    private String description;
     private Type type;
-    private int pricePerSqFt;
+    private int pricePerSquareFoot;
     private int levelNeeded;
     private final int MAX_SQ_FT = 100;//TODO Change this later. Not sure how the SqFt thing is going to work yet.
 
-    private int sqFtOwned;
+    private int squareFeetOwned;
 
     public void setName(String name){
         this.name = name;
@@ -17,11 +17,11 @@ public class Property {
     public String getName(){
         return this.name;
     }
-    public void setDesc(String desc){
-        this.desc = desc;
+    public void setDesc(String description){
+        this.description = description;
     }
-    public String getDesc(){
-        return this.desc;
+    public String getDescription(){
+        return this.description;
     }
     public void setType(Type type){
         this.type = type;
@@ -29,11 +29,11 @@ public class Property {
     public Type getType(){
         return this.type;
     }
-    public void setPricePerSqFt(int pricePerSqFt){
-        this.pricePerSqFt = pricePerSqFt;
+    public void setPricePerSquareFoot(int pricePerSquareFoot){
+        this.pricePerSquareFoot = pricePerSquareFoot;
     }
-    public int getPricePerSqFt(){
-        return this.pricePerSqFt;
+    public int getPricePerSquareFoot(){
+        return this.pricePerSquareFoot;
     }
     public void setLevelNeeded(int levelNeeded){
         this.levelNeeded = levelNeeded;
@@ -41,15 +41,15 @@ public class Property {
     public int getLevelNeeded(){
         return this.levelNeeded;
     }
-    public void setSqFtOwned(int sqFtOwned){
-        if (sqFtOwned > MAX_SQ_FT){
-            this.sqFtOwned = MAX_SQ_FT;
+    public void setSquareFeetOwned(int squareFeetOwned){
+        if (squareFeetOwned > MAX_SQ_FT){
+            this.squareFeetOwned = MAX_SQ_FT;
         } else {
-            this.sqFtOwned = sqFtOwned;
+            this.squareFeetOwned = squareFeetOwned;
         }
     }
-    public int getSqFtOwned(){
-        return this.sqFtOwned;
+    public int getSquareFeetOwned(){
+        return this.squareFeetOwned;
     }
     public static void buyProperty(){
 
