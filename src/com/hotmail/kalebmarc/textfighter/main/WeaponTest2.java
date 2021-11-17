@@ -98,7 +98,7 @@ public class WeaponTest2 {
 	}
 
 	@Test
-	public void testDealDam() {
+	public void testDealDamage() {
 		
 		Weapon.set(0);
 		
