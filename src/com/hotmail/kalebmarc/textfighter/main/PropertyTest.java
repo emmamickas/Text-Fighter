@@ -48,4 +48,48 @@ public class PropertyTest {
 		assertEquals("One more description of a property!", testProperty2.getDesc());
 	}
 
+	@Test
+	public void testPricePerSquareFoot() {
+		Property testProperty1 = new Property();
+		Property testProperty2 = new Property();
+		
+		testProperty1.setPricePerSqFt(10);
+		
+		testProperty2.setPricePerSqFt(20);
+		
+		assertEquals(10, testProperty1.getPricePerSqFt());
+		
+		assertEquals(20, testProperty2.getPricePerSqFt());
+		
+		testProperty1.setPricePerSqFt(15);
+		
+		testProperty2.setPricePerSqFt(25);
+		
+		assertEquals(15, testProperty1.getPricePerSqFt());
+		
+		assertEquals(25, testProperty2.getPricePerSqFt());
+	}
+
+	@Test
+	public void testSquareFootOwned() {
+		Property testProperty1 = new Property();
+		Property testProperty2 = new Property();
+		
+		testProperty1.setSqFtOwned(50);
+		
+		testProperty2.setSqFtOwned(2000);
+		
+		assertEquals(50, testProperty1.getSqFtOwned());
+		
+		assertEquals(100, testProperty2.getSqFtOwned());
+		
+		testProperty1.setSqFtOwned(75);
+		
+		testProperty2.setSqFtOwned(80);
+		
+		assertEquals(75, testProperty1.getSqFtOwned());
+		
+		assertEquals(80, testProperty2.getSqFtOwned());
+	}
+
 }
