@@ -6,8 +6,8 @@ public class Handle {
     private Handle() {
     }
 
-    public static void error(String e) {
-        System.err.println(e);
-        Ui.popup(e, "An error has occurred", JOptionPane.WARNING_MESSAGE);
+    public static void error(String error) {
+        System.err.println(error);
+        Ui.popup(error, "An error has occurred", JOptionPane.WARNING_MESSAGE);
     }
 }
