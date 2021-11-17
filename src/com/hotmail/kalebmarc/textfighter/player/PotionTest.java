@@ -298,7 +298,7 @@ public class PotionTest {
 		
 		assertEquals(2, Potion.rpUsed); // Check total recovery potions that have been used
 		
-		// Deplete potions again
+		// Deplete potions again 
 		Potion.use("survival");
 		
 		Potion.use("survival");
