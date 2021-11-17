@@ -65,9 +65,9 @@ public class AchievementsTest {
 		assertEquals(Achievements.arrayKilled.get(8), false);
 		assertEquals(Achievements.arrayKilled.get(9), false);
 		
-		Achievements.getEnemyAch(ninja);
-		Achievements.getEnemyAch(goblin);
-		Achievements.getEnemyAch(giantAnt);
+		Achievements.getEnemyAchievement(ninja);
+		Achievements.getEnemyAchievement(goblin);
+		Achievements.getEnemyAchievement(giantAnt);
 		
 		assertEquals(Achievements.arrayKilled.get(0), false);
 		assertEquals(Achievements.arrayKilled.get(1), true);

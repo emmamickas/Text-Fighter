@@ -49,7 +49,7 @@ public class Achievements {
     private Achievements() {
     }
 
-    public static void setUpEnemyAch(String name, Enemy type) {
+    public static void setUpEnemyAchievement(String name, Enemy type) {
 
         arrayKilled.add(false);
         arrayEnemy.add(type);
@@ -61,82 +61,82 @@ public class Achievements {
         //Displays which achievements the user has gotten
         Ui.cls();
 
-        boolean[] ach = new boolean[22];
-        String[] strAch = new String[22];
-        ach[0] = moneyMaker;
-        strAch[0] = "Money Maker";
+        boolean[] achievementsGained = new boolean[22];
+        String[] stringAchievements = new String[22];
+        achievementsGained[0] = moneyMaker;
+        stringAchievements[0] = "Money Maker";
 
-        ach[1] = enemySlayer;
-        strAch[1] = "Enemy Slayer";
+        achievementsGained[1] = enemySlayer;
+        stringAchievements[1] = "Enemy Slayer";
 
-        ach[2] = firstKill;
-        strAch[2] = "First Kill";
+        achievementsGained[2] = firstKill;
+        stringAchievements[2] = "First Kill";
 
-        ach[3] = timeForAnUpgrade;
-        strAch[3] = "Time For An Upgrade";
+        achievementsGained[3] = timeForAnUpgrade;
+        stringAchievements[3] = "Time For An Upgrade";
 
-        ach[4] = textFighterMaster;
-        strAch[4] = "Text-Fighter Master";
+        achievementsGained[4] = textFighterMaster;
+        stringAchievements[4] = "Text-Fighter Master";
 
-        ach[5] = YAYPOWER;
-        strAch[5] = "YAY POWER!";
+        achievementsGained[5] = YAYPOWER;
+        stringAchievements[5] = "YAY POWER!";
 
-        ach[6] = awwYouCareAboutMe;
-        strAch[6] = "Aww, You Care About Me :')";
+        achievementsGained[6] = awwYouCareAboutMe;
+        stringAchievements[6] = "Aww, You Care About Me :')";
 
-        ach[7] = slayer;
-        strAch[7] = "Slayer";
+        achievementsGained[7] = slayer;
+        stringAchievements[7] = "Slayer";
 
-        ach[8] = nobodysPerfect;
-        strAch[8] = "Nobodys Perfect";
+        achievementsGained[8] = nobodysPerfect;
+        stringAchievements[8] = "Nobodys Perfect";
 
-        ach[9] = makingMoney;
-        strAch[9] = "Making Money";
+        achievementsGained[9] = makingMoney;
+        stringAchievements[9] = "Making Money";
 
-        ach[10] = gamblingAddiction;
-        strAch[10] = "Gambling Addiction";
+        achievementsGained[10] = gamblingAddiction;
+        stringAchievements[10] = "Gambling Addiction";
 
-        ach[11] = level2Fighter;
-        strAch[11] = "Level 2 Fighter!";
+        achievementsGained[11] = level2Fighter;
+        stringAchievements[11] = "Level 2 Fighter!";
 
-        ach[12] = level3Fighter;
-        strAch[12] = "Level 3 Fighter!";
+        achievementsGained[12] = level3Fighter;
+        stringAchievements[12] = "Level 3 Fighter!";
 
-        ach[13] = level4Fighter;
-        strAch[13] = "Level 4 Fighter!";
+        achievementsGained[13] = level4Fighter;
+        stringAchievements[13] = "Level 4 Fighter!";
 
-        ach[14] = level5Fighter;
-        strAch[14] = "Level 5 Fighter!";
+        achievementsGained[14] = level5Fighter;
+        stringAchievements[14] = "Level 5 Fighter!";
 
-        ach[15] = level6Fighter;
-        strAch[15] = "Level 6 Fighter!";
+        achievementsGained[15] = level6Fighter;
+        stringAchievements[15] = "Level 6 Fighter!";
 
-        ach[16] = level7Fighter;
-        strAch[16] = "Level 7 Fighter!";
+        achievementsGained[16] = level7Fighter;
+        stringAchievements[16] = "Level 7 Fighter!";
 
-        ach[17] = level8Fighter;
-        strAch[17] = "Level 8 Fighter!";
+        achievementsGained[17] = level8Fighter;
+        stringAchievements[17] = "Level 8 Fighter!";
 
-        ach[18] = level9Fighter;
-        strAch[18] = "Level 9 Fighter!";
+        achievementsGained[18] = level9Fighter;
+        stringAchievements[18] = "Level 9 Fighter!";
 
-        ach[19] = level10Fighter;
-        strAch[19] = "Level 10 Fighter!";
+        achievementsGained[19] = level10Fighter;
+        stringAchievements[19] = "Level 10 Fighter!";
 
-        ach[20] = honestPlayer;
-        strAch[20] = "Honest Player";
+        achievementsGained[20] = honestPlayer;
+        stringAchievements[20] = "Honest Player";
 
-        ach[21] = unnaturalLuck;
-        strAch[21] = "Unnatural Luck";
+        achievementsGained[21] = unnaturalLuck;
+        stringAchievements[21] = "Unnatural Luck";
 
         Ui.println("---------------------------------------");
         Ui.println("Achievements");
         Ui.println();
         Ui.println("Unlocked Achievements:");
         Ui.println();
-        for (int i = 0; i < ach.length; i++) {
-            if (ach[i]) {
-                Ui.println(strAch[i]);
+        for (int i = 0; i < achievementsGained.length; i++) {
+            if (achievementsGained[i]) {
+                Ui.println(stringAchievements[i]);
             }
         }
         //Enemy
@@ -148,9 +148,9 @@ public class Achievements {
         Ui.println();
         Ui.println("Locked Achievements:");
         Ui.println();
-        for (int i = 0; i < ach.length; i++) {
-            if (!ach[i]) {
-                Ui.println(strAch[i]);
+        for (int i = 0; i < achievementsGained.length; i++) {
+            if (!achievementsGained[i]) {
+                Ui.println(stringAchievements[i]);
             }
         }
         //Enemy
@@ -196,16 +196,16 @@ public class Achievements {
         }
     }
 
-    public static void getEnemyAch(Enemy x) {
-        if (!arrayKilled.get(arrayEnemy.indexOf(x))) {
-            get("Goodbye, " + x.getName() + "!");
-            arrayKilled.set(arrayEnemy.indexOf(x), true);
+    public static void getEnemyAchievement(Enemy enemy) {
+        if (!arrayKilled.get(arrayEnemy.indexOf(enemy))) {
+            get("Goodbye, " + enemy.getName() + "!");
+            arrayKilled.set(arrayEnemy.indexOf(enemy), true);
         }
     }
 
-    private static void get(String ach) {
+    private static void get(String achievement) {
         //Displays that you've gotten an achievement
-        Ui.popup("You've got an achievement! \n\n" + ach, "Achievement", JOptionPane.INFORMATION_MESSAGE);
+        Ui.popup("You've got an achievement! \n\n" + achievement, "Achievement", JOptionPane.INFORMATION_MESSAGE);
         Xp.set(100, true);
     }
 
