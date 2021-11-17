@@ -24,8 +24,8 @@ class About {
         return viewed;
     }
 
-    public static void setViewed(boolean v) {
-        viewed = v;
+    public static void setViewed(boolean hasBeenViewed) {
+        viewed = hasBeenViewed;
     }
 
     public static boolean isEven(int check) {//TODO Remove when implementing JTools

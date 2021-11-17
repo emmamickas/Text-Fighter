@@ -155,4 +155,38 @@ public class EnemyTest {
 		assertEquals(Enemy.arrayEnemy.get(8), Enemy.getEnemies().get(8));
 		assertEquals(Enemy.arrayEnemy.get(9), Enemy.getEnemies().get(9));
 	}
+
+	@Test
+	public void testSet() {
+		
+		Enemy.set(0);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(0));
+		
+		Enemy.set(2);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(2));
+		
+		Enemy.set(4);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(4));
+		
+		Enemy.set(6);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(6));
+		
+		Enemy.set(8);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(8));
+		
+		Enemy.set(1);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(1));
+		
+		Enemy.set(3);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(3));
+		
+		Enemy.set(5);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(5));
+		
+		Enemy.set(7);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(7));
+		
+		Enemy.set(9);
+		assertEquals(Enemy.get(), Enemy.getEnemies().get(9));
+	}
 }
