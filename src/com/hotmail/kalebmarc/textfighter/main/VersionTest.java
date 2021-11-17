@@ -35,7 +35,7 @@ public class VersionTest {
             + "written in Java.\n\n"
             + "Text-Fighter is currently in Alpha stage\n"
             + "which means it's still in early development,\n"
-            + "and will contain lots of bugs and missing features.", Version.getDesc());
+            + "and will contain lots of bugs and missing features.", Version.getDescription());
 	}
 
 }

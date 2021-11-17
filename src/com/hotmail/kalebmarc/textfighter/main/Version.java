@@ -3,7 +3,7 @@ package com.hotmail.kalebmarc.textfighter.main;
 class Version {
     private static final String VERSION = "4.9DEV";
     private static final String STAGE = "Alpha";
-    private static final String DESC = "" //Award for "worse game description" goes to:
+    private static final String DESCRIPTION = "" //Award for "worse game description" goes to:
             //But seriously; add information that the user actually cares about
             + "Text-Fighter is a Text-Based\n"
             + "Fighter RPG game, completely\n"
@@ -40,8 +40,8 @@ class Version {
         return STAGE + " " + VERSION;
     }
 
-    public static String getDesc() {
-        return DESC;
+    public static String getDescription() {
+        return DESCRIPTION;
     }
 
     public static String getChange() {
