@@ -94,21 +94,21 @@ public class Enemy {
                 suitableEnemies.add(getEnemies().get(i));
             }
         }
-        current = suitableEnemies.get(Random.RInt(0, suitableEnemies.size() -1));
+        current = suitableEnemies.get(Random.randomInt(0, suitableEnemies.size() -1));
     }
 
     public static void encounterNew() {
 
         findEnemy();
         current.health = current.healthMax;
-        current.firstAidKit = Random.RInt(FIRST_AID_KIT_MIN, FIRST_AID_KIT_MAX);
+        current.firstAidKit = Random.randomInt(FIRST_AID_KIT_MIN, FIRST_AID_KIT_MAX);
         com.hotmail.kalebmarc.textfighter.player.Xp.setBattleXp(0, false);
         Ui.popup("You have encountered a " + current.getName(), "Encounter", JOptionPane.INFORMATION_MESSAGE);
 
     }
 
     private static void testFoundPipe() {
-        int found = Random.RInt(100);
+        int found = Random.randomInt(100);
         if (found <= 2 && !Game.pipe.owns) {
             Game.pipe.owns = true;
             Weapon.set(Game.pipe);
@@ -126,15 +126,15 @@ public class Enemy {
     }
 
     void dealDamage() {
-        int damage = Random.RInt(this.damageMin, this.damageMax);
+        int damage = Random.randomInt(this.damageMin, this.damageMax);
         Health.takeDamage(damage);
     }
 
     private void die() {
 
         //Get rewards & store in temp vars
-        int tempCoin = Random.RInt(coinDropMin, coinDropMax);
-        int tempHealth = Random.RInt(0, 2);
+        int tempCoin = Random.randomInt(coinDropMin, coinDropMax);
+        int tempHealth = Random.randomInt(0, 2);
         xp += com.hotmail.kalebmarc.textfighter.player.Xp.getBattleXp();
         com.hotmail.kalebmarc.textfighter.player.Xp.setBattleXp(0, false);
 

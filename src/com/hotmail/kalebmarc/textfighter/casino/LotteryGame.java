@@ -57,13 +57,13 @@ public class LotteryGame extends BasicCasinoGame {
 
         // Calculate the individual ticket results
         for (int ticketNumber = 0; ticketNumber < ticketsBought; ticketNumber++) { // Tries every ticket
-            if (Random.RInt(100) / 100D <= LOW_PRIZE_CHANCE && lowPrizeWon < LOW_PRIZE_MAX) {
+            if (Random.randomInt(100) / 100D <= LOW_PRIZE_CHANCE && lowPrizeWon < LOW_PRIZE_MAX) {
                 lowPrizeWon++;
-            } else if (Random.RInt(100) / 100D <= MID_PRIZE_CHANCE && midPrizeWon < MID_PRIZE_MAX) {
+            } else if (Random.randomInt(100) / 100D <= MID_PRIZE_CHANCE && midPrizeWon < MID_PRIZE_MAX) {
                 midPrizeWon++;
-            } else if (Random.RInt(100) / 100D <= HIGH_PRIZE_CHANCE && highPrizeWon < HIGH_PRIZE_MAX) {
+            } else if (Random.randomInt(100) / 100D <= HIGH_PRIZE_CHANCE && highPrizeWon < HIGH_PRIZE_MAX) {
                 highPrizeWon++;
-            } else if (Random.RInt(1000) / 1000D <= JACKPOT_CHANCE && jackpotWon < JACKPOT_MAX) {
+            } else if (Random.randomInt(1000) / 1000D <= JACKPOT_CHANCE && jackpotWon < JACKPOT_MAX) {
                 jackpotWon++;
                 unlockUnnaturalLuck = true;
             }

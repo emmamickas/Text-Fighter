@@ -123,7 +123,7 @@ public class EnemyTest2 {
 		
 		String nextEnemy = Enemy.get().getName();
 		
-		assertTrue((lost <= Random.RInt(3, 4) * 10 * 10 && lost >= 0) || (nextEnemy != previousEnemy) || (Enemy.get().getHealth() == 20));
+		assertTrue((lost <= Random.randomInt(3, 4) * 10 * 10 && lost >= 0) || (nextEnemy != previousEnemy) || (Enemy.get().getHealth() == 20));
 		
 		startHealth = Enemy.get().getHealth();
 
@@ -139,6 +139,6 @@ public class EnemyTest2 {
 		
 		String lastEnemy = Enemy.get().getName();
 		
-		assertTrue((lost <= Random.RInt(3, 4) * 10 * 10 && lost >= 0) || (lastEnemy != nextEnemy) || (Enemy.get().getHealth() == 20));
+		assertTrue((lost <= Random.randomInt(3, 4) * 10 * 10 && lost >= 0) || (lastEnemy != nextEnemy) || (Enemy.get().getHealth() == 20));
 	}
 }

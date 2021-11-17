@@ -208,7 +208,7 @@ public class Weapon implements Comparable<Weapon> {
             /*
              * Melee Attack
              */
-            damageDealt = Random.RInt(this.damageMin, this.damageMax);
+            damageDealt = Random.randomInt(this.damageMin, this.damageMax);
         } else {
 
             /*
@@ -217,7 +217,7 @@ public class Weapon implements Comparable<Weapon> {
             if (getAmmo() >= this.ammoUsed) {
 
                 for (int i = 1; i <= this.ammoUsed; i++) {
-                    if (Random.RInt(100) > this.chanceOfMissing) {
+                    if (Random.randomInt(100) > this.chanceOfMissing) {
                         damageDealt += BULLET_DAMAGE;
                         Stats.bulletsThatHit++;
 
@@ -261,7 +261,7 @@ public class Weapon implements Comparable<Weapon> {
     private void criticalHit() {
 
         if (wasCriticalHit()) {
-            int critMultiplier = Random.RInt(this.criticalDamageMultiplierMin, this.criticalDamageMultiplierMax);
+            int critMultiplier = Random.randomInt(this.criticalDamageMultiplierMin, this.criticalDamageMultiplierMax);
 
             damageDealt *= critMultiplier;
 
@@ -292,11 +292,11 @@ public class Weapon implements Comparable<Weapon> {
     }
 
     private boolean wasCriticalHit() {
-        return Random.RInt((int) (100 / this.criticalChanceMultiplier)) == 1;
+        return Random.randomInt((int) (100 / this.criticalChanceMultiplier)) == 1;
     }
     
     private boolean bulletWasCriticalHit() {
-    	return Random.RInt((int) (100 / Weapon.BULLET_CRITICAL_CHANCE)) == 1;
+    	return Random.randomInt((int) (100 / Weapon.BULLET_CRITICAL_CHANCE)) == 1;
     }
 
     public void viewAbout() {

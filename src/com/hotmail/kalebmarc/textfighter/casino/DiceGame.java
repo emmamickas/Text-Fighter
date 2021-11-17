@@ -78,8 +78,8 @@ public class DiceGame extends BasicCasinoGame {
         } catch (InterruptedException e) {
             Handle.error(e.toString());
         }
-        dice1 = Random.RInt(6);
-        dice2 = Random.RInt(6);
+        dice1 = Random.randomInt(6);
+        dice2 = Random.randomInt(6);
         Ui.println("Results are ready! Press enter to continue.");
         Ui.pause();
 

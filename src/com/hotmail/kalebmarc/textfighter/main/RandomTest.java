@@ -28,13 +28,13 @@ public class RandomTest {
 
 	@Test
 	public void testRandomInt() {
-		assertTrue(Random.RInt(10) <= 10);
+		assertTrue(Random.randomInt(10) <= 10);
 		
-		assertTrue(Random.RInt(10) >= 0);
+		assertTrue(Random.randomInt(10) >= 0);
 		
-		assertTrue(Random.RInt(5, 10) <= 10);
+		assertTrue(Random.randomInt(5, 10) <= 10);
 		
-		assertTrue(Random.RInt(5, 10) >= 5);
+		assertTrue(Random.randomInt(5, 10) >= 5);
 	}
 
 }

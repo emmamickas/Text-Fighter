@@ -132,7 +132,7 @@ public class WeaponTest2 {
 		
 		String nextEnemy = Enemy.get().getName();
 		
-		assertTrue((lost <= Random.RInt(3, 4) * 10 * 10 && lost >= 0) || (nextEnemy != previousEnemy));
+		assertTrue((lost <= Random.randomInt(3, 4) * 10 * 10 && lost >= 0) || (nextEnemy != previousEnemy));
 		
 		startHealth = Enemy.get().getHealth();
 		
@@ -144,7 +144,7 @@ public class WeaponTest2 {
 		
 		String lastEnemy = Enemy.get().getName();
 		
-		assertTrue((lost <= Random.RInt(3, 4) * 10 * 10 && lost >= 0) || (lastEnemy != nextEnemy));
+		assertTrue((lost <= Random.randomInt(3, 4) * 10 * 10 && lost >= 0) || (lastEnemy != nextEnemy));
 	}
 
 	@Test
@@ -181,7 +181,7 @@ public class WeaponTest2 {
 		
 		String nextEnemy = Enemy.get().getName();
 		
-		assertTrue((lost <= Random.RInt(3, 4) * 10 * 10 && lost >= 100) || (nextEnemy != previousEnemy) || (Enemy.get().getHealth() == 20));
+		assertTrue((lost <= Random.randomInt(3, 4) * 10 * 10 && lost >= 100) || (nextEnemy != previousEnemy) || (Enemy.get().getHealth() == 20));
 		
 		startHealth = Enemy.get().getHealth();
 
@@ -197,6 +197,6 @@ public class WeaponTest2 {
 		
 		String lastEnemy = Enemy.get().getName();
 		
-		assertTrue((lost <= Random.RInt(3, 4) * 10 * 10 && lost >= 100) || (lastEnemy != nextEnemy) || (Enemy.get().getHealth() == 20));
+		assertTrue((lost <= Random.randomInt(3, 4) * 10 * 10 && lost >= 100) || (lastEnemy != nextEnemy) || (Enemy.get().getHealth() == 20));
 	}
 }

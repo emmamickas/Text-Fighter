@@ -159,7 +159,7 @@ public class Game {
 
 			switch (Ui.getValidInt()) {
 				case 1:
-					int fightPath = Random.RInt(100);
+					int fightPath = Random.randomInt(100);
 
 					if (Weapon.get().getName().equals("Sniper")) {
 						if (fightPath <= 30) Enemy.get().dealDamage();
