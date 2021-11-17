@@ -4,14 +4,14 @@ import com.hotmail.kalebmarc.textfighter.main.Handle;
 import com.hotmail.kalebmarc.textfighter.main.Ui;
 
 public class Potion {
-    public static int spUsed = 0;
-    public static int spLevel;
-    public static int spPrice;
+    public static int survivalPotionUsed = 0;
+    public static int survivalPotionLevel;
+    public static int survivalPotionPrice;
     //TODO will eventually add potions to heal status ailments
     //TODO possibly add potion that gives player a temporary strength boost (Does more damage)
-    public static int rpUsed = 0;
-    public static int rpLevel;
-    public static int rpPrice;
+    public static int recoveryPotionUsed = 0;
+    public static int recoveryPotionLevel;
+    public static int recoveryPotionPrice;
     private static int survivalPotion; //potion that heals 25% of health
     private static int recoveryPotion; //potion that heals 75% of health
 
@@ -52,9 +52,9 @@ public class Potion {
         }
     }
 
-    public static void use(String k) {
-        String kind = k.trim().substring(0, 1).toUpperCase()
-                + k.substring(1).toLowerCase();
+    public static void use(String potionKind) {
+        String kind = potionKind.trim().substring(0, 1).toUpperCase()
+                + potionKind.substring(1).toLowerCase();
         Ui.cls();
 
         if (get(kind) <= 0) {
@@ -110,10 +110,10 @@ public class Potion {
     public static void used(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
-                spUsed++;
+                survivalPotionUsed++;
                 break;
             case "recovery":
-                rpUsed++;
+                recoveryPotionUsed++;
                 break;
         }
     }
@@ -141,9 +141,9 @@ public class Potion {
     public static int getLevel(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
-                return spLevel;
+                return survivalPotionLevel;
             case "recovery":
-                return rpLevel;
+                return recoveryPotionLevel;
             default:
                 return 0; //need to modify
         }
@@ -152,9 +152,9 @@ public class Potion {
     public static int getPrice(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
-                return spPrice;
+                return survivalPotionPrice;
             case "recovery":
-                return rpPrice;
+                return recoveryPotionPrice;
             default:
                 return 0; //need to modify
         }

@@ -177,16 +177,16 @@ public class Settings {
             Weapon.BULLET_CRITICAL_CHANCE = 0.01;
             Weapon.BULLET_CRITICAL_MULTIPLIER = 10;
             FirstAid.price = 5;
-            Potion.spPrice = 10;
-            Potion.rpPrice = 20;
+            Potion.survivalPotionPrice = 10;
+            Potion.recoveryPotionPrice = 20;
             InstaHealth.price = 30;
             Bank.setInterest(0.05);
             Health.setUpgradePrice(100);
 
             //Levels needed
             FirstAid.level = 1;
-            Potion.spLevel = 2;
-            Potion.rpLevel = 2;
+            Potion.survivalPotionLevel = 2;
+            Potion.recoveryPotionLevel = 2;
             InstaHealth.level = 3;
             Power.level = 4;
 
@@ -228,16 +228,16 @@ public class Settings {
             Weapon.BULLET_CRITICAL_CHANCE = 0.01;
             Weapon.BULLET_CRITICAL_MULTIPLIER = 10;
             FirstAid.price = 15;
-            Potion.spPrice = 25;
-            Potion.rpPrice = 35;
+            Potion.survivalPotionPrice = 25;
+            Potion.recoveryPotionPrice = 35;
             InstaHealth.price = 45;
             Bank.setInterest(0.10);
             Health.setUpgradePrice(100);
 
             //Levels needed
             FirstAid.level = 1;
-            Potion.spLevel = 2;
-            Potion.rpLevel = 2;
+            Potion.survivalPotionLevel = 2;
+            Potion.recoveryPotionLevel = 2;
             InstaHealth.level = 3;
             Power.level = 4;
 

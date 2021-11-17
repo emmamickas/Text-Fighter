@@ -77,12 +77,12 @@ class Shop {
             Ui.println("   Level - " + FirstAid.level);
             Ui.println();
             Ui.println("2) SURVIVAL POTION");
-            Ui.println("   Price - " + Potion.spPrice + " coins");
-            Ui.println("   Level - " + Potion.spLevel);
+            Ui.println("   Price - " + Potion.survivalPotionPrice + " coins");
+            Ui.println("   Level - " + Potion.survivalPotionLevel);
             Ui.println();
             Ui.println("3) RECOVERY POTION");
-            Ui.println("   Price - " + Potion.rpPrice + " coins");
-            Ui.println("   Level - " + Potion.rpLevel);
+            Ui.println("   Price - " + Potion.recoveryPotionPrice + " coins");
+            Ui.println("   Level - " + Potion.recoveryPotionLevel);
             Ui.println();
             Ui.println("4) INSTA-HEALTH");
             Ui.println("   Price - " + InstaHealth.price + " coins");

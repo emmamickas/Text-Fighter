@@ -68,9 +68,9 @@ public class Stats {
         Ui.println("   Health - " + Health.getAsString());
         Ui.println("   Insta-Healths used - " + InstaHealth.used);
         Ui.println("   First-Aid kits used - " + FirstAid.used);
-        Ui.println("   Survival potions used - " + (Potion.spUsed));
-        Ui.println("   Recovery potions used - " + (Potion.rpUsed));
-        Ui.println("   Total potions used - " + (Potion.spUsed + Potion.rpUsed));
+        Ui.println("   Survival potions used - " + (Potion.survivalPotionUsed));
+        Ui.println("   Recovery potions used - " + (Potion.recoveryPotionUsed));
+        Ui.println("   Total potions used - " + (Potion.survivalPotionUsed + Potion.recoveryPotionUsed));
         Ui.println("   Times Died - " + Health.timesDied);
         Ui.println("   Food items eaten - " + Food.totalEaten);
         Ui.println();

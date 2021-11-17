@@ -219,9 +219,9 @@ public class PotionTest {
 		
 		Potion.set("recovery", 5, false); // Set player's recovery potion count to 5
 
-		assertEquals(16, Potion.spUsed); // Check total survival potions that have been used throughout the tests
+		assertEquals(16, Potion.survivalPotionUsed); // Check total survival potions that have been used throughout the tests
 		
-		assertEquals(14, Potion.rpUsed); // Check total recovery potions that have been used throughout the tests
+		assertEquals(14, Potion.recoveryPotionUsed); // Check total recovery potions that have been used throughout the tests
 
 		// Test that using a potion increments the total used
 		Potion.use("survival");
@@ -234,9 +234,9 @@ public class PotionTest {
 		
 		Potion.use("recovery");
 
-		assertEquals(19, Potion.spUsed); // Check total survival potions that have been used
+		assertEquals(19, Potion.survivalPotionUsed); // Check total survival potions that have been used
 		
-		assertEquals(16, Potion.rpUsed); // Check total recovery potions that have been used
+		assertEquals(16, Potion.recoveryPotionUsed); // Check total recovery potions that have been used
 		
 		// Deplete potions again
 		Potion.use("survival");
@@ -249,18 +249,18 @@ public class PotionTest {
 		
 		Potion.use("recovery");
 
-		assertEquals(21, Potion.spUsed); // Check total survival potions that have been used
+		assertEquals(21, Potion.survivalPotionUsed); // Check total survival potions that have been used
 		
-		assertEquals(19, Potion.rpUsed); // Check total recovery potions that have been used
+		assertEquals(19, Potion.recoveryPotionUsed); // Check total recovery potions that have been used
 
 		// Attempt to use nonexistant potions
 		Potion.use("survival");
 		
 		Potion.use("recovery");
 
-		assertEquals(21, Potion.spUsed); // Check total survival potions that have been used after using all potions
+		assertEquals(21, Potion.survivalPotionUsed); // Check total survival potions that have been used after using all potions
 		
-		assertEquals(19, Potion.rpUsed); // Check total recovery potions that have been used after using all potions
+		assertEquals(19, Potion.recoveryPotionUsed); // Check total recovery potions that have been used after using all potions
 	}
 
 	@Ignore
@@ -275,13 +275,13 @@ public class PotionTest {
 		
 		Potion.set("recovery", 5, false); // Set player's recovery potion count to 5
 		
-		Potion.spUsed = 0; // Reset survival potion usage count
+		Potion.survivalPotionUsed = 0; // Reset survival potion usage count
 		
-		Potion.rpUsed = 0; // Reset recovery potion usage count
+		Potion.recoveryPotionUsed = 0; // Reset recovery potion usage count
 
-		assertEquals(0, Potion.spUsed); // Check total survival potions that have been used in this test
+		assertEquals(0, Potion.survivalPotionUsed); // Check total survival potions that have been used in this test
 		
-		assertEquals(0, Potion.rpUsed); // Check total recovery potions that have been used in this test
+		assertEquals(0, Potion.recoveryPotionUsed); // Check total recovery potions that have been used in this test
 
 		// Test that using a potion increments the total used
 		Potion.use("survival");
@@ -294,9 +294,9 @@ public class PotionTest {
 		
 		Potion.use("recovery");
 
-		assertEquals(3, Potion.spUsed); // Check total survival potions that have been used
+		assertEquals(3, Potion.survivalPotionUsed); // Check total survival potions that have been used
 		
-		assertEquals(2, Potion.rpUsed); // Check total recovery potions that have been used
+		assertEquals(2, Potion.recoveryPotionUsed); // Check total recovery potions that have been used
 		
 		// Deplete potions again 
 		Potion.use("survival");
@@ -309,17 +309,17 @@ public class PotionTest {
 		
 		Potion.use("recovery");
 
-		assertEquals(5, Potion.spUsed); // Check total survival potions that have been used
+		assertEquals(5, Potion.survivalPotionUsed); // Check total survival potions that have been used
 		
-		assertEquals(5, Potion.rpUsed); // Check total recovery potions that have been used
+		assertEquals(5, Potion.recoveryPotionUsed); // Check total recovery potions that have been used
 
 		// Attempt to use nonexistant potions
 		Potion.use("survival");
 		
 		Potion.use("recovery");
 
-		assertEquals(5, Potion.spUsed); // Check total survival potions that have been used after using all potions
+		assertEquals(5, Potion.survivalPotionUsed); // Check total survival potions that have been used after using all potions
 		
-		assertEquals(5, Potion.rpUsed); // Check total recovery potions that have been used after using all potions
+		assertEquals(5, Potion.recoveryPotionUsed); // Check total recovery potions that have been used after using all potions
 	}
 }

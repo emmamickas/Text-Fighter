@@ -75,8 +75,8 @@ public class Saves {
 		set("User.XP.battleXp", Xp.getBattleXp());
 
 		//Potions
-		set("Stats.Potions.Survival.Used", Potion.spUsed);
-		set("Stats.Potions.Recovery.Used", Potion.rpUsed);
+		set("Stats.Potions.Survival.Used", Potion.survivalPotionUsed);
+		set("Stats.Potions.Recovery.Used", Potion.recoveryPotionUsed);
 		set("User.Potions.Survival", Potion.get("survival"));
 		set("User.Potions.Recovery", Potion.get("recovery"));
 
@@ -231,8 +231,8 @@ public class Saves {
 		Xp.setBattleXp(getInteger("User.XP.battleXp"), false);
 
 		//Potions
-		Potion.spUsed = getInteger("Stats.Potions.Survival.Used");
-		Potion.rpUsed = getInteger("Stats.Potions.Recovery.Used");
+		Potion.survivalPotionUsed = getInteger("Stats.Potions.Survival.Used");
+		Potion.recoveryPotionUsed = getInteger("Stats.Potions.Recovery.Used");
 		Potion.set("survival", getInteger("User.Potions.Survival"), false);
 		Potion.set("recovery", getInteger("User.Potions.Recovery"), false);
 
@@ -439,8 +439,8 @@ public class Saves {
 			Xp.setBattleXp(readInt(), false);
 
 			//Potions
-			Potion.spUsed = readInt();
-			Potion.rpUsed = readInt();
+			Potion.survivalPotionUsed = readInt();
+			Potion.recoveryPotionUsed = readInt();
 			Potion.set("survival", readInt(), false);
 			Potion.set("recovery", readInt(), false);
 
