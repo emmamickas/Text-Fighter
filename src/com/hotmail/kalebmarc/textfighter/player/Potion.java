@@ -71,7 +71,7 @@ public class Potion {
             Ui.println("You already have full health!");
             Ui.println("You don't need to use a " + kind + " Potion!");
             Ui.println("----------------------------------------------------");
-            Ui.println("Your health: " + Health.getStr());
+            Ui.println("Your health: " + Health.getAsString());
             Ui.println(kind + " Potions: " + get(kind));
             Ui.println("----------------------------------------------------");
             Ui.pause();
@@ -87,7 +87,7 @@ public class Potion {
             Ui.println("You have used a " + kind + " Potion.");
             Ui.println("You've gained " + heal + " health.");
             Ui.println("----------------------------------------------------");
-            Ui.println("Your health: " + Health.getStr());
+            Ui.println("Your health: " + Health.getAsString());
             Ui.println(kind + " Potions: " + get(kind));
             Ui.println("----------------------------------------------------");
             Ui.pause();

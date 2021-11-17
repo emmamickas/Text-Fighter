@@ -19,7 +19,7 @@ public class Health {
     private Health() {
     }
 
-    public static String getStr() {
+    public static String getAsString() {
         return health + "/" + outOf;
     }
 
@@ -31,28 +31,28 @@ public class Health {
         return outOf;
     }
 
-    public static void set(int h) {
-        health = h;
+    public static void set(int newHealth) {
+        health = newHealth;
     }
 
-    public static void set(int h, int hOutOf) {
-        health = h;
-        outOf = hOutOf;
+    public static void set(int newHealth, int newOutOf) {
+        health = newHealth;
+        outOf = newOutOf;
     }
 
     public static void setUpgradePrice(int price) {
         UPGRADE_PRICE = price;
     }
 
-    public static void gain(int h) {
-        health += h;
+    public static void gain(int amountToGain) {
+        health += amountToGain;
         if (health > outOf) {
             health = outOf;
         }
     }
 
-    private static void lose(int h) {
-        health -= h;
+    private static void lose(int amountToLose) {
+        health -= amountToLose;
         if (health <= 0) {
             die();
         }
@@ -146,7 +146,7 @@ public class Health {
             Ui.println("You'll be able to upgrade 10HP at a time, and");
             Ui.println("each upgrade will cost " + UPGRADE_PRICE + " coins.");
             Ui.println();
-            Ui.println("Current Health: " + getStr());
+            Ui.println("Current Health: " + getAsString());
             Ui.println();
             Ui.println("1) Upgrade to " + health + " health.");
             Ui.println("2) Go back");

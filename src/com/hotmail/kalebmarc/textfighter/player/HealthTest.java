@@ -31,13 +31,13 @@ public class HealthTest {
 		
 		Health.set(0, 0);
 		
-		assertEquals("0/0", Health.getStr());
+		assertEquals("0/0", Health.getAsString());
 		
 		Health.set(90, 100);
-		assertEquals("90/100", Health.getStr());
+		assertEquals("90/100", Health.getAsString());
 		
 		Health.set(100, 100);
-		assertEquals("100/100", Health.getStr());
+		assertEquals("100/100", Health.getAsString());
 	}
 
 	@Test
@@ -59,14 +59,14 @@ public class HealthTest {
 		
 		Health.set(0, 0);
 		
-		assertEquals("0/0", Health.getStr());
+		assertEquals("0/0", Health.getAsString());
 		
 		Health.set(90, 100);
-		assertEquals("90/100", Health.getStr());
+		assertEquals("90/100", Health.getAsString());
 		assertEquals(90, Health.get());
 		
 		Health.set(100, 100);
-		assertEquals("100/100", Health.getStr());
+		assertEquals("100/100", Health.getAsString());
 		assertEquals(100, Health.get());
 	}
 
@@ -75,14 +75,14 @@ public class HealthTest {
 		
 		Health.set(0, 100);
 		
-		assertEquals("0/100", Health.getStr());
+		assertEquals("0/100", Health.getAsString());
 		
 		Health.gain(5);
-		assertEquals("5/100", Health.getStr());
+		assertEquals("5/100", Health.getAsString());
 		assertEquals(5, Health.get());
 
 		Health.gain(50);
-		assertEquals("55/100", Health.getStr());
+		assertEquals("55/100", Health.getAsString());
 		assertEquals(55, Health.get());
 	}
 

@@ -6,7 +6,7 @@ import com.hotmail.kalebmarc.textfighter.player.*;
 import javax.swing.*;
 import java.util.Scanner;
 
-import static com.hotmail.kalebmarc.textfighter.player.Health.getStr;
+import static com.hotmail.kalebmarc.textfighter.player.Health.getAsString;
 import static com.hotmail.kalebmarc.textfighter.player.Health.upgrade;
 import static com.hotmail.kalebmarc.textfighter.player.Settings.menu;
 import static com.hotmail.kalebmarc.textfighter.player.Settings.setDif;
@@ -129,7 +129,7 @@ public class Game {
 			Ui.println("     Kill Streak: " + Stats.kills);
 			Ui.println("     Highest Kill Streak: " + Stats.highScore);
 			Ui.println("--" + User.name() + "--");
-			Ui.println("     Health: " + getStr());
+			Ui.println("     Health: " + getAsString());
 			Ui.println("     Coins: " + Coins.get());
 			Ui.println("     First-Aid kits: " + FirstAid.get());
             Ui.println("     Potions: ");
@@ -238,7 +238,7 @@ public class Game {
 			Ui.println("     Kill Streak: " + Stats.kills);
 			Ui.println("     Highest Kill Streak: " + Stats.highScore);
 			Ui.println("--Player Info--");
-			Ui.println("     Health: " + getStr());
+			Ui.println("     Health: " + getAsString());
 			Ui.println("     Coins: " + Coins.get());
 			Ui.println("     First-Aid kits: " + FirstAid.get());
             Ui.println("     Potions: ");
@@ -293,7 +293,7 @@ public class Game {
 			Ui.println("     Kill Streak: " + Stats.kills);
 			Ui.println("     Highest Kill Streak: " + Stats.highScore);
 			Ui.println("--Player Info--");
-			Ui.println("     Health: " + getStr());
+			Ui.println("     Health: " + getAsString());
 			Ui.println("     Coins: " + Coins.get());
 			Ui.println("     First-Aid kits: " + FirstAid.get());
             Ui.println("     Potions: " + (Potion.get("survival") + Potion.get("recovery")));

@@ -65,7 +65,7 @@ public class Stats {
         Ui.println("   XP bought - " + xpBought);
         Ui.println();
         Ui.println("Health:");
-        Ui.println("   Health - " + Health.getStr());
+        Ui.println("   Health - " + Health.getAsString());
         Ui.println("   Insta-Healths used - " + InstaHealth.used);
         Ui.println("   First-Aid kits used - " + FirstAid.used);
         Ui.println("   Survival potions used - " + (Potion.spUsed));

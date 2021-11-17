@@ -45,7 +45,7 @@ public class InstaHealth {
             Ui.println("You already have full health!");
             Ui.println("You don't need an Insta-Health!");
             Ui.println("----------------------------------------------------");
-            Ui.println("Your health: " + Health.getStr());
+            Ui.println("Your health: " + Health.getAsString());
             Ui.println("Insta-Health's: " + get());
             Ui.println("----------------------------------------------------");
             Ui.pause();
@@ -60,7 +60,7 @@ public class InstaHealth {
             Ui.println("You have used an Insta-Health.");
             Ui.println("You're health has been fully restored.");
             Ui.println("----------------------------------------------------");
-            Ui.println("Your health: " + Health.getStr());
+            Ui.println("Your health: " + Health.getAsString());
             Ui.println("Insta-Health's: " + get());
             Ui.println("----------------------------------------------------");
             Ui.pause();

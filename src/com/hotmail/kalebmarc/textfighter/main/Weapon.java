@@ -246,7 +246,7 @@ public class Weapon implements Comparable<Weapon> {
             Ui.println("You have attacked a " + Enemy.get().getName() + "!");
             Ui.println("You dealt " + damageDealt + " damage with a " + this.name);
             Ui.println("----------------------------------------------------");
-            Ui.println("Your health: " + com.hotmail.kalebmarc.textfighter.player.Health.getStr());
+            Ui.println("Your health: " + com.hotmail.kalebmarc.textfighter.player.Health.getAsString());
             Ui.println("Enemy health: " + Enemy.get().getHeathStr());
             Ui.println("----------------------------------------------------");
             Ui.pause();

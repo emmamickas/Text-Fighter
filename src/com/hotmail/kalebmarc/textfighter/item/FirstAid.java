@@ -46,7 +46,7 @@ public class FirstAid {
             Ui.println("You already have full health!");
             Ui.println("You don't need a First-Aid kit!");
             Ui.println("----------------------------------------------------");
-            Ui.println("Your health: " + Health.getStr());
+            Ui.println("Your health: " + Health.getAsString());
             Ui.println("First-Aid kits: " + get());
             Ui.println("----------------------------------------------------");
             Ui.pause();
@@ -61,7 +61,7 @@ public class FirstAid {
             Ui.println("You have used a First-Aid kit.");
             Ui.println("You've gained 20 health.");
             Ui.println("----------------------------------------------------");
-            Ui.println("Your health: " + Health.getStr());
+            Ui.println("Your health: " + Health.getAsString());
             Ui.println("First-Aid kits: " + get());
             Ui.println("----------------------------------------------------");
             Ui.pause();
