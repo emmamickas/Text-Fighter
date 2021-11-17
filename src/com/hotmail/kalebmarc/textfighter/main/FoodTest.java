@@ -109,6 +109,7 @@ public class FoodTest {
 		assertEquals(Food.arrayFood, Food.getFoods());
 
 		// Check all objects are the same in each list access method
+		// Specifically pay attention to description field as well
 		assertEquals(Food.arrayFood.get(0), Food.getFoods().get(0));
 		assertEquals(Food.arrayFood.get(1), Food.getFoods().get(1));
 		assertEquals(Food.arrayFood.get(2), Food.getFoods().get(2));
