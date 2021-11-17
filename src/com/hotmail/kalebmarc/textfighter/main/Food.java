@@ -11,7 +11,7 @@ public class Food {
     public static final ArrayList<Food> arrayFood = new ArrayList<>();
     public static int totalEaten;
     private String name;
-    private String desc;
+    private String description;
     private int quantity = 1;//TODO change to not have a default value once done testing
     private StatusEffect.type statusEffect;
     private int effectLevel;
@@ -19,9 +19,9 @@ public class Food {
     //for ach
     private boolean viewedAbout;
 
-    public Food(String name, String desc, StatusEffect.type statusEffect, type foodType, int effectLevel) {
+    public Food(String name, String description, StatusEffect.type statusEffect, type foodType, int effectLevel) {
         this.name = name;
-        this.desc = desc;
+        this.description = description;
         this.statusEffect = statusEffect;
         this.foodType = foodType;
         this.effectLevel = effectLevel;
@@ -136,7 +136,7 @@ public class Food {
         for (int i = 0; i < ((BORDER_LENGTH / 2) - (this.getName().length() / 2)); i++)
             Ui.print(" ");//Set correct spacing to get name in middle of box
         Ui.println(this.getName());
-        Ui.println(this.desc);
+        Ui.println(this.description);
         Ui.println("Category: " + this.foodType.toString());
         Ui.println("Status effect type: " + this.statusEffect.toString());
         Ui.println("Status effect level: " + this.getEffectLevel());
