@@ -122,7 +122,7 @@ public class Game {
 			if (Cheats.enabled()) {
 				Ui.println("CHEATS ACTIVATED");
 			}
-			Ui.println(Settings.godModeMsg());
+			Ui.println(Settings.godModeMessage());
 			//------------------
 			Ui.println("--Score Info--");
 			Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());

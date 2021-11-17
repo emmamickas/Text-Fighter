@@ -264,7 +264,7 @@ public class Settings {
     }
 
     //Returns message only if god mode is enabled
-    public static String godModeMsg() {
+    public static String godModeMessage() {
         if (godMode) {
             return "Godmode is enabled\n";
         }
