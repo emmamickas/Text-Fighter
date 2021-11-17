@@ -193,4 +193,14 @@ public class ArmourTest {
 		assertEquals(30, Armour.getArmours().get(2).getDamResist());
 		assertEquals(7, Armour.getArmours().get(2).getLevel());
 	}
+
+	@Test
+	public void testDamageResist() {
+		
+		assertEquals(0, Armour.getArmours().get(0).getDamResist());
+		
+		assertEquals(15, Armour.getArmours().get(1).getDamResist());
+
+		assertEquals(30, Armour.getArmours().get(2).getDamResist());
+	}
 }
