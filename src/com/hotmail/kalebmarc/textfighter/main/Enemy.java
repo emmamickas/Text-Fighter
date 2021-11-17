@@ -69,8 +69,8 @@ public class Enemy {
         }
     }
 
-    public static void set(int i) {
-        current = arrayEnemy.get(i);
+    public static void set(int enemyIndex) {
+        current = arrayEnemy.get(enemyIndex);
     }
 
     public static ArrayList<Enemy> getEnemies() {
@@ -81,8 +81,8 @@ public class Enemy {
         return current;
     }
 
-    public static int getIndex(Enemy i) {
-        return arrayEnemy.indexOf(i);
+    public static int getIndex(Enemy enemy) {
+        return arrayEnemy.indexOf(enemy);
     }
 
     public static void findEnemy() {
