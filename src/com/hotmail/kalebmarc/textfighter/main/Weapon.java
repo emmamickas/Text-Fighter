@@ -29,9 +29,9 @@ public class Weapon implements Comparable<Weapon> {
     private int damageMax;
     private int damageDealt;
     private double chanceOfMissing;
-    private double critChanceMultiplier;
-    private int critDamMultiplierMin;
-    private int critDamMultiplierMax;
+    private double criticalChanceMultiplier;
+    private int criticalDamageMultiplierMin;
+    private int criticalDamageMultiplierMax;
     private String name;
     private boolean buyable;
     //Ammo
@@ -41,7 +41,7 @@ public class Weapon implements Comparable<Weapon> {
     private int ammoIncludedWithPurchase;
 
     public Weapon(String name, int ammoUsed, int ammoIncludedWithPurchase, boolean buyable, int price, //For guns
-                  int ammoPrice, int level, double chanceOfMissing, double critChanceMultiplier, int critDamMultiplierMin, int critDamMultiplierMax, boolean firstInit, boolean changeDif) {
+                  int ammoPrice, int level, double chanceOfMissing, double criticalChanceMultiplier, int criticalDamageMultiplierMin, int criticalDamageMultiplierMax, boolean firstInitialization, boolean changeDifficulty) {
 
         this.name = name;
         this.ammoUsed = ammoUsed;
@@ -51,16 +51,16 @@ public class Weapon implements Comparable<Weapon> {
         this.ammoPrice = ammoPrice;
         this.level = level;
         this.chanceOfMissing = chanceOfMissing;
-        this.critChanceMultiplier = critChanceMultiplier;
-        this.critDamMultiplierMin = critDamMultiplierMin;
-        this.critDamMultiplierMax = critDamMultiplierMax;
+        this.criticalChanceMultiplier = criticalChanceMultiplier;
+        this.criticalDamageMultiplierMin = criticalDamageMultiplierMin;
+        this.criticalDamageMultiplierMax = criticalDamageMultiplierMax;
         this.melee = false;
 
-        if (!changeDif) {
+        if (!changeDifficulty) {
             arrayWeapon.add(this);
         }
 
-        if (firstInit) {
+        if (firstInitialization) {
             this.owns = false;
 
         }
@@ -70,7 +70,7 @@ public class Weapon implements Comparable<Weapon> {
     }
 
     public Weapon(String name, boolean startingWeapon, boolean buyable, int price, int level,//For Melee
-                  int damageMin, int damageMax, boolean firstInit, boolean changeDif) {
+                  int damageMin, int damageMax, boolean firstInitialization, boolean changeDifficulty) {
         this.name = name;
         this.buyable = buyable;
         this.price = price;
@@ -79,11 +79,11 @@ public class Weapon implements Comparable<Weapon> {
         this.damageMax = damageMax;
         this.melee = true;
 
-        if (!changeDif) {
+        if (!changeDifficulty) {
             arrayWeapon.add(this);
         }
 
-        if (firstInit) {
+        if (firstInitialization) {
             if (startingWeapon) {//If first init, see if player starts with this or not.
                 this.owns = true;
                 current = this;
@@ -102,16 +102,16 @@ public class Weapon implements Comparable<Weapon> {
         return current;
     }
 
-    static int getIndex(Weapon i) {
-        return arrayWeapon.indexOf(i);
+    static int getIndex(Weapon weapon) {
+        return arrayWeapon.indexOf(weapon);
     }
 
-    public static void set(Weapon x) {
-        current = x;
+    public static void set(Weapon weapon) {
+        current = weapon;
     }
 
-    public static void set(int i) {
-        current = arrayWeapon.get(i);
+    public static void set(int weaponIndex) {
+        current = arrayWeapon.get(weaponIndex);
     }
 
     public static void choose() {
@@ -202,7 +202,7 @@ public class Weapon implements Comparable<Weapon> {
         return this.damageDealt;
     }
 
-    public void dealDam() {
+    public void dealDamage() {
 
         if (this.melee) {
             /*
@@ -261,7 +261,7 @@ public class Weapon implements Comparable<Weapon> {
     private void criticalHit() {
 
         if (wasCriticalHit()) {
-            int critMultiplier = Random.RInt(this.critDamMultiplierMin, this.critDamMultiplierMax);
+            int critMultiplier = Random.RInt(this.criticalDamageMultiplierMin, this.criticalDamageMultiplierMax);
 
             damageDealt *= critMultiplier;
 
@@ -292,7 +292,7 @@ public class Weapon implements Comparable<Weapon> {
     }
 
     private boolean wasCriticalHit() {
-        return Random.RInt((int) (100 / this.critChanceMultiplier)) == 1;
+        return Random.RInt((int) (100 / this.criticalChanceMultiplier)) == 1;
     }
     
     private boolean bulletWasCriticalHit() {
@@ -314,8 +314,8 @@ public class Weapon implements Comparable<Weapon> {
         Ui.println("Chance of missing: " + this.chanceOfMissing + "%");
         Ui.println("Ammo Used: " + this.ammoUsed);
         Ui.println("Damage: " + this.getDamage());
-        Ui.println("Chance of critical hit: " + this.critChanceMultiplier + "%");
-        Ui.println("Critical hit damage multiplier: " + this.critDamMultiplierMin + "-" + this.critDamMultiplierMax + "x");
+        Ui.println("Chance of critical hit: " + this.criticalChanceMultiplier + "%");
+        Ui.println("Critical hit damage multiplier: " + this.criticalDamageMultiplierMin + "-" + this.criticalDamageMultiplierMax + "x");
         if (!this.melee) {
             Ui.println("Chance of critical hit, bullet: " + Weapon.BULLET_CRITICAL_CHANCE + "%");
             Ui.println("Bullet Critical of critical hit, bullet: " + Weapon.BULLET_CRITICAL_MULTIPLIER + "x");
@@ -413,7 +413,7 @@ public class Weapon implements Comparable<Weapon> {
     }
 
     @Override
-    public int compareTo(Weapon w) {
-        return Integer.compare(this.level, w.level);
+    public int compareTo(Weapon weapon) {
+        return Integer.compare(this.level, weapon.level);
     }
 }

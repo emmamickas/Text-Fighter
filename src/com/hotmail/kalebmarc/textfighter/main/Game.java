@@ -163,10 +163,10 @@ public class Game {
 
 					if (Weapon.get().getName().equals("Sniper")) {
 						if (fightPath <= 30) Enemy.get().dealDamage();
-						if (fightPath > 30) sniper.dealDam();
+						if (fightPath > 30) sniper.dealDamage();
 					} else {
 						if (fightPath <= 50) Enemy.get().dealDamage();
-						if (fightPath > 50) Weapon.get().dealDam();
+						if (fightPath > 50) Weapon.get().dealDamage();
 					}
 					break;
 				case 2:

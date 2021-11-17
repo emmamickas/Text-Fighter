@@ -112,7 +112,7 @@ public class WeaponTest2 {
 		
 		int startHealth = Enemy.get().getHealth();
 		
-		Weapon.get().dealDam();
+		Weapon.get().dealDamage();
 		
 		int endHealth = Enemy.get().getHealth();
 		
@@ -124,7 +124,7 @@ public class WeaponTest2 {
 		
 		Weapon.set(4);
 		
-		Weapon.get().dealDam();
+		Weapon.get().dealDamage();
 		
 		endHealth = Enemy.get().getHealth();
 		
@@ -136,7 +136,7 @@ public class WeaponTest2 {
 		
 		startHealth = Enemy.get().getHealth();
 		
-		Weapon.get().dealDam();
+		Weapon.get().dealDamage();
 		
 		endHealth = Enemy.get().getHealth();
 		
@@ -171,7 +171,7 @@ public class WeaponTest2 {
 		
 		do
 		{
-			Weapon.get().dealDam(); // Loop until user doesn't miss
+			Weapon.get().dealDamage(); // Loop until user doesn't miss
 			
 			endHealth = Enemy.get().getHealth();
 			
@@ -187,7 +187,7 @@ public class WeaponTest2 {
 
 		do
 		{
-			Weapon.get().dealDam(); // Loop until user doesn't miss
+			Weapon.get().dealDamage(); // Loop until user doesn't miss
 			
 			endHealth = Enemy.get().getHealth();
 			

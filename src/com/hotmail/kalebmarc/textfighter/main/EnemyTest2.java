@@ -113,7 +113,7 @@ public class EnemyTest2 {
 		
 		do
 		{
-			Weapon.get().dealDam(); // Loop until user doesn't miss
+			Weapon.get().dealDamage(); // Loop until user doesn't miss
 			
 			endHealth = Enemy.get().getHealth();
 			
@@ -129,7 +129,7 @@ public class EnemyTest2 {
 
 		do
 		{
-			Weapon.get().dealDam(); // Loop until user doesn't miss
+			Weapon.get().dealDamage(); // Loop until user doesn't miss
 			
 			endHealth = Enemy.get().getHealth();
 			
