@@ -123,21 +123,8 @@ public class Game {
 				Ui.println("CHEATS ACTIVATED");
 			}
 			Ui.println(Settings.godModeMsg());
+			printPlayerInformation();
 			//------------------
-			Ui.println("--Score Info--");
-			Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());
-			Ui.println("     Kill Streak: " + Stats.kills);
-			Ui.println("     Highest Kill Streak: " + Stats.highScore);
-			Ui.println("--" + User.name() + "--");
-			Ui.println("     Health: " + getStr());
-			Ui.println("     Coins: " + Coins.get());
-			Ui.println("     First-Aid kits: " + FirstAid.get());
-            Ui.println("     Potions: ");
-            Ui.println("          Survival: " + Potion.get("survival"));
-            Ui.println("          Recovery: " + Potion.get("recovery"));
-			Ui.println("     Equipped armour: " + Armour.getEquipped().toString());
-			Ui.println("     Equipped Weapon: " + Weapon.get().getName());
-			//Displays ammo only if a weapon is equipped
 			Weapon.displayAmmo();
 			//--------------------
 			Ui.println("--Enemy Info--");
@@ -233,18 +220,9 @@ public class Game {
 		while (true) {
 			Ui.cls();
 			Ui.println("------------------------------------------------------------------");
+
 			Ui.println("                      WELCOME TO THE TOWN                         ");
-			Ui.println("--Score Info--");
-			Ui.println("     Kill Streak: " + Stats.kills);
-			Ui.println("     Highest Kill Streak: " + Stats.highScore);
-			Ui.println("--Player Info--");
-			Ui.println("     Health: " + getStr());
-			Ui.println("     Coins: " + Coins.get());
-			Ui.println("     First-Aid kits: " + FirstAid.get());
-            Ui.println("     Potions: ");
-            Ui.println("          Survival: " + Potion.get("survival"));
-            Ui.println("          Recovery: " + Potion.get("recovery"));
-			Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+			printPlayerInformation();
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("1) Casino");
 			Ui.println("2) Home");
@@ -280,6 +258,23 @@ public class Game {
 		}//While Loop
 	}//Method
 
+	private static void printPlayerInformation(){
+
+		Ui.println("--Score Info--");
+		Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());
+		Ui.println("     Kill Streak: " + Stats.kills);
+		Ui.println("     Highest Kill Streak: " + Stats.highScore);
+		Ui.println("--" + User.name() + "--");
+		Ui.println("     Health: " + getStr());
+		Ui.println("     Coins: " + Coins.get());
+		Ui.println("     First-Aid kits: " + FirstAid.get());
+		Ui.println("     Potions: ");
+		Ui.println("          Survival: " + Potion.get("survival"));
+		Ui.println("          Recovery: " + Potion.get("recovery"));
+		Ui.println("     Equipped armour: " + Armour.getEquipped().toString());
+		Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+	}
+
 	private static void home() {
 
 		int menuChoice;
@@ -289,15 +284,8 @@ public class Game {
 			Ui.cls();
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("                          WELCOME HOME                            ");
-			Ui.println("--Score Info--");
-			Ui.println("     Kill Streak: " + Stats.kills);
-			Ui.println("     Highest Kill Streak: " + Stats.highScore);
-			Ui.println("--Player Info--");
-			Ui.println("     Health: " + getStr());
-			Ui.println("     Coins: " + Coins.get());
-			Ui.println("     First-Aid kits: " + FirstAid.get());
-            Ui.println("     Potions: " + (Potion.get("survival") + Potion.get("recovery")));
-			Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+
+			printPlayerInformation();
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("1) Equip weapon");
 			Ui.println("2) Equip Armour");

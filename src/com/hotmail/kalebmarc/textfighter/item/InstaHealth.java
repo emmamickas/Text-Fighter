@@ -1,5 +1,6 @@
 package com.hotmail.kalebmarc.textfighter.item;
 
+import com.hotmail.kalebmarc.textfighter.main.Shop;
 import com.hotmail.kalebmarc.textfighter.main.Ui;
 import com.hotmail.kalebmarc.textfighter.player.Coins;
 import com.hotmail.kalebmarc.textfighter.player.Health;
@@ -69,18 +70,9 @@ public class InstaHealth {
     }
 
     public static void buy() {
-        if (Xp.getLevel() < level) {
-            Ui.println("You have to be at least level " + level + " to buy this!");
-            Ui.pause();
-        } else if (price <= Coins.get()) {
-            Coins.set(-price, true);
-            Stats.coinsSpentOnHealth += price;
+        if(Shop.purchase(price, level)){
             set(1, true);
-            Ui.println("Thank you for your purchase. Come again soon! ");
-            Ui.pause();
-        } else {
-            Ui.println("You do not have enough coins.");
-            Ui.pause();
         }
+        Ui.pause();
     }
 }

@@ -274,14 +274,9 @@ public class Weapon implements Comparable<Weapon> {
     public void viewAbout() {
 
         final int BORDER_LENGTH = 39;
+        Ui.printClassInfo(this.getName());
+       //Start of weapon Info
 
-        //Start of weapon Info
-        Ui.cls();
-        for (int i = 0; i < BORDER_LENGTH; i++) Ui.print("-");//Make line
-        Ui.println();
-        for (int i = 0; i < ((BORDER_LENGTH / 2) - (this.getName().length() / 2)); i++)
-            Ui.print(" ");//Set correct spacing to get name in middle of box
-        Ui.println(this.getName());
         Ui.println("Price: " + this.price + " coins");
         Ui.println("Chance of missing: " + this.chanceOfMissing + "%");
         Ui.println("Ammo Used: " + this.ammoUsed);

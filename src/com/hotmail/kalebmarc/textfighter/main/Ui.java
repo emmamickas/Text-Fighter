@@ -216,4 +216,14 @@ public class Ui {
             //Blank for a reason - Not supposed to do anything.
         }
     }
+
+    public static void printClassInfo(String name){
+        final int BORDER_LENGTH = 39;
+        Ui.cls();
+        for (int i = 0; i < BORDER_LENGTH; i++) Ui.print("-");//Make line
+        Ui.println();
+        for (int i = 0; i < ((BORDER_LENGTH / 2) - (name.length() / 2)); i++)
+            Ui.print(" ");//Set correct spacing to get name in middle of box
+        Ui.println(name);
+    }
 }

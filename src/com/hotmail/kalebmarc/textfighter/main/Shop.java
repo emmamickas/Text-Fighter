@@ -11,7 +11,7 @@ import com.hotmail.kalebmarc.textfighter.player.Xp;
 
 import java.util.ArrayList;
 
-class Shop {
+public class Shop {
     private Shop() {
     }
 
@@ -356,4 +356,19 @@ class Shop {
             }
         }
     }
+    public static boolean purchase(int level, int price){
+        if (Xp.getLevel() < level) {
+            Ui.println("You have to be at least level " + level + " to buy this!");
+            return false;
+        } else if (price <= Coins.get()) {
+            Coins.set(-price, true);
+            Stats.coinsSpentOnHealth += price;
+            Ui.println("Thank you for your purchase. Come again soon! ");
+            return true;
+        } else {
+            Ui.println("You do not have enough coins.");
+            return false;
+        }
+    }
+
 }

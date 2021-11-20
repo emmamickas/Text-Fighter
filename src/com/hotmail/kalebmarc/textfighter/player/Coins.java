@@ -1,5 +1,7 @@
 package com.hotmail.kalebmarc.textfighter.player;
 
+import com.hotmail.kalebmarc.textfighter.main.Ui;
+
 public class Coins {
 
     private static int coins;
@@ -22,5 +24,8 @@ public class Coins {
             if (coins < 0) coins = 0;
         }
     }
+
+
+
 
 }

@@ -212,20 +212,14 @@ public class Enemy {
 
     public void viewAbout() {
         final int BORDER_LENGTH = 39;
-
+        Ui.printClassInfo(this.getName());
         //Start of weapon Info
-        Ui.cls();
-        for (int i = 0; i < BORDER_LENGTH; i++) Ui.print("-");//Make line
-        Ui.println();
-        for (int i = 0; i < ((BORDER_LENGTH / 2) - (this.getName().length() / 2)); i++)
-            Ui.print(" ");//Set correct spacing to get name in middle of box
-        Ui.println(this.getName());
         Ui.println("Health: " + this.getHealthMax());
         Ui.println("Damage: " + this.damageMin + "-" + this.damageMax);
         Ui.println("Coin Drop: " + this.coinDropMin + "-" + this.coinDropMax);
         Ui.println();
         Ui.println("XP Dropped: " + this.xp + "Xp");
-        for (int i = 0; i < 39; i++) Ui.print("-");//Make line
+        for (int i = 0; i < BORDER_LENGTH; i++) Ui.print("-");//Make line
         Ui.pause();
         Ui.cls();
         //End of weapon Info

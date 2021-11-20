@@ -121,16 +121,10 @@ public class Food {
     }
 
     public void viewAbout() {
-
-        final int BORDER_LENGTH = 39;
+        Ui.printClassInfo(this.getName());
+       final int BORDER_LENGTH = 39;
 
         //End of food Info
-        Ui.cls();
-        for (int i = 0; i < BORDER_LENGTH; i++) Ui.print("-");//draw line
-        Ui.println();
-        for (int i = 0; i < ((BORDER_LENGTH / 2) - (this.getName().length() / 2)); i++)
-            Ui.print(" ");//Set correct spacing to get name in middle of box
-        Ui.println(this.getName());
         Ui.println(this.desc);
         Ui.println("Category: " + this.foodType.toString());
         Ui.println("Status effect type: " + this.statusEffect.toString());

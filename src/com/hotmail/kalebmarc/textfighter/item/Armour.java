@@ -188,14 +188,8 @@ public class Armour {
     public void viewAbout() {
 
         final int BORDER_LENGTH = 39;
-
+        Ui.printClassInfo(this.getName());
         //Start of armour Info
-        Ui.cls();
-        for (int i = 0; i < BORDER_LENGTH; i++) Ui.print("-");//Make line
-        Ui.println();
-        for (int i = 0; i < ((BORDER_LENGTH / 2) - (this.getName().length() / 2)); i++)
-            Ui.print(" ");//Set correct spacing to get name in middle of box
-        Ui.println(this.toString());
         Ui.println("Price: " + this.price + " coins");
         Ui.println("Damage Resistance(%): " + this.damResist + "%");
         Ui.println("Level needed: " + this.level);
