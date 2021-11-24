@@ -68,6 +68,10 @@ public class Health {
         timesDied++;
     }
 
+    /**
+     * Decreases health according the the amount of damage being taken.
+     * @param damage
+     */
     public static void takeDamage(int damage) {
 
         if (Settings.getGodMode()) {
@@ -122,6 +126,9 @@ public class Health {
         }
     }
 
+    /**
+     * Sets health OutOf to the next possible maximum
+     */
     public static void upgrade() {
         while (true) {
 
