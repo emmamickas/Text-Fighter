@@ -40,6 +40,22 @@ public class Weapon implements Comparable<Weapon> {
     private int ammoPrice;//Per 1
     private int ammoIncludedWithPurchase;
 
+    /**
+     * Constructor for weapon of type gun
+     * @param name
+     * @param ammoUsed
+     * @param ammoIncludedWithPurchase
+     * @param buyable
+     * @param price
+     * @param ammoPrice
+     * @param level
+     * @param chanceOfMissing
+     * @param criticalChanceMultiplier
+     * @param criticalDamageMultiplierMin
+     * @param criticalDamageMultiplierMax
+     * @param firstInitialization
+     * @param changeDifficulty
+     */
     public Weapon(String name, int ammoUsed, int ammoIncludedWithPurchase, boolean buyable, int price, //For guns
                   int ammoPrice, int level, double chanceOfMissing, double criticalChanceMultiplier, int criticalDamageMultiplierMin, int criticalDamageMultiplierMax, boolean firstInitialization, boolean changeDifficulty) {
 
@@ -69,6 +85,18 @@ public class Weapon implements Comparable<Weapon> {
 
     }
 
+    /**
+     * Constructor for weapon of type melee
+     * @param name
+     * @param startingWeapon
+     * @param buyable
+     * @param price
+     * @param level
+     * @param damageMin
+     * @param damageMax
+     * @param firstInitialization
+     * @param changeDifficulty
+     */
     public Weapon(String name, boolean startingWeapon, boolean buyable, int price, int level,//For Melee
                   int damageMin, int damageMax, boolean firstInitialization, boolean changeDifficulty) {
         this.name = name;
@@ -114,6 +142,9 @@ public class Weapon implements Comparable<Weapon> {
         current = arrayWeapon.get(weaponIndex);
     }
 
+    /**
+     * Allows for the user to select which weapon to be equipped
+     */
     public static void choose() {
         while (true) {
             Ui.cls();
@@ -202,6 +233,9 @@ public class Weapon implements Comparable<Weapon> {
         return this.damageDealt;
     }
 
+    /**
+     * Calculates the damage to be dealt by the weapon and calls necessary functions to apply damage dealt
+     */
     public void dealDamage() {
 
         if (this.melee) {
@@ -258,6 +292,9 @@ public class Weapon implements Comparable<Weapon> {
         damageDealt = 0;
     }
 
+    /**
+     * Applies logic for a critical hit
+     */
     private void criticalHit() {
 
         if (wasCriticalHit()) {
@@ -275,6 +312,9 @@ public class Weapon implements Comparable<Weapon> {
         }
     }
     
+    /**
+     * Applies logic for a bullet critical hit
+     */
     private void bulletCriticalHit() {
     	
     	if (bulletWasCriticalHit()) {
@@ -326,6 +366,10 @@ public class Weapon implements Comparable<Weapon> {
         //End of weapon Info
     }
 
+    /**
+     * Get the amount of damage that a weapon can deal
+     * @return
+     */
     private String getDamage() {
         if (this.melee) {
             return (this.damageMin + " - " + this.damageMax);
@@ -342,6 +386,9 @@ public class Weapon implements Comparable<Weapon> {
         return this.buyable;
     }
 
+    /**
+     * Checks if the weapon can be purchased and then sets the proper variables to signify ownership
+     */
     public void buy() {
         if (!isBuyable()) {
             Ui.msg("Sorry, this item is no longer in stock.");
@@ -375,6 +422,9 @@ public class Weapon implements Comparable<Weapon> {
 
     }
 
+    /**
+     * Checks if the ammo can be purchased and then sets the proper variables to signify ownership
+     */
     public void buyAmmo() {
 
         Ui.cls();
