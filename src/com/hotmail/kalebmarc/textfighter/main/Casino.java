@@ -18,6 +18,9 @@ public class Casino {
     private Casino() {
     }
 
+    /**
+     * Shows all options of games that player can play in casino. Calls the according game class.
+     */
     public static void menu() {
 
         while (true) {
