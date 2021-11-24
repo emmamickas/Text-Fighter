@@ -28,6 +28,9 @@ public class Food {
         arrayFood.add(this);
     }
 
+    /**
+     * Shows all foods that the user currently has and allows the user to select eating them.
+     */
     public static void list() {
 
         while (true) {
@@ -100,6 +103,10 @@ public class Food {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+    
+    /**
+     * Eat the selected food and modify player status accordingly.
+     */
     public void eat() {
         Ui.cls();
 
@@ -125,6 +132,9 @@ public class Food {
 
     }
 
+    /**
+     * Show information about the food selected.
+     */
     public void viewAbout() {
 
         final int BORDER_LENGTH = 39;
