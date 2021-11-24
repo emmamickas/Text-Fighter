@@ -17,6 +17,11 @@ public class Power {
         return powers;
     }
 
+    /**
+     * Either sets the number of powers owned by the player to amount or adds amount to the number of powers owned by the player
+     * @param amount
+     * @param add whether or not amount is set or added
+     */
     public static void set(int amount, boolean add) {
         if (!add) {
             powers = amount;
@@ -26,6 +31,9 @@ public class Power {
         }
     }
 
+    /**
+     * Checks whether user has a power to use, and deals damage to the enemy to kill it if a power can be used
+     */
     public static void use() {
 
         Ui.cls();
@@ -52,6 +60,9 @@ public class Power {
         }
     }
 
+    /**
+     * Checks if the power can be purchased and then sets the proper variables to signify purchase
+     */
     public static void buy() {
         if (Xp.getLevel() < level) {
             Ui.println("You have to be at least level " + level + " to buy this!");
