@@ -14,6 +14,9 @@ public class LotteryGame extends BasicCasinoGame {
     private int ticketsBought;
     private boolean unlockUnnaturalLuck;
 
+    /**
+     * Called when starting lottery. Prints out information regarding the game and sets the current game type being played to lottery
+     */
     public LotteryGame() {
         super("------------------------------------------------------------------\n" +
                         "                                Lottery                            \n" +
@@ -31,6 +34,9 @@ public class LotteryGame extends BasicCasinoGame {
         unlockUnnaturalLuck = false;
     }
 
+    /**
+     * Allows for playing the lottery game. Called once per selection made by the user. Returns either -1 if the lottery is not done yet or the amount the player won
+     */
     @Override
     public int play(int selection) {
         switch (selection) {
@@ -119,6 +125,9 @@ public class LotteryGame extends BasicCasinoGame {
         ticketsBought = tickets;
     }
 
+    /**
+     * Returns the number to be selected for exiting this game
+     */
     @Override
     protected int getExitEntry() {
         return 3;
