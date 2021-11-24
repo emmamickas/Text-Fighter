@@ -16,6 +16,11 @@ public class NPC {
     public NPC() {
     }
 
+    /**
+     * View the name of the NPC based on the type of NPC it is
+     * @param type
+     * @return the NPC's name
+     */
     public static String getName(String type) {
         switch (type.toLowerCase()) {
             case "health":
@@ -38,6 +43,11 @@ public class NPC {
         }
     }
 
+    /**
+     * Gets the NPC's shop based on the name of the NPC
+     * @param npc
+     * @return
+     */
     public static String getShop(String npc) {//TODO use constants instead of names
         switch (npc.toLowerCase()) {
             case "corinna":
@@ -68,11 +78,19 @@ public class NPC {
         shop = type;
     }
 
+    /**
+     * Shows the NPC's welcome based on the type of NPC
+     * @param type
+     */
     public static void welcome(String type) {
         Ui.println(getName(type) + ": \n\tWelcome to the " + type + " shop.");
         Ui.println("\tHow can I help you today?");
     }
 
+    /**
+     * Shows the NPC's thanks for purchase based on the type of NPC
+     * @param type
+     */
     public static void gratitude(String shop, String type) {
         if (type.toLowerCase().equals("purchase")) {
             Ui.println(getName(shop) + ": \nThank you for your purchase.");
