@@ -23,6 +23,9 @@ class Debug {
         return enabled;
     }
 
+    /**
+     * Allows user to modify their player to make debugging easier.
+     */
     public static void menu() {
 
         //Validate
