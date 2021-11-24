@@ -7,6 +7,9 @@ import com.hotmail.kalebmarc.textfighter.player.Coins;
 
 public class DiceGame extends BasicCasinoGame {
 
+    /**
+     * Called when starting dice. Prints out information regarding the game and sets the current game type being played to dice
+     */
     public DiceGame() {
         super("------------------------------------------------------------------\n" +
                         "                                Dice Game                            \n" +
@@ -22,6 +25,9 @@ public class DiceGame extends BasicCasinoGame {
                 GameType.DICE);
     }
 
+    /**
+     * Allows for playing the dice game. Called once per game played. Returns the winnings of the player
+     */
     @Override
     public int play(int selection) {
         int bet;
@@ -102,16 +108,35 @@ public class DiceGame extends BasicCasinoGame {
         return coinsWon;
     }
 
+    /**
+     * Determines whether the first number has been matched by one of the dice
+     * @param firstNumber the first number to compare to the dice
+     * @param dice1
+     * @param dice2
+     * @param fNum whether or not the first number was matched
+     * @return whether or not the first number was matched
+     */
 	private boolean determineFirstNumber(int firstNumber, int dice1, int dice2, boolean fNum) {
 		if (firstNumber == dice1 || firstNumber == dice2) fNum = true;
 		return fNum;
 	}
 
+    /**
+     * Determines whether the second number has been matched by one of the dice
+     * @param secondNumber the second number to compare to the dice
+     * @param dice1
+     * @param dice2
+     * @param sNum whether or not the second number was matched
+     * @return whether or not the second number was matched
+     */
 	private boolean determineSecondNumber(int secondNumber, int dice1, int dice2, boolean sNum) {
 		sNum = determineFirstNumber(secondNumber, dice1, dice2, sNum);
 		return sNum;
 	}
 
+    /**
+     * Returns the number to be selected for exiting this game
+     */
     @Override
     protected int getExitEntry() {
         return 2;
