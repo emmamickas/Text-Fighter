@@ -4,6 +4,9 @@ import static java.util.Arrays.asList;
 
 class Menu {
 
+	/**
+	 * Shows the very first menu seen when loading the game.
+	 */
   public void load() {
     while (true) {
 
