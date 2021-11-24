@@ -13,6 +13,11 @@ public class Coins {
         return coins;
     }
 
+    /**
+     * Either sets the number of coins owned by the player to amount or adds amount to the number of coins owned by the player
+     * @param amount
+     * @param add whether or not amount is set or added
+     */
     public static void set(int amount, boolean add) {
         if (!add) {
             coins = amount;
