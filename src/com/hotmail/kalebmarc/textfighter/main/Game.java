@@ -60,6 +60,9 @@ public class Game {
 
 	private static Scanner scan = new Scanner(System.in);
 
+	/**
+	 * Either loads an existing game or initializes all information pertaining to a new game and starts that game.
+	 */
 	public void start() {
 		
 		/*
@@ -225,6 +228,9 @@ public class Game {
 		}//While loop
 	}//Method
 
+	/**
+	 * Shows all options player has in town.
+	 */
 	private static void town() {
 
 		int menuChoice;
@@ -280,6 +286,9 @@ public class Game {
 		}//While Loop
 	}//Method
 
+	/**
+	 * Shows all options player has at home.
+	 */
 	private static void home() {
 
 		int menuChoice;
@@ -350,6 +359,10 @@ public class Game {
 		}//While loop
 	}//Method
 
+	/**
+	 * Shows game difficulty and allows user to select a different difficulty.
+	 * @return
+	 */
 	private static String getDifficulty() {
 		
 		/*
