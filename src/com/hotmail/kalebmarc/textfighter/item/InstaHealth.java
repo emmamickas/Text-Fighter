@@ -19,6 +19,11 @@ public class InstaHealth {
         return instaHealth;
     }
 
+    /**
+     * Either sets the number of insta healths owned by the player to amount or adds amount to the number of insta healths owned by the player
+     * @param amount
+     * @param add whether or not amount is set or added
+     */
     public static void set(int amount, boolean add) {
         if (!add) {
             instaHealth = amount;
@@ -28,6 +33,9 @@ public class InstaHealth {
         }
     }
 
+    /**
+     * Checks whether user has an insta health to use, whether user can gain health, and adds the amount of health gained from an insta health
+     */
     public static void use() {
 
         Ui.cls();
@@ -68,6 +76,9 @@ public class InstaHealth {
         }
     }
 
+    /**
+     * Checks if the insta health can be purchased and then sets the proper variables to signify purchase
+     */
     public static void buy() {
         if (Xp.getLevel() < level) {
             Ui.println("You have to be at least level " + level + " to buy this!");
