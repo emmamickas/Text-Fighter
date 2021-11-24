@@ -6,7 +6,7 @@ import com.hotmail.kalebmarc.textfighter.player.Coins;
 import java.util.*;
 
 public class BlackjackGame extends BasicCasinoGame {
-    private Stack<Card> cardStack;
+    public Stack<Card> cardStack;
 
     public BlackjackGame() {
         super("------------------------------------------------------------------\n" +
@@ -259,13 +259,17 @@ public class BlackjackGame extends BasicCasinoGame {
         cardStack.addAll(Arrays.asList(ass, ass, ten, ten, nine, nine, eight, eight, seven, seven, six, six, five, five, four, four, three, three, two, two));
         Collections.shuffle(cardStack);
     }
+    
+    public void ResetCards() {
+    	this.resetCards();
+    }
 
     @Override
     protected int getExitEntry() {
         return 2;
     }
 
-    private static class Card {
+    public static class Card {
         private final int value;
         private final String name;
 
