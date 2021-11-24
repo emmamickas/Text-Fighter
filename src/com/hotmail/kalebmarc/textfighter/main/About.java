@@ -8,6 +8,10 @@ class About {
     private About() {
     }
 
+    /**
+     * Shows user's version of the game. Sets view status for achievements.
+     * @param isAchievementValid
+     */
     public static void view(boolean isAchievementValid) {
         //Displays basic information
         Ui.popup("Text-Fighter " + Version.getFull() + "\n\n" + Version.getDescription(), "About", JOptionPane.INFORMATION_MESSAGE);
