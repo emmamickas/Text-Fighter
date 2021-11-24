@@ -10,6 +10,9 @@ public class Chest {
     private Chest() {
     }
 
+    /**
+     * Shows all items in the chest sorted by each category.
+     */
     public static void view() {
 
         Ui.cls();
