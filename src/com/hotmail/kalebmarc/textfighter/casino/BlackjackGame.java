@@ -218,7 +218,7 @@ public class BlackjackGame extends BasicCasinoGame {
         // Calculate the value without taking * into account
         for (Card card : cards) {
             value += card.getValue();
-            if (card.getName().equals("*")) assCounter++;
+            assCounter = incrementCounter(assCounter, card);
         }
 
         // Subtracts value of *
@@ -231,6 +231,11 @@ public class BlackjackGame extends BasicCasinoGame {
         return value;
     }
 
+	private int incrementCounter(int assCounter, Card card) {
+		if (card.getName().equals("*")) assCounter++;
+		return assCounter;
+	}
+
     /**
      * Helper method to draw cards.
      *
@@ -241,7 +246,12 @@ public class BlackjackGame extends BasicCasinoGame {
     }
 
     private void resetCards() {
-        cardStack = new Stack<>();
+        initializeCardStackElements();
+        Collections.shuffle(cardStack);
+    }
+
+	private void initializeCardStackElements() {
+		cardStack = new Stack<>();
 
         // Defining Cards
         Card ass = new Card(11, "*");
@@ -257,8 +267,7 @@ public class BlackjackGame extends BasicCasinoGame {
 
         // Add cards and shuffle them
         cardStack.addAll(Arrays.asList(ass, ass, ten, ten, nine, nine, eight, eight, seven, seven, six, six, five, five, four, four, three, three, two, two));
-        Collections.shuffle(cardStack);
-    }
+	}
     
     public void ResetCards() {
     	this.resetCards();
