@@ -33,6 +33,10 @@ public abstract class BasicCasinoGame {
         this.start(getExitEntry());
     }
 
+    /**
+     * Starts the game loop that allows for the user to play.
+     * @param exitOption the number to be selected in order to exit the game
+     */
     private void start(int exitOption) {
         while (true) {
             Ui.cls();
@@ -87,14 +91,26 @@ public abstract class BasicCasinoGame {
      */
     protected abstract int getExitEntry();
 
+    /**
+     * Gets the description of the game
+     * @return
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Gets the header of the game
+     * @return
+     */
     public String getHeader() {
         return header;
     }
 
+    /**
+     * Gets the options involved in playing the game.
+     * @return
+     */
     public String getOptions() {
         return options;
     }
