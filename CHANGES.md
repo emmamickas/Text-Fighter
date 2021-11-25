@@ -51,8 +51,8 @@
  
  ### Additional resources:
  #### Please view the following to find additional documentation of the changes and the code involved in the changes.
-  * [LOC per unit and method]() of modified classes.
-  * [CBO]() of modified classes
+  * [LOC per unit and method](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/Maintenance%20Measurement/LOC.pdf) of modified classes.
+  * [CBO](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/Maintenance%20Measurement/CBO.pdf) of modified classes
 
 # See below for more changes from the main branch
 
