@@ -47,7 +47,7 @@
  * [Weapon](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest2.java)
  * [Health](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/HealthTest.java)
  * [Potion](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
- ##### See [here](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/TESTING.md) for more information on testing.
+ ##### See [here](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/TESTING.md) for more information on testing.
  
  ### Additional resources:
  #### Please view the following to find additional documentation of the changes and the code involved in the changes.
