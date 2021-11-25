@@ -1,5 +1,60 @@
 # Changes in this branch (to be used in maintainability measurement work).
 
+## Changes in the LackOfComments branch
+
+### This branch addresses instances of lacking comments.
+### Desired modifications:
+#### In the current project, there are few comments describing general functionality. The changes include refactoring to include header comments above major, non-simple methods (no comments above getters/setters).
+
+### Modified files:
+#### The following files were modified in the change:
+ * [BasicCasinoGame.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino/BasicCasinoGame.java)
+ * [BlackjackGame.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino/BlackjackGame.java)
+ * [DiceGame.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino/DiceGame.java)
+ * [LotteryGame](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino/LotteryGame.java)
+ * [SlotsGame](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino/SlotsGame.java)
+ * [Armour.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/Armour.java)
+ * [Chest.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/Chest.java)
+ * [FirstAid.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/FirstAid.java)
+ * [InstaHealth.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/InstaHealth.java)
+ * [Power.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/Power.java)
+ * [About.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/About.java)
+ * [Bank.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Bank.java)
+ * [Casino.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Casino.java)
+ * [Cheats.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Cheats.java)
+ * [Debug.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Debug.java)
+ * [Enemy.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Enemy.java)
+ * [Food.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Food.java)
+ * [Game.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
+ * [Help.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Help.java)
+ * [Loan.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Loan.java)
+ * [Menu.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Menu.java)
+ * [NPC.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/NPC.java)
+ * [Shop.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Shop.java)
+ * [Weapon.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/Weapon.java)
+ * [Coins.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/Coins.java)
+ * [Health.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/Health.java)
+ * [Potion.java](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/Potion.java)
+
+### Testing:
+####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
+ * [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino)
+ * [Armour](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/ArmourTest.java)
+ * [Cheats](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/CheatsTest.java)
+ * [Debug](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/DebugTest.java)
+ * [Enemy](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java)
+ * [Food](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/FoodTest.java)
+ * [Weapon](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest2.java)
+ * [Health](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/HealthTest.java)
+ * [Potion](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
+ ##### See [here](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/TESTING.md) for more information on testing.
+ 
+ ### Additional resources:
+ #### Please view the following to find additional documentation of the changes and the code involved in the changes.
+  * [LOC per unit and method]() of modified classes.
+  * [CBO]() of modified classes
+
+# See below for more changes from the main branch
 
 ## Changes in the ShowSpecificPotionStats branch
 
