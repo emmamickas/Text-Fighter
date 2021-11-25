@@ -1,5 +1,23 @@
 # Changes in this branch (to be used in maintainability measurement work).
 
+## Changes in the LongMethods branch
+
+### This branch addresses instances of long methods or bloated methods
+### Desired modifications:
+#### In the current project, there are multiple instances of long methods. The changes include refactoring these methods to be a more sensible length and separate functionality.
+
+### Modified files:
+#### The following files were modified in the change:
+ * [BlackjackGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/BlackjackGame.java)
+ * [DiceGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/DiceGame.java)
+ * [SlotsGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/SlotsGame.java)
+ 
+ ### Additional resources:
+ #### Please view the following to find additional documentation of the changes and the code involved in the changes.
+  * [LOC per unit and method]() of modified classes.
+  * [CBO]() of modified classes
+
+# See below for more changes from the main branch
 
 ## Changes in the ShowSpecificPotionStats branch
 
