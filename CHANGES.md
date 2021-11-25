@@ -12,6 +12,11 @@
  * [DiceGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/DiceGame.java)
  * [SlotsGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/SlotsGame.java)
  
+ ### Testing:
+####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
+ * [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino)
+ ##### See [here](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/TESTING.md) for more information on testing.
+ 
  ### Additional resources:
  #### Please view the following to find additional documentation of the changes and the code involved in the changes.
   * [LOC per unit and method]() of modified classes.
