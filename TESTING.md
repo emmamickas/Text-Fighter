@@ -1,4 +1,6 @@
 # Testing class functionality:
+## The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
+### [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino)
 
 # See below for additional testing that was performed following changes from the main branch
 
