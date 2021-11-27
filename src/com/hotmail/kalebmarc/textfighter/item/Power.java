@@ -2,8 +2,6 @@ package com.hotmail.kalebmarc.textfighter.item;
 
 import com.hotmail.kalebmarc.textfighter.main.Enemy;
 import com.hotmail.kalebmarc.textfighter.main.Ui;
-import com.hotmail.kalebmarc.textfighter.player.Coins;
-import com.hotmail.kalebmarc.textfighter.player.Stats;
 import com.hotmail.kalebmarc.textfighter.player.Xp;
 
 public class Power {
@@ -48,22 +46,6 @@ public class Power {
             Ui.println("Enemy Health: " + Enemy.get().getHeathStr());
             Ui.println("POWER's: " + powers);
             Ui.println("----------------------------------------------------");
-            Ui.pause();
-        }
-    }
-
-    public static void buy() {
-        if (Xp.getLevel() < level) {
-            Ui.println("You have to be at least level " + level + " to buy this!");
-            Ui.pause();
-        } else if (price <= Coins.get()) {
-            Coins.set(-price, true);
-            Stats.coinsSpentOnWeapons += price;
-            set(1, true);
-            Ui.println("Thank you for your purchase. Come again soon! ");
-            Ui.pause();
-        } else {
-            Ui.println("You do not have enough coins.");
             Ui.pause();
         }
     }
