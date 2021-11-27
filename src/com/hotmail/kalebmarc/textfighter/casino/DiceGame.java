@@ -85,9 +85,9 @@ public class DiceGame extends BasicCasinoGame {
 
         //Results
         boolean fNum = false, sNum = false;
-        if (firstNumber == dice1 || firstNumber == dice2) fNum = true;
-        if (secondNumber == dice1 || secondNumber == dice2) sNum = true;
-        if (fNum ^ sNum) coinsWon = bet * 2;
+        fNum = determineFirstNumber(firstNumber, dice1, dice2, fNum);
+        sNum = determineSecondNumber(secondNumber, dice1, dice2, sNum);
+		if (fNum ^ sNum) coinsWon = bet * 2;
         if (fNum && sNum) coinsWon = bet * 5;
         Ui.cls();
         Ui.println(getHeader());
@@ -101,6 +101,16 @@ public class DiceGame extends BasicCasinoGame {
         Ui.println("Coins Won: " + coinsWon);
         return coinsWon;
     }
+
+	private boolean determineFirstNumber(int firstNumber, int dice1, int dice2, boolean fNum) {
+		if (firstNumber == dice1 || firstNumber == dice2) fNum = true;
+		return fNum;
+	}
+
+	private boolean determineSecondNumber(int secondNumber, int dice1, int dice2, boolean sNum) {
+		sNum = determineFirstNumber(secondNumber, dice1, dice2, sNum);
+		return sNum;
+	}
 
     @Override
     protected int getExitEntry() {

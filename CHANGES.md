@@ -1,49 +1,27 @@
 # Changes in this branch (to be used in maintainability measurement work).
 
-## Changes in the LBSExtremeContraction branch
+## Changes in the LongMethods branch
 
-### This branch addresses instances of extreme contraction in identifiers/variable names
+### This branch addresses instances of long methods or bloated methods
 ### Desired modifications:
-#### In the current project, there are multiple instances of extremely shortened words in variable names, or extreme contractions. The changes include refactoring these identifier names to be more understandable.
+#### In the current project, there are multiple instances of long methods. The changes include refactoring these methods to be a more sensible length and separate functionality.
 
 ### Modified files:
 #### The following files were modified in the change:
- * [Armour.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/item/Armour.java)
- * [About.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/About.java)
- * [Enemy.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Enemy.java)
- * [Food.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Food.java)
- * [Handle.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Handle.java)
- * [Help.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Help.java)
- * [Property.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Property.java)
- * [Quest.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Quest.java)
- * [Random.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Random.java)
- * [Version.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Version.java)
- * [Weapon.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/Weapon.java)
- * [Achievements.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/Achievements.java)
- * [Health.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/Health.java)
- * [Potion.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/Potion.java)
- * [Settings.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/Settings.java)
- * [Stats.java](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/Stats.java)
-
-### Testing:
+ * [BlackjackGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/BlackjackGame.java)
+ * [DiceGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/DiceGame.java)
+ * [SlotsGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/SlotsGame.java)
+ 
+ ### Testing:
 ####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
- * [Armour](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/item/ArmourTest.java)
- * [Enemy](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java)
- * [Food](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/FoodTest.java)
- * [Property](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/PropertyTest.java)
- * [Random](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/RandomTest.java)
- * [Version](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/VersionTest.java)
- * [Weapon](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest2.java)
- * [Achievements](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/AchievementsTest.java)
- * [Health](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/HealthTest.java)
- * [Potion](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
- * [Settings](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/SettingsTest.java)
- ##### See [here](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/TESTING.md) for more information on testing.
+ * [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino)
+ ##### See [here](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/TESTING.md) for more information on testing.
  
  ### Additional resources:
  #### Please view the following to find additional documentation of the changes and the code involved in the changes.
-  * [LOC per unit and method](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/Maintenance%20Measurement/LOC.pdf) of modified classes.
-  * [CBO](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/Maintenance%20Measurement/CBO.pdf) of modified classes
+  * [LOC per unit and method](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/Maintenance%20Measurement/LOC.pdf) of modified classes.
+  * [CBO](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/Maintenance%20Measurement/CBO.pdf) of modified classes
+
 
 # See below for more changes from the main branch
 
