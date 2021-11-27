@@ -30,8 +30,7 @@ public class BlackjackGame extends BasicCasinoGame {
         int bet;
 
         //Greeting & Input
-        Ui.cls();
-        Ui.println(getHeader());
+        resetGameView();
         Ui.println();
         Ui.println("Coins: " + Coins.get());
         Ui.println();
@@ -71,6 +70,11 @@ public class BlackjackGame extends BasicCasinoGame {
         }
     }
 
+	private void resetGameView() {
+		Ui.cls();
+        Ui.println(getHeader());
+	}
+
     /**
      * Lets the player play his round of blackjack
      *
@@ -83,24 +87,16 @@ public class BlackjackGame extends BasicCasinoGame {
         // Ask the player to draw more cards
         do {
             // Draw cards
-            Card drawn = drawCard();
-            drawnCards.add(drawn);
+            Card drawn = drawCard(drawnCards);
             Ui.cls();
             Ui.println("You drew a " + drawn.getName());
             Ui.pause();
 
-            // Shows current cards and drawn cards
-            Ui.cls();
-            Ui.println(getHeader());
+            resetGameView();
             Ui.println();
             Ui.print("Cards:");
             // Draw every card
-            for (int i = 0; i < drawnCards.size(); i++) {
-                Ui.print(" " + drawnCards.get(i));
-                if (i + 1 < drawnCards.size()) {
-                    Ui.print(",");
-                }
-            }
+            displayDrawnCards(drawnCards);
             // Value of cards
             Ui.println("Value: " + highestPossibleValue(drawnCards));
             Ui.println();
@@ -143,6 +139,21 @@ public class BlackjackGame extends BasicCasinoGame {
         }
     }
 
+	private void displayDrawnCards(List<Card> drawnCards) {
+		for (int i = 0; i < drawnCards.size(); i++) {
+		    Ui.print(" " + drawnCards.get(i));
+		    if (i + 1 < drawnCards.size()) {
+		        Ui.print(",");
+		    }
+		}
+	}
+
+	private Card drawCard(List<Card> drawnCards) {
+		Card drawn = drawCard();
+		drawnCards.add(drawn);
+		return drawn;
+	}
+
     /**
      * The computer plays his round, progress is shown to the player
      *
@@ -154,25 +165,15 @@ public class BlackjackGame extends BasicCasinoGame {
 
         // Determine to draw more cards
         do {
-            // Draw cards
-            Card drawn = drawCard();
-            drawnCards.add(drawn);
+            Card drawn = drawCard(drawnCards);
             Ui.cls();
             Ui.println("Casino drew a " + drawn.getName());
             Ui.pause();
 
-            // Shows current cards and drawn cards
-            Ui.cls();
-            Ui.println(getHeader());
+            resetGameView();
             Ui.println();
             Ui.print("Casino's cards:");
-            // Draw every card
-            for (int i = 0; i < drawnCards.size(); i++) {
-                Ui.print(" " + drawnCards.get(i));
-                if (i + 1 < drawnCards.size()) {
-                    Ui.print(",");
-                }
-            }
+            displayDrawnCards(drawnCards);
             // Value of cards
             Ui.println("Casino's value: " + highestPossibleValue(drawnCards));
             Ui.println();
@@ -189,11 +190,9 @@ public class BlackjackGame extends BasicCasinoGame {
                 exit = true;
                 Ui.println("The casino stopped playing!");
 
-            } else if (highestPossibleValue(drawnCards) > 15) {
-                if (Math.random() < 0.5D) {
-                    exit = true;
-                    Ui.println("The casino stopped playing!");
-                }
+            } else if (highestPossibleValue(drawnCards) > 15 && Math.random() < 0.5D) {
+                exit = true;
+                Ui.println("The casino stopped playing!");
             }
 
         } while (!exit);
