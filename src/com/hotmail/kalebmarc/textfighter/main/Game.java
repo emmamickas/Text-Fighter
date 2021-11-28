@@ -331,6 +331,9 @@ public class Game {
 		}//While loop
 	}//Method
 
+	/**
+	 * Shows information pertaining to the player's current state.
+	 */
 	private static void showInfo() {
 		Ui.println("--Score Info--");
 		Ui.println("     Kill Streak: " + Stats.kills);
