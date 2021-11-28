@@ -46,6 +46,7 @@ public class Game {
 
 	//Amours
 	public static Armour none = new Armour("None", 0, 0, 1);//DO NOT REMOVE
+	/*
 	public static Armour basic = new Armour("Basic", 400, 15, 5);
 	public static Armour advanced = new Armour("Advanced", 750, 30, 7);
 
@@ -57,7 +58,7 @@ public class Game {
 	public static Food meat        = new Food("Chunk of meat", "Probably not rotten.",               StatusEffect.type.HEALTH, Food.type.MEAT_OTHER, 15);
 	public static Food mushroom    = new Food("Mushroom",      "The good kind!",                     StatusEffect.type.HEALTH, Food.type.OTHER,      5);
 	public static Food fish        = new Food("Fish",          "Found in rivers and lakes.",         StatusEffect.type.HEALTH, Food.type.MEAT_FISH,  15);
-
+	*/
 	private static Scanner scan = new Scanner(System.in);
 
 	public void start() {
@@ -116,7 +117,7 @@ public class Game {
 				Ui.println("CHEATS ACTIVATED");
 			}
 
-			currentStatsAndActions(); // Print the player's current stats and what they can do
+			printCurrentStatsAndActions(); // Print the player's current stats and what they can do
 
 			int input = Ui.getValidInt(); // Read the input on screen
 			playerActionChoice(input); // Pass input into switch method for actions
@@ -135,7 +136,7 @@ public class Game {
 			Ui.println("                      WELCOME TO THE TOWN                         ");
 
 			playerBasicStats();
-			
+
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("1) Casino");
 			Ui.println("2) Home");
@@ -283,7 +284,7 @@ public class Game {
 	}
 
 	// Extracted code to shorten start() making it easier to understand
-	private static void currentStatsAndActions() {
+	private static void printCurrentStatsAndActions() {
 		Ui.println(Settings.godModeMsg());
 
 		playerBasicStats();
@@ -337,16 +338,10 @@ public class Game {
 				Ui.println("2) Recovery Potion");
 				Ui.println("3) Back");
 				switch (Ui.getValidInt()) {
-					case 1:
-						Potion.use("survival");
-						break;
-					case 2:
-						Potion.use("recovery");
-						break;
-					case 3:
-						break;
-					default:
-						break;
+					case 1 -> Potion.use("survival");
+					case 2 -> Potion.use("recovery");
+					default -> {
+					}
 				}
 				break;
 			case 6:
