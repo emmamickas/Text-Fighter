@@ -11,6 +11,10 @@
  * [BlackjackGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/BlackjackGame.java)
  * [DiceGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/DiceGame.java)
  * [SlotsGame.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino/SlotsGame.java)
+ * [FirstAid.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/item/FirstAid.java)
+ * [InstaHealth.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/item/InstaHealth.java)
+ * [Power.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/item/Power.java)
+ * [Shop.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/main/Shop.java)
  
  ### Testing:
 ####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
