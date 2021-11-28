@@ -82,7 +82,7 @@ public class Game {
 					// docschorsch savesPrompt() true only if not exited --> game started with loaded player
 					gameStarted = true;
 					break;
-			// docschorsch added another return to Menu.load() if game selected but exited before start
+				// docschorsch added another return to Menu.load() if game selected but exited before start
 				} else {
 					return;
 				}
@@ -92,14 +92,7 @@ public class Game {
 				if(difficultyLevel.equals("Exit")) {
 					return;
 				} else {
-					setDif(difficultyLevel, true, false);
-					Health.set(100, 100);
-					//docschorsch swapped order of promptNameSelection() and encounterNew()
-					User.promptNameSelection();
-					Enemy.encounterNew();
-					Saves.save();
-					// --> game started with new player
-					gameStarted = true;
+					startNewPlayer();
 					break;
 				}
 		}
@@ -122,106 +115,12 @@ public class Game {
 			if (Cheats.enabled()) {
 				Ui.println("CHEATS ACTIVATED");
 			}
-			Ui.println(Settings.godModeMsg());
-			//------------------
-			Ui.println("--Score Info--");
-			Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());
-			Ui.println("     Kill Streak: " + Stats.kills);
-			Ui.println("     Highest Kill Streak: " + Stats.highScore);
-			Ui.println("--" + User.name() + "--");
-			Ui.println("     Health: " + getStr());
-			Ui.println("     Coins: " + Coins.get());
-			Ui.println("     First-Aid kits: " + FirstAid.get());
-            Ui.println("     Potions: ");
-            Ui.println("          Survival: " + Potion.get("survival"));
-            Ui.println("          Recovery: " + Potion.get("recovery"));
-			Ui.println("     Equipped armour: " + Armour.getEquipped().toString());
-			Ui.println("     Equipped Weapon: " + Weapon.get().getName());
-			//Displays ammo only if a weapon is equipped
-			Weapon.displayAmmo();
-			//--------------------
-			Ui.println("--Enemy Info--");
-			Ui.println("     Enemy: " + Enemy.get().getName());
-			Ui.println("     Enemy Health: " + Enemy.get().getHeathStr());
-			Ui.println("     Enemy's First Aid Kit's: " + Enemy.get().getFirstAidKit());
-			Ui.println("------------------------------------------------------------------");
-			Ui.println("1) Go to battle");
-			Ui.println("2) Go Home");
-			Ui.println("3) Go to the town");
-			Ui.println("4) Use First-Aid kit");
-			Ui.println("5) Use Potion");
-			Ui.println("6) Eat Food");
-			Ui.println("7) Use Insta-Health");
-			Ui.println("8) Use POWER");
-			Ui.println("9) Run From Battle (You will lose any XP earned)");
-			Ui.println("10) Quit Game (Game will automatically be saved)");
-			Ui.println("------------------------------------------------------------------");
 
-			switch (Ui.getValidInt()) {
-				case 1:
-					int fightPath = Random.RInt(100);
+			currentStatsAndActions(); // Print the player's current stats and what they can do
 
-					if (Weapon.get().getName().equals("Sniper")) {
-						if (fightPath <= 30) Enemy.get().dealDamage();
-						if (fightPath > 30) sniper.dealDam();
-					} else {
-						if (fightPath <= 50) Enemy.get().dealDamage();
-						if (fightPath > 50) Weapon.get().dealDam();
-					}
-					break;
-				case 2:
-					home();
-					break;
-				case 3:
-					town();
-					break;
-				case 4:
-					FirstAid.use();
-					break;
-				case 5:
-					Ui.cls();
-					Ui.println("Which potion would you like to use?");
-					Ui.println("1) Survival Potion");
-					Ui.println("2) Recovery Potion");
-					Ui.println("3) Back");
-					switch (Ui.getValidInt()) {
-						case 1:
-							Potion.use("survival");
-							break;
-						case 2:
-							Potion.use("recovery");
-							break;
-						case 3:
-							break;
-						default:
-							break;
-					}
-					break;
-				case 6:
-					Food.list();
-					break;
-				case 7:
-					InstaHealth.use();
-					break;
-				case 8:
-					Power.use();
-					break;
-				case 9:
-					Ui.cls();
-					Ui.popup("You ran away from the battle.", "Ran Away", JOptionPane.INFORMATION_MESSAGE);
-					Enemy.encounterNew();
-					break;
-				case 10:
-					Stats.timesQuit++;
-					return;
-				case 0:
-					Cheats.cheatGateway();
-					break;
-				case 99:
-					Debug.menu();
-				default:
-					break;
-			}//Switch
+			int input = Ui.getValidInt(); // Read the input on screen
+			playerActionChoice(input); // Pass input into switch method for actions
+
 		}//While loop
 	}//Method
 
@@ -381,5 +280,125 @@ public class Game {
 				return "Exit";
 			}
 		}
+	}
+
+	// Extracted code to shorten start() making it easier to understand
+	private static void startNewPlayer() {
+		String difficultyLevel = getDifficulty();
+
+		setDif(difficultyLevel, true, false);
+		Health.set(100, 100);
+		//docschorsch swapped order of promptNameSelection() and encounterNew()
+		User.promptNameSelection();
+		Enemy.encounterNew();
+		Saves.save();
+		// --> game started with new player
+		gameStarted = true;
+	}
+
+	// Extracted code to shorten start() making it easier to understand
+	private static void currentStatsAndActions() {
+		Ui.println(Settings.godModeMsg());
+		//------------------
+		Ui.println("--Score Info--");
+		Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());
+		Ui.println("     Kill Streak: " + Stats.kills);
+		Ui.println("     Highest Kill Streak: " + Stats.highScore);
+		Ui.println("--" + User.name() + "--");
+		Ui.println("     Health: " + getStr());
+		Ui.println("     Coins: " + Coins.get());
+		Ui.println("     First-Aid kits: " + FirstAid.get());
+		Ui.println("     Potions: ");
+		Ui.println("          Survival: " + Potion.get("survival"));
+		Ui.println("          Recovery: " + Potion.get("recovery"));
+		Ui.println("     Equipped armour: " + Armour.getEquipped().toString());
+		Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+		//Displays ammo only if a weapon is equipped
+		Weapon.displayAmmo();
+		//--------------------
+		Ui.println("--Enemy Info--");
+		Ui.println("     Enemy: " + Enemy.get().getName());
+		Ui.println("     Enemy Health: " + Enemy.get().getHeathStr());
+		Ui.println("     Enemy's First Aid Kit's: " + Enemy.get().getFirstAidKit());
+		Ui.println("------------------------------------------------------------------");
+		Ui.println("1) Go to battle");
+		Ui.println("2) Go Home");
+		Ui.println("3) Go to the town");
+		Ui.println("4) Use First-Aid kit");
+		Ui.println("5) Use Potion");
+		Ui.println("6) Eat Food");
+		Ui.println("7) Use Insta-Health");
+		Ui.println("8) Use POWER");
+		Ui.println("9) Run From Battle (You will lose any XP earned)");
+		Ui.println("10) Quit Game (Game will automatically be saved)");
+		Ui.println("------------------------------------------------------------------");
+	}
+
+	private static void playerActionChoice(int a) {
+		switch (a) {
+			case 1:
+				int fightPath = Random.RInt(100);
+
+				if (Weapon.get().getName().equals("Sniper")) {
+					if (fightPath <= 30) Enemy.get().dealDamage();
+					if (fightPath > 30) sniper.dealDam();
+				} else {
+					if (fightPath <= 50) Enemy.get().dealDamage();
+					if (fightPath > 50) Weapon.get().dealDam();
+				}
+				break;
+			case 2:
+				home();
+				break;
+			case 3:
+				town();
+				break;
+			case 4:
+				FirstAid.use();
+				break;
+			case 5:
+				Ui.cls();
+				Ui.println("Which potion would you like to use?");
+				Ui.println("1) Survival Potion");
+				Ui.println("2) Recovery Potion");
+				Ui.println("3) Back");
+				switch (Ui.getValidInt()) {
+					case 1:
+						Potion.use("survival");
+						break;
+					case 2:
+						Potion.use("recovery");
+						break;
+					case 3:
+						break;
+					default:
+						break;
+				}
+				break;
+			case 6:
+				Food.list();
+				break;
+			case 7:
+				InstaHealth.use();
+				break;
+			case 8:
+				Power.use();
+				break;
+			case 9:
+				Ui.cls();
+				Ui.popup("You ran away from the battle.", "Ran Away", JOptionPane.INFORMATION_MESSAGE);
+				Enemy.encounterNew();
+				break;
+			case 10:
+				Stats.timesQuit++;
+				return;
+			case 0:
+				Cheats.cheatGateway();
+				break;
+			case 99:
+				Debug.menu();
+			default:
+				break;
+		}//Switch
 	}
 }
