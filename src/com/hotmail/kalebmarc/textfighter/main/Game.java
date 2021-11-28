@@ -133,17 +133,9 @@ public class Game {
 			Ui.cls();
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("                      WELCOME TO THE TOWN                         ");
-			Ui.println("--Score Info--");
-			Ui.println("     Kill Streak: " + Stats.kills);
-			Ui.println("     Highest Kill Streak: " + Stats.highScore);
-			Ui.println("--Player Info--");
-			Ui.println("     Health: " + getStr());
-			Ui.println("     Coins: " + Coins.get());
-			Ui.println("     First-Aid kits: " + FirstAid.get());
-            Ui.println("     Potions: ");
-            Ui.println("          Survival: " + Potion.get("survival"));
-            Ui.println("          Recovery: " + Potion.get("recovery"));
-			Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+
+			playerBasicStats();
+			
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("1) Casino");
 			Ui.println("2) Home");
@@ -188,15 +180,9 @@ public class Game {
 			Ui.cls();
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("                          WELCOME HOME                            ");
-			Ui.println("--Score Info--");
-			Ui.println("     Kill Streak: " + Stats.kills);
-			Ui.println("     Highest Kill Streak: " + Stats.highScore);
-			Ui.println("--Player Info--");
-			Ui.println("     Health: " + getStr());
-			Ui.println("     Coins: " + Coins.get());
-			Ui.println("     First-Aid kits: " + FirstAid.get());
-            Ui.println("     Potions: " + (Potion.get("survival") + Potion.get("recovery")));
-			Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+
+			playerBasicStats();
+
 			Ui.println("------------------------------------------------------------------");
 			Ui.println("1) Equip weapon");
 			Ui.println("2) Equip Armour");
@@ -299,22 +285,9 @@ public class Game {
 	// Extracted code to shorten start() making it easier to understand
 	private static void currentStatsAndActions() {
 		Ui.println(Settings.godModeMsg());
-		//------------------
-		Ui.println("--Score Info--");
-		Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());
-		Ui.println("     Kill Streak: " + Stats.kills);
-		Ui.println("     Highest Kill Streak: " + Stats.highScore);
-		Ui.println("--" + User.name() + "--");
-		Ui.println("     Health: " + getStr());
-		Ui.println("     Coins: " + Coins.get());
-		Ui.println("     First-Aid kits: " + FirstAid.get());
-		Ui.println("     Potions: ");
-		Ui.println("          Survival: " + Potion.get("survival"));
-		Ui.println("          Recovery: " + Potion.get("recovery"));
-		Ui.println("     Equipped armour: " + Armour.getEquipped().toString());
-		Ui.println("     Equipped Weapon: " + Weapon.get().getName());
-		//Displays ammo only if a weapon is equipped
-		Weapon.displayAmmo();
+
+		playerBasicStats();
+
 		//--------------------
 		Ui.println("--Enemy Info--");
 		Ui.println("     Enemy: " + Enemy.get().getName());
@@ -334,6 +307,7 @@ public class Game {
 		Ui.println("------------------------------------------------------------------");
 	}
 
+	// Extracted code from start()
 	private static void playerActionChoice(int a) {
 		switch (a) {
 			case 1:
@@ -400,5 +374,23 @@ public class Game {
 			default:
 				break;
 		}//Switch
+	}
+
+	// Duplicate code from start(), town(), and home()
+	private static void playerBasicStats() {
+		Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());
+		Ui.println("     Kill Streak: " + Stats.kills);
+		Ui.println("     Highest Kill Streak: " + Stats.highScore);
+		Ui.println("--" + User.name() + "--");
+		Ui.println("     Health: " + getStr());
+		Ui.println("     Coins: " + Coins.get());
+		Ui.println("     First-Aid kits: " + FirstAid.get());
+		Ui.println("     Potions: ");
+		Ui.println("          Survival: " + Potion.get("survival"));
+		Ui.println("          Recovery: " + Potion.get("recovery"));
+		Ui.println("     Equipped armour: " + Armour.getEquipped().toString());
+		Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+		//Displays ammo only if a weapon is equipped
+		Weapon.displayAmmo();
 	}
 }
