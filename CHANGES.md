@@ -15,6 +15,7 @@
  * [InstaHealth.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/item/InstaHealth.java)
  * [Power.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/item/Power.java)
  * [Shop.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/main/Shop.java)
+ * [Game.java](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
  
  ### Testing:
 ####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
