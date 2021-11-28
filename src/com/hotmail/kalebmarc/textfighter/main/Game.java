@@ -74,9 +74,8 @@ public class Game {
 				asList("Exit to Main", "Yes", "No")
 				);
 
-		int choice = Ui.getValidInt();
-
-		switch(choice){
+		int menuChoice;
+		switch(Ui.getValidInt()){
 			case 1: return;
 			case 2:
 				if(Saves.savesPrompt()) {
@@ -118,7 +117,9 @@ public class Game {
 			}
 
 			printCurrentStatsAndActions(); // Print the player's current stats and what they can do
-			playerActionChoice(choice); // Pass input into switch method for actions
+
+			menuChoice = Ui.getValidInt();
+			playerActionChoice(menuChoice); // Pass input into switch method for actions
 
 		}//While loop
 	}//Method
