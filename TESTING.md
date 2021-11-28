@@ -1,5 +1,6 @@
 # Testing class functionality:
 ## The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
+
 ### [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino)
 ### [Armour](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/ArmourTest.java)
 ### [Cheats](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/CheatsTest.java)
@@ -9,6 +10,7 @@
 ### [Weapon](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest2.java)
 ### [Health](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/HealthTest.java)
 ### [Potion](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
+
 
 # See below for additional testing that was performed following changes from the main branch
 

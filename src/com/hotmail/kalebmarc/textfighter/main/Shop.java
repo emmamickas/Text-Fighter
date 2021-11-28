@@ -99,7 +99,7 @@ class Shop {
             switch (Ui.getValidInt()) {
                 case 1:
                     Ui.cls();
-                    FirstAid.buy();
+                    buyItem("FirstAid", FirstAid.level, FirstAid.price);
                     NPC.gratitude("Health", "purchase");
                     break;
                 case 2:
@@ -114,7 +114,7 @@ class Shop {
                     break;
                 case 4:
                     Ui.cls();
-                    InstaHealth.buy();
+                    buyItem("InstaHealth", InstaHealth.level, InstaHealth.price);
                     NPC.gratitude("Health", "purchase");
                     break;
                 case 5:
@@ -168,7 +168,7 @@ class Shop {
 
                     //choices other than options in the array go here:
                     if (menuItem == (j + 1))
-                        Power.buy();
+                        buyItem("Power", Power.level, Power.price);
                     if (menuItem == (j + 2))
                         buyAmmo();
                     if (menuItem == (j + 3) || menuItem > j)
@@ -378,5 +378,34 @@ class Shop {
                 }
             }
         }
+    }
+    
+    public static void buyItem(String itemType, int level, int price)
+    {
+		if (Xp.getLevel() < level) {
+            Ui.println("You have to be at least level " + level + " to buy this!");
+            Ui.pause();
+        } else if (price <= Coins.get()) {
+            Coins.set(-price, true);
+            switch(itemType)
+            {
+            case "FirstAid":
+                Stats.coinsSpentOnHealth += price;
+                FirstAid.set(1, true);
+            case "Power":
+            	Stats.coinsSpentOnWeapons += price;
+                Power.set(1, true);
+            case "InstaHealth":
+                Stats.coinsSpentOnHealth += price;
+                InstaHealth.set(1, true);
+            }
+            
+            Ui.println("Thank you for your purchase. Come again soon! ");
+            Ui.pause();
+        } else {
+            Ui.println("You do not have enough coins.");
+            Ui.pause();
+        }
+		return;
     }
 }
