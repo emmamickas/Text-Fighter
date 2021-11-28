@@ -118,9 +118,7 @@ public class Game {
 			}
 
 			printCurrentStatsAndActions(); // Print the player's current stats and what they can do
-
-			int input = Ui.getValidInt(); // Read the input on screen
-			playerActionChoice(input); // Pass input into switch method for actions
+			playerActionChoice(choice); // Pass input into switch method for actions
 
 		}//While loop
 	}//Method
