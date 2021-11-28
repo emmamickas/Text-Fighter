@@ -21,6 +21,7 @@
  #### Please view the following to find additional documentation of the changes and the code involved in the changes.
   * [LOC per unit and method](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/Maintenance%20Measurement/LOC.pdf) of modified classes.
   * [CBO](https://github.com/emmamickas/Text-Fighter/blob/LongMethods/Maintenance%20Measurement/CBO.pdf) of modified classes
+  * [General Complexity Analysis](https://github.com/emmamickas/Text-Fighter/tree/LBSExtremeContraction/Maintenance%20Measurement/General%20Complexity)
 
 
 # See below for more changes from the main branch
