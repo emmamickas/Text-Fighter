@@ -42,10 +42,17 @@ public class Armour {
         return armours.indexOf(getEquipped());
     }
 
-    public static void set(int i) {
-        armours.get(i).equipped = true;
+    /**
+     * Equips the armour at the entered index
+     * @param index the index of the armour to be equipped
+     */
+    public static void set(int index) {
+        armours.get(index).equipped = true;
     }
 
+    /**
+     * Allows for the user to select which armour to be equipped
+     */
     public static void choose() {
         while (true) {
             Ui.cls();
@@ -132,6 +139,9 @@ public class Armour {
         return this.equipped;
     }
 
+    /**
+     * Checks whether the user owns the current armour and then equips it if it is owned
+     */
     public void equip() {
         if (!(this.owns)) {
             Ui.msg("You do not own this.");
@@ -162,6 +172,10 @@ public class Armour {
         return this.getName() + " armour";
     }
 
+    /**
+     * Checks if the armour can be purchased and then sets the proper variables to signify ownership
+     * @return true if the armour was purchased, false otherwise
+     */
     public boolean buy() {
         if (Xp.getLevel() < this.getLevel()) {
             Ui.println("You have to be at least level " + this.getLevel() + " to buy this!");

@@ -6,8 +6,15 @@ import com.hotmail.kalebmarc.textfighter.player.Coins;
 import java.util.*;
 
 public class BlackjackGame extends BasicCasinoGame {
+	
+	/**
+	 * The stack of cards used in playing blackjack
+	 */
     public Stack<Card> cardStack;
 
+    /**
+     * Called when starting blackjack. Prints out information regarding the game and sets the current game type being played to blackjack
+     */
     public BlackjackGame() {
         super("------------------------------------------------------------------\n" +
                         "                            Blackjack                           \n" +
@@ -25,6 +32,9 @@ public class BlackjackGame extends BasicCasinoGame {
         cardStack = null;
     }
 
+    /**
+     * Allows for playing the blackjack game. Called once per game played. Returns the winnings of the player
+     */
     @Override
     public int play(int selection) {
         int bet;
@@ -230,6 +240,12 @@ public class BlackjackGame extends BasicCasinoGame {
         return value;
     }
 
+    /**
+     * Increments a counter if the current card is an ace
+     * @param assCounter the counter
+     * @param card the current card being checked
+     * @return the new counter
+     */
 	private int incrementCounter(int assCounter, Card card) {
 		if (card.getName().equals("*")) assCounter++;
 		return assCounter;
@@ -244,11 +260,17 @@ public class BlackjackGame extends BasicCasinoGame {
         return cardStack.pop();
     }
 
+    /**
+     * Refreshes the card stack so it contains all initial elements.
+     */
     private void resetCards() {
         initializeCardStackElements();
         Collections.shuffle(cardStack);
     }
 
+    /**
+     * Initializes all elements in the stack.
+     */
 	private void initializeCardStackElements() {
 		cardStack = new Stack<>();
 
@@ -272,6 +294,9 @@ public class BlackjackGame extends BasicCasinoGame {
     	this.resetCards();
     }
 
+    /**
+     * Returns the number to be selected for exiting this game
+     */
     @Override
     protected int getExitEntry() {
         return 2;

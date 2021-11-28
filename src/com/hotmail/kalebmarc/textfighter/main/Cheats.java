@@ -14,6 +14,9 @@ public class Cheats {
     private static boolean enabled = false;
     private static boolean locked = false;
 
+    /**
+     * Warns user that they are enabling cheats, then enables cheats and allows user to select what cheat they want.
+     */
     public static void cheatGateway() {
 
         //Makes sure cheats aren't locked
@@ -32,6 +35,9 @@ public class Cheats {
         if (enabled()) Cheats.cheatSelect();
     }
 
+    /**
+     * Allows user to select a cheat to apply. Sets variables accordingly.
+     */
     private static void cheatSelect() {
         Ui.println("*");
 

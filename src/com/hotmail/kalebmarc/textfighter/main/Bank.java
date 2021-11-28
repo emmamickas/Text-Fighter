@@ -9,6 +9,9 @@ public class Bank {
     private static double interest;
     private static int balance;
 
+    /**
+     * Checks if player is allowed to use the bank. Shows all options for player in bank class.
+     */
     public static void menu() {
 
         int amount;
@@ -108,6 +111,10 @@ public class Bank {
         interest = price;
     }
 
+    /**
+     * Allows user to withdraw money from the bank. Sets bank balance and player money accordingly.
+     * @param amount
+     */
     private static void withdraw(int amount) {
         //Calculation
         Coins.set(amount, true);
@@ -120,6 +127,10 @@ public class Bank {
         Ui.pause();
     }
 
+    /**
+     * Allows user to deposit money in the bank. Sets bank balance and player money accordingly.
+     * @param amount
+     */
     private static void deposit(int amount, double interest) {
 
         //Get interest

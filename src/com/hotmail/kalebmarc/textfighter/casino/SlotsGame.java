@@ -7,6 +7,9 @@ import com.hotmail.kalebmarc.textfighter.player.Coins;
 
 public class SlotsGame extends BasicCasinoGame {
 
+    /**
+     * Called when starting slots. Prints out information regarding the game and sets the current game type being played to slots
+     */
     public SlotsGame() {
         super("------------------------------------------------------------------\n" +
                         "                                Slots                             \n" +
@@ -24,6 +27,9 @@ public class SlotsGame extends BasicCasinoGame {
                 GameType.SLOTS);
     }
 
+    /**
+     * Allows for playing the slots game. Called once per game played. Returns the winnings of the player
+     */
     @Override
     public int play(int selection) {
         int bet;
@@ -87,6 +93,10 @@ public class SlotsGame extends BasicCasinoGame {
         return coinsWon;
     }
 
+    /**
+     * Fills out all slots being randomly selected in the game
+     * @param slots the slots being filled
+     */
 	private void fillSlots(String[] slots) {
 		int slot;
 		slot = Random.randomInt(5);
@@ -118,6 +128,9 @@ public class SlotsGame extends BasicCasinoGame {
         if (slot == 5) slots[4] = "@";
 	}
 
+    /**
+     * Returns the number to be selected for exiting this game
+     */
     @Override
     protected int getExitEntry() {
         return 2;

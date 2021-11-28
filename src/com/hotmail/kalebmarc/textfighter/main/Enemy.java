@@ -90,6 +90,9 @@ public class Enemy {
         return arrayEnemy.indexOf(enemy);
     }
 
+    /**
+     * Searches for a valid enemy to set to the curent enemy that the user is facing.
+     */
     public static void findEnemy() {
         int playerLevel = Xp.getLevel();
         ArrayList<Enemy> suitableEnemies = new ArrayList<>();
@@ -102,6 +105,9 @@ public class Enemy {
         current = suitableEnemies.get(Random.randomInt(0, suitableEnemies.size() -1));
     }
 
+    /**
+     * Sets up a new encounter for the player to face.
+     */
     public static void encounterNew() {
 
         findEnemy();
@@ -121,6 +127,11 @@ public class Enemy {
         }
     }
 
+    /**
+     * Modifies variables in order to make enemy take damage.
+     * @param damage amount of damage enemy is taken
+     * @return true if enemy is killed, false otherwise
+     */
     public boolean takeDamage(int damage) {
         this.health -= damage;
         if (this.health <= 0) {
@@ -130,11 +141,17 @@ public class Enemy {
         return false;
     }
 
+    /**
+     * Determines how much damage an enemy is deals.
+     */
     void dealDamage() {
         int damage = Random.randomInt(this.damageMin, this.damageMax);
         Health.takeDamage(damage);
     }
 
+    /**
+     * Sets all variables according to enemy death.
+     */
     private void die() {
 
         //Get rewards & store in temp vars
@@ -170,6 +187,10 @@ public class Enemy {
         encounterNew();
     }
 
+    /**
+     * Enemy uses a first aid kit. Health is modified accordingly
+     * @return True if a first aid kit is used successfully, false otherwise
+     */
     public boolean useFirstAidKit(){
         if (this.firstAidKit <= 0) {
             return false;
@@ -220,6 +241,9 @@ public class Enemy {
         return name;
     }
 
+    /**
+     * Show information about an enemy.
+     */
     public void viewAbout() {
         final int BORDER_LENGTH = 39;
 

@@ -16,6 +16,11 @@ public class FirstAid {
         return firstAid;
     }
 
+    /**
+     * Either sets the number of first aid owned by the player to amount or adds amount to the number of first aid owned by the player
+     * @param amount
+     * @param add whether or not amount is set or added
+     */
     public static void set(int amount, boolean add) {
         if (!add) {
             firstAid = amount;
@@ -25,6 +30,9 @@ public class FirstAid {
         }
     }
 
+    /**
+     * Checks whether user has a first aid kit to use, whether user can gain health, and adds the amount of health gained from a first aid kit
+     */
     public static void use() {
 
         Ui.cls();

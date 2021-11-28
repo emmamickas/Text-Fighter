@@ -9,6 +9,9 @@ public class Loan {
     private static int currentLoan;
     private static int netDue;
 
+    /**
+     * Shows player current information regarding and options for loans.
+     */
     public static void menu() {
         while (true) {
             Ui.cls();
@@ -39,6 +42,9 @@ public class Loan {
         }
     }
 
+    /**
+     * User takes out a new loan if they have no other loans currently.
+     */
     private static void createLoan() {
 
         if (hasLoan()) {
@@ -71,6 +77,9 @@ public class Loan {
         Ui.pause();
     }
 
+    /**
+     * User pays at least 1 coin towards an existing loan.
+     */
     private static void payLoan() {
         if (getGrossDue() == 0) {
             Ui.println("You must enter at least 1 coin.");

@@ -18,6 +18,11 @@ public class Potion {
     private Potion() {
     }
 
+    /**
+     * Get the amount of potions owned of the specified kind
+     * @param kind
+     * @return
+     */
     public static int get(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -29,6 +34,11 @@ public class Potion {
         }
     }
 
+    /**
+     * Either sets the number of potions of the specified type owned by the player to amount or adds amount to the number of potions owned by the player
+     * @param amount
+     * @param add whether or not amount is set or added
+     */
     public static void set(String kind, int amount, boolean add) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -52,6 +62,9 @@ public class Potion {
         }
     }
 
+    /**
+     * Checks whether user has a potion of the specified kind to use, whether user can gain health, and adds the amount of health gained from the potion
+     */
     public static void use(String potionKind) {
         String kind = potionKind.trim().substring(0, 1).toUpperCase()
                 + potionKind.substring(1).toLowerCase();
@@ -96,6 +109,11 @@ public class Potion {
 
     }
 
+    /**
+     * Applies changes necessary to gain health from the specified potion type
+     * @param kind
+     * @return
+     */
     public static double healBy(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -107,6 +125,10 @@ public class Potion {
         }
     }
 
+    /**
+     * Increments the used count for the specified type of potion
+     * @param kind
+     */
     public static void used(String kind) {
         switch (kind.toLowerCase()) {
             case "survival":
@@ -118,6 +140,9 @@ public class Potion {
         }
     }
 
+    /**
+     * Checks if the potion can be purchased and then sets the proper variables to signify purchase
+     */
     public static void buy(String kind) {
 
         int level = getLevel(kind);

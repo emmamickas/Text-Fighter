@@ -7,6 +7,9 @@ class Help {
     private Help() {
     }
 
+    /**
+     * Allows user to select game elements to learn about.
+     */
     public static void view() {
         while (true) {
             Ui.cls();

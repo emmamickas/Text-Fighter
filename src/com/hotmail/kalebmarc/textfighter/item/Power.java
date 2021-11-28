@@ -15,6 +15,11 @@ public class Power {
         return powers;
     }
 
+    /**
+     * Either sets the number of powers owned by the player to amount or adds amount to the number of powers owned by the player
+     * @param amount
+     * @param add whether or not amount is set or added
+     */
     public static void set(int amount, boolean add) {
         if (!add) {
             powers = amount;
@@ -24,6 +29,9 @@ public class Power {
         }
     }
 
+    /**
+     * Checks whether user has a power to use, and deals damage to the enemy to kill it if a power can be used
+     */
     public static void use() {
 
         Ui.cls();
