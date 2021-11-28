@@ -15,7 +15,7 @@
 
 ## Testing InstaHealth functionality:
 ### The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
- ####[InstaHealth](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/InstaHealthTest.java)
+ #### [InstaHealth](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/InstaHealthTest.java)Tests including testing of the methods:
  * buy()
  * get()
 
