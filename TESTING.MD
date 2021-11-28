@@ -1,81 +1,41 @@
 # Testing class functionality:
 ## The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
 
-### [Enemy](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java)
-### [Food](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/FoodTest.java)
-### [Property](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/PropertyTest.java)
-### [Random](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/RandomTest.java)
-### [Version](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/VersionTest.java)
-### [Weapon](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest2.java)
-### [Achievements](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/AchievementsTest.java)
-### [Health](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/HealthTest.java)
-### [Potion](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
-### [Settings](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/SettingsTest.java)
+ ### [InstaHealth.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/InstaHealth.java)
+ ### [FirstAid.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/FirstAid.java)
+ ### [Shop.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Shop.java)
+ ### [Weapon.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Weapon.java)
+ ### [Food.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Food.java)
+ ### [Armour.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/Armour.java)
+ ### [Enemy.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Enemy.java)
+ ### [UI.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Ui.java)
+ ### [Game.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
 
 # See below for additional testing that was performed following changes from the main branch
 
-## Testing critical hit functionality:
+## Testing InstaHealth functionality:
 ### The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
- #### [Weapon](https://github.com/emmamickas/Text-Fighter/blob/CriticalHits/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest.java) Tests including testing of the methods:
- * dealDam()
- * bulletCriticalHit()
- #### [Enemy](https://github.com/emmamickas/Text-Fighter/blob/CriticalHits/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java) Tests including testing of the methods:
- * die()
+ ####[InstaHealth](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/InstaHealthTest.java)
+ * buy()
+ * get()
 
-## Testing cheat functionality:
+## Testing FirstAid functionality:
 ### The following tests were performed to ensure that behavior was preserved after refactoring/changes:
- #### [Cheats](https://github.com/emmamickas/Text-Fighter/blob/CheatsIndexOutOfBoundsFix/src/com/hotmail/kalebmarc/textfighter/main/CheatsTest.java) Tests including testing of the methods:
- * cheatGateway()
- ** This method is tested for the 'givemeitall' cheat, the 'weaponstash' cheat, and the 'thirstforfood' cheat.
+ ####  [FirstAid](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/FirstAidTest.java) Tests including testing of the methods:
+ * buy()
+ * get()
+ 
+ ## Testing Shop functionality:
+### The following tests were performed to ensure that behavior was preserved after refactoring/changes:
+ ####   [Shop](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/ShopTest.java)Tests including testing of the methods:
+ * purchase
  
 ### Additional Notes on Testing:
-#### N/A
-#### All tests may be run as normal through JUnit
+#### Dynamic testing was necessary for the following classes because the changes made were strictly user interface related:
+ ### [Weapon.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Weapon.java)
+ ### [Food.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Food.java)
+ ### [Armour.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/item/Armour.java)
+ ### [Enemy.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Enemy.java)
+ ### [UI.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Ui.java)
+ ### [Game.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
 
-## Testing array access modifier functionality:
-### The following tests were performed to ensure that behavior was preserved after refactoring/changes:
- #### [Armour Tests](https://github.com/emmamickas/Text-Fighter/blob/AddConstantArraylistAccessModifiers/src/com/hotmail/kalebmarc/textfighter/item/ArmourTest.java) including testing of the methods:
- * choose()
- * getArmours()
- #### [Weapon Tests](https://github.com/emmamickas/Text-Fighter/blob/AddConstantArraylistAccessModifiers/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest.java) including testing of the methods:
- * set(int i)
- * choose()
- * getWeapons()
- #### [Enemy Tests](https://github.com/emmamickas/Text-Fighter/blob/AddConstantArraylistAccessModifiers/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java) including testing of the methods:
- * set(int i)
- * get()
- * getIndex(Enemy i)
- * findEnemy()
- * getEnemies()
- #### [Food Tests](https://github.com/emmamickas/Text-Fighter/blob/AddConstantArraylistAccessModifiers/src/com/hotmail/kalebmarc/textfighter/main/FoodTest.java) including testing of the methods:
- * choose()
- * getFoods()
- #### [Cheats Tests](https://github.com/emmamickas/Text-Fighter/blob/AddConstantArraylistAccessModifiers/src/com/hotmail/kalebmarc/textfighter/main/CheatsTest.java) including testing of the methods:
- * cheatGateway()
-** This method is tested for the 'givemeitall' cheat, the 'weaponstash' cheat, and the 'thirstforfood' cheat.
- #### [Debug Tests](https://github.com/emmamickas/Text-Fighter/blob/AddConstantArraylistAccessModifiers/src/com/hotmail/kalebmarc/textfighter/main/DebugTest.java) including testing of the methods:
- * menu()
-** This method is tested for weapon and food debugging
-
-### Additional Notes on Testing:Testing constant array access modifier functionality:
-#### The testing of the Armour, Weapon, Food, Enemy, Debug, and Cheat class require UI interaction.
-#### As such, each test requiring UI interaction including:
-* ArmourTest: testChooseOnly, testChooseFirst, testChooseMiddle, testChooseLast
-* CheatsTest: testCheatGatewaygivemeitall, testCheatGatewayweaponstash, testCheatGatewaythirstforfood
-* DebugTest: testMenuWeapon, testMenuFood
-* FoodTest: testListChooseFirst, testListChooseMiddle, testListChooseLast
-* WeaponTest: testChooseFirst, testChooseMiddle, testChooseLast
-#### Must be run individually rather than running all tests in the class at once.
-
-## Testing potion functionality:
-### The following tests were performed to ensure that behavior was preserved after refactoring/changes:
- #### [Potion](https://github.com/emmamickas/Text-Fighter/blob/ShowSpecificPotionStats/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java) Tests including testing of the methods:
- * get(String kind)
- * set(String kind, int amount, boolean add)
- * use(String k)
- * used(String kind)
-
-### Additional Notes on Testing:
-#### The potion tests are built to work when run all at once or separately except for the testUsed() test case.
-#### This test case keeps track of all previous actions of the class, and thus will be accurate when only when run with the other tests.
-#### If you wish to perform only the unit test for the used function, you may reenable the testUsedAlone test and run all tests, or only the testUsedAlone test.
