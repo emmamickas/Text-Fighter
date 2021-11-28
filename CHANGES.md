@@ -128,6 +128,34 @@
   * [LOC per unit and method](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/Maintenance%20Measurement/LOC.pdf) of modified classes.
   * [CBO](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/Maintenance%20Measurement/CBO.pdf) of modified classes
 
+
+## Changes in the Long Parameter List branch
+### This branch addresses the issues of long parameter lists.
+
+### Desired modifications:
+#### Fix the long parameter list code smell by introducing a parameter object. The parameter object that is passed to the Quest class constructor will be from a QuestBuilder class that is created when implementing a builder pattern. The poor encapsulation will be fixed by implementing getter and setter methods that will enable testing for the class.
+
+### Modified files:
+#### The following files were modified in the change:
+ * [Quest.java](https://github.com/emmamickas/Text-Fighter/blob/Colin-Deliverable-2/src/com/hotmail/kalebmarc/textfighter/main/Quest.java)
+
+### Added files:
+#### The following files were created in the change:
+ * [QuestBuilder.java](https://github.com/emmamickas/Text-Fighter/blob/Colin-Deliverable-2/src/com/hotmail/kalebmarc/textfighter/main/QuestBuilder.java)
+ * [QuestCoins.java](https://github.com/emmamickas/Text-Fighter/blob/Colin-Deliverable-2/src/com/hotmail/kalebmarc/textfighter/item/QuestCoins.java)
+ * [QuestHealth.java](https://github.com/emmamickas/Text-Fighter/blob/Colin-Deliverable-2/src/com/hotmail/kalebmarc/textfighter/item/QuestHealth.java)
+ * [QuestStats.java](https://github.com/emmamickas/Text-Fighter/blob/Colin-Deliverable-2/src/com/hotmail/kalebmarc/textfighter/item/QuestStats.java)
+ * [QuestXp.java](https://github.com/emmamickas/Text-Fighter/blob/Colin-Deliverable-2/src/com/hotmail/kalebmarc/textfighter/item/QuestXp.java)
+
+### Testing:
+####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
+ * [TestQuests.java](https://github.com/emmamickas/Text-Fighter/blob/Colin-Deliverable-2/src/tests/TestQuests.java)
+
+ ### Additional resources:
+ #### Please view the following to find additional documentation of the changes and the code involved in the changes.
+  * [Before and after quality.](https://github.com/emmamickas/Text-Fighter/tree/Colin-Deliverable-2/Code%20Quality)
+
+
 # See below for more changes from the main branch
 
 ## Changes in the ShowSpecificPotionStats branch
