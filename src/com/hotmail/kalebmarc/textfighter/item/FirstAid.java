@@ -72,7 +72,7 @@ public class FirstAid {
     }
 
     public static void buy() {
-        if(Shop.purchase(price, level)){
+        if(Shop.purchase(level, price)){
             set(1, true);
         }
         Ui.pause();
