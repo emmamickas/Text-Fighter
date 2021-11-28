@@ -1,15 +1,8 @@
 # Testing class functionality:
 ## The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
 
-### [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LackOfComments/src/com/hotmail/kalebmarc/textfighter/casino)
-### [Armour](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/item/ArmourTest.java)
-### [Cheats](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/CheatsTest.java)
-### [Debug](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/DebugTest.java)
-### [Enemy](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java)
-### [Food](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/FoodTest.java)
-### [Weapon](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest2.java)
-### [Health](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/HealthTest.java)
-### [Potion](https://github.com/emmamickas/Text-Fighter/blob/LackOfComments/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
+## The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
+### [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino)
 
 
 # See below for additional testing that was performed following changes from the main branch
