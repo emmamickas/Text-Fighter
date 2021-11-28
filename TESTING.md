@@ -1,8 +1,16 @@
 # Testing class functionality:
 ## The following tests were performed to ensure that behavior was preserved and correct after refactoring/changes:
 
-### [BlackjackGame](https://github.com/emmamickas/Text-Fighter/tree/LongMethods/src/com/hotmail/kalebmarc/textfighter/casino)
-
+### [Enemy](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/EnemyTest.java)
+### [Food](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/FoodTest.java)
+### [Property](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/PropertyTest.java)
+### [Random](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/RandomTest.java)
+### [Version](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/VersionTest.java)
+### [Weapon](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/main/WeaponTest2.java)
+### [Achievements](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/AchievementsTest.java)
+### [Health](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/HealthTest.java)
+### [Potion](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/PotionTest.java)
+### [Settings](https://github.com/emmamickas/Text-Fighter/blob/LBSExtremeContraction/src/com/hotmail/kalebmarc/textfighter/player/SettingsTest.java)
 
 # See below for additional testing that was performed following changes from the main branch
 
