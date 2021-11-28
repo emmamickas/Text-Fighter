@@ -17,7 +17,6 @@
  * [Enemy.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Enemy.java)
  * [UI.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Ui.java)
  * [Game.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/main/Game.java)
- * [Coins.java](https://github.com/emmamickas/Text-Fighter/blob/duplicateCodeRefactor/src/com/hotmail/kalebmarc/textfighter/player/Coins.java)
 
 ### Testing:
 ####  The following tests were performed to ensure that behavior was preserved after refactoring/changes:
