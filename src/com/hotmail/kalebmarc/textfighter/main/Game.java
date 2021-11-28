@@ -124,19 +124,9 @@ public class Game {
 			}
 			Ui.println(Settings.godModeMessage());
 			//------------------
-			Ui.println("--Score Info--");
 			Ui.println("     Level " + Xp.getLevel() + "      " + Xp.getFull());
-			Ui.println("     Kill Streak: " + Stats.kills);
-			Ui.println("     Highest Kill Streak: " + Stats.highScore);
 			Ui.println("--" + User.name() + "--");
-			Ui.println("     Health: " + getAsString());
-			Ui.println("     Coins: " + Coins.get());
-			Ui.println("     First-Aid kits: " + FirstAid.get());
-            Ui.println("     Potions: ");
-            Ui.println("          Survival: " + Potion.get("survival"));
-            Ui.println("          Recovery: " + Potion.get("recovery"));
-			Ui.println("     Equipped armour: " + Armour.getEquipped().toString());
-			Ui.println("     Equipped Weapon: " + Weapon.get().getName());
+			showInfo();
 			//Displays ammo only if a weapon is equipped
 			Weapon.displayAmmo();
 			//--------------------
