@@ -76,9 +76,7 @@ public class Enemy {
         return current;
     }
 
-    public static int getIndex(Enemy i) {
-        return arrayEnemy.indexOf(i);
-    }
+
 
     public static void findEnemy() {
         int playerLevel = Xp.getLevel();
@@ -179,15 +177,9 @@ public class Enemy {
         this.firstAidKit = amount;
     }
 
-    public void setDamage(int min, int max) {
-        this.damageMin = min;
-        this.damageMax = max;
-    }
 
-    public void setCoinDrop(int min, int max) {
-        this.coinDropMin = min;
-        this.coinDropMax = max;
-    }
+
+
 
     public void setHealth(int current, int max) {
         this.health = current;

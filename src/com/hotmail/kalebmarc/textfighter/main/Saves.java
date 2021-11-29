@@ -515,9 +515,7 @@ public class Saves {
 		return true;
 	}
 
-	public static boolean contains(String key) {
-		return data.containsKey(key);
-	}
+
 
 	public static boolean exists() {
 		return data != null;
@@ -541,53 +539,13 @@ public class Saves {
 		return false;
 	}
 
-	public static boolean hasValue(String key) {
-		Object tempObject = data.get(key);
-
-		return (tempObject != null);
-	}
 
 	public static boolean isEmpty() {
 		return data.isEmpty() || data == null;
 	}
 
-	public static byte getByte(String key) {
-		Object tempObject = get(key);
 
-		if (tempObject instanceof Byte)
-			return (Byte) tempObject;
-		if (tempObject instanceof String)
-			if (Ui.isNumber(tempObject.toString()))
-				return Byte.parseByte(tempObject.toString());
-		if (tempObject instanceof Number)
-			return Byte.parseByte(tempObject.toString());
-		return -1;
-	}
 
-	public static char getChar(String key) {
-		Object tempObject = get(key);
-
-		if (tempObject instanceof Character)
-			return (Character) tempObject;
-		if (tempObject instanceof String)
-			return tempObject.toString().charAt(0);
-		if (tempObject instanceof Number)
-			return tempObject.toString().charAt(0);
-		return '\u0000';
-	}
-
-	public static double getDouble(String key) {
-		Object tempObject = get(key);
-
-		if (tempObject instanceof Double)
-			return (Double) tempObject;
-		if (tempObject instanceof String)
-			if (Ui.isDecimalNumber(tempObject.toString()))
-				return Double.parseDouble(tempObject.toString());
-		if (tempObject instanceof Number)
-			return Double.parseDouble(tempObject.toString());
-		return -1;
-	}
 
 	public static int getInteger(String key) {
 		Object tempObject = get(key);
@@ -610,32 +568,9 @@ public class Saves {
 		return null;
 	}
 
-	public static long getLong(String key) {
-		Object tempObject = get(key);
 
-		if (tempObject instanceof Long)
-			return (Long) tempObject;
-		if (tempObject instanceof String)
-			if (Ui.isNumber(tempObject.toString()))
-				return Long.parseLong(tempObject.toString());
-		if (tempObject instanceof Number)
-			return Long.parseLong(tempObject.toString());
-		return -1;
-	}
 
-	public static Map<?, ?> getMap(String key) {
-		Object tempObject = get(key);
 
-		if (tempObject instanceof Map<?, ?>)
-			return (Map) tempObject;
-		return null;
-	}
-
-	public static Map<String, Object> getValues() {
-		if (!isEmpty())
-			return data;
-		return null;
-	}
 
 	public static Object get(String key) {
 		if (isEmpty())
@@ -659,24 +594,8 @@ public class Saves {
 		return null;
 	}
 
-	public static Set<String> getKeys() {
-		if (!isEmpty())
-			return data.keySet();
-		return new HashSet<>();
-	}
 
-	public static short getShort(String key) {
-		Object tempObject = get(key);
 
-		if (tempObject instanceof Short)
-			return (Short) tempObject;
-		if (tempObject instanceof String)
-			if (Ui.isNumber(tempObject.toString()))
-				return Short.parseShort(tempObject.toString());
-		if (tempObject instanceof Number)
-			return Short.parseShort(tempObject.toString());
-		return -1;
-	}
 
 	public static String getString(String key) {
 		Object tempObject = get(key);

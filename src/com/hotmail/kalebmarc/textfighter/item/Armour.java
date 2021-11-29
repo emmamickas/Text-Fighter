@@ -108,9 +108,7 @@ public class Armour {
         return this.damResist;
     }
 
-    public void setDamResist(int damResist) {
-        this.damResist = damResist;
-    }
+
 
     public int getLevel() {
         return this.level;
